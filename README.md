@@ -78,8 +78,8 @@ Name | Type | Required | Description
 ---: | --- | --- | ---
 id | `integer` | `False` | Auto generated Object Id
 name | `string` | `True` | Connection name
-cluster | `integer` | `True` | FK to [Cluster](#cluster)
-filesystem | `integer` | `True` | FK to [File system](#file-system)
+cluster_id | `integer` | `True` | FK to [Cluster](#cluster)
+filesystem_id | `integer` | `True` | FK to [File system](#file-system)
 
 
 ### Backup
@@ -105,5 +105,5 @@ Name | Type | Required | Description
 ---: | --- | --- | ---
 id | `integer` | `False` | Auto generated Object Id
 name | `string` | `True` | Backup name
-cluster | `integer` | `True` | FK to [Cluster](#cluster)
-filesystem | `integer` | `True` | FK to [File system](#file-system)
+cluster_id | `integer` | `True` | FK to [Cluster](#cluster)
+filesystem_id | `integer` | `True` | FK to [File system](#file-system)

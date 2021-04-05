@@ -1,0 +1,49 @@
+version: "3.3"
+
+services:
+  # Web Server
+  web:
+    image: nginx
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+      - ./docker/vhost.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 8000:80
+
+  # Application
+  app:
+    build:
+      context: ./docker
+      dockerfile: app.dockerfile
+    working_dir: /var/www
+    volumes:
+      - ./app:/var/www
+      - ./docker/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    environment:
+      APP_NAME: SQA Demo
+      APP_ENV: local
+      APP_KEY:
+      APP_DEBUG: 1
+      DB_CONNECTION: mysql
+      DB_HOST: database
+      DB_PORT: 3306
+      DB_DATABASE: arenadata_db
+      DB_USERNAME: arenadata
+      DB_PASSWORD: qwert
+
+  # Database Server
+  database:
+    image: mysql
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: qwert123
+      MYSQL_DATABASE: arenadata_db
+      MYSQL_USER: arenadata
+      MYSQL_PASSWORD: qwert
+    ports:
+      - 33060:3306
+
+volumes:
+  db_data:
