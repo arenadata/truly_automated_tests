@@ -42,6 +42,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
         with:
@@ -55,10 +60,12 @@ jobs:
 
       - name: Build app image
         run: |
-          docker build --tag app:latest .
+          docker build --tag app:${{ steps.extract_branch.outputs.branch }} .
 
       - name: Run tests
-        run: pytest ./tests -s -v -n auto --alluredir=allure-results
+        run: |
+          pytest ./tests -s -v -n auto --alluredir=allure-results \
+            --app-image=app:${{ steps.extract_branch.outputs.branch }}
 
       - name: Get Allure history
         uses: actions/checkout@v2

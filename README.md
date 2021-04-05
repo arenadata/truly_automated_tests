@@ -15,7 +15,7 @@ Sample project for "Truly automated testing" concept demo
 ### Types
 
  - `integer`
-    - Positive integer value <= 2<sup>63</sup>
+    - Positive integer value < 2<sup>31</sup>
  - `string`
     - String up to 255 symbols
  - `text`
