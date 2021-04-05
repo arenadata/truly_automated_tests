@@ -3,5 +3,5 @@ Dummy test file for github actions test
 """
 
 
-def test_dummy():
+def test_pass():
     assert True
