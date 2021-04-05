@@ -12,6 +12,15 @@ Sample project for "Truly automated testing" concept demo
  - **/endpoint/\<obj_id\>/**
     - **GET** - Get exact object data. Will be called **GET** in further mentions
 
+### Types
+
+ - `integer`
+    - Positive integer value <= 2<sup>63</sup>
+ - `string`
+    - String up to 255 symbols
+ - `text`
+    - String with to 2000 symbols
+
 ### Cluster
 
 DB cluster object
