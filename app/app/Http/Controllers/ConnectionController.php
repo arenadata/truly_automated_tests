@@ -16,12 +16,12 @@ class ConnectionController extends Controller
     public function store(Request $request)
     {
         $validated = $this->validate($request, [
-            'name' => 'required|string|unique:connections',
+            'name' => 'required|string|max:255|unique:connections',
             'cluster_id' => 'required|integer|exists:clusters,id',
             'filesystem_id' => 'required|integer|exists:file_systems,id',
         ]);
 
-        return Connection::create($validated);
+        return response()->json(Connection::create($validated), 201);
     }
 
     public function show($id)

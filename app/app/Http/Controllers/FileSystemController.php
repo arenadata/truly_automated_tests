@@ -15,11 +15,11 @@ class FileSystemController extends Controller
     public function store(Request $request)
     {
         $validated = $this->validate($request, [
-            'name' => 'required|string|unique:file_systems',
-            'description' => 'nullable|string|max:255'
+            'name' => 'required|string|max:255|unique:file_systems',
+            'description' => 'nullable|string|max:2000'
         ]);
 
-        return FileSystem::create($validated);
+        return response()->json(FileSystem::create($validated), 201);
     }
 
     public function show($id)
