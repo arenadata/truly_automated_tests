@@ -16,7 +16,7 @@ class BackupController extends Controller
     public function store(Request $request)
     {
         $validated = $this->validate($request, [
-            'name' => 'required|string|unique:backups',
+            'name' => 'required|string|max:255|unique:backups',
             'cluster_id' => 'required|integer|exists:clusters,id',
             'filesystem_id' => 'required|integer|exists:file_systems,id',
         ]);
@@ -27,7 +27,7 @@ class BackupController extends Controller
         ])->first();
 
         if (!empty($connection)) {
-            return Backup::create($validated);
+            return response()->json(Backup::create($validated), 201);
         } else {
             return response()->json(['connection' => ['Connection does not exist']], 404);
         }

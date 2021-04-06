@@ -15,11 +15,11 @@ class ClusterController extends Controller
     public function store(Request $request)
     {
         $validated = $this->validate($request, [
-            'name' => 'required|string|unique:clusters',
-            'description' => 'nullable|string|max:255'
+            'name' => 'required|string|max:255|unique:clusters',
+            'description' => 'nullable|string|max:2000'
         ]);
 
-        return Cluster::create($validated);
+        return response()->json(Cluster::create($validated), 201);
     }
 
     public function show($id)
