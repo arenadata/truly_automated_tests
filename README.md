@@ -37,11 +37,35 @@ POST | `True`
 
 #### Fields
 
-Name | Type | Required | Description
----: | --- | --- | ---
-id | `integer` | `False` | Auto generated Object Id
-name | `string` | `True` | Cluster name
-description | `text` | `False` | Cluster description for UI
+Name | Type | Required | Nullable | Description
+---: | --- | --- | --- | ---
+id | `integer` | `False` | `False` | Auto generated Object Id
+name | `string` | `True` | `False` | Cluster name
+description | `text` | `False` | `True` | Cluster description for UI
+cluster_type_id | `integer` | `True` | `False` | FK to [Cluster type](#cluster-type)
+
+
+### Cluster type
+
+Predefined Cluster types
+A list of cluster types should be predefined and only available for reading
+
+**Endpoint:** _/cluster-type/_
+
+#### Allowed methods
+
+Name | Allowed
+---: | ---
+GET  | `True`
+LIST | `True`
+POST | `False`
+
+#### Fields
+
+Name | Type | Required | Nullable | Description
+---: | --- | --- | --- | ---
+id | `integer` | `False` | `False` | Auto generated Object Id
+name | `string` | `True` | `False` | Cluster type name
 
 
 ### File system
@@ -60,11 +84,35 @@ POST | `True`
 
 #### Fields
 
-Name | Type | Required | Description
----: | --- | --- | ---
-id | `integer` | `False` | Auto generated Object Id
-name | `string` | `True` | File system name
-description | `text` | `False` | File system description for UI
+Name | Type | Required | Nullable | Description
+---: | --- | --- | --- | ---
+id | `integer` | `False` | `False` | Auto generated Object Id
+name | `string` | `True` | `False` | File system name
+description | `text` | `False` | `True` | File system description for UI
+fs_type_id | `integer` | `True` | `False` | FK to [File system type](#file-system-type)
+
+
+### File system type
+
+Predefined File system types
+A list of file system types should be predefined and only available for reading
+
+**Endpoint:** _/cluster-type/_
+
+#### Allowed methods
+
+Name | Allowed
+---: | ---
+GET  | `True`
+LIST | `True`
+POST | `False`
+
+#### Fields
+
+Name | Type | Required | Nullable | Description
+---: | --- | --- | --- | ---
+id | `integer` | `False` | `False` | Auto generated Object Id
+name | `string` | `True` | `False` | File system type name
 
 
 ### Connection
@@ -83,12 +131,12 @@ POST | `True`
 
 #### Fields
 
-Name | Type | Required | Description
----: | --- | --- | ---
-id | `integer` | `False` | Auto generated Object Id
-name | `string` | `True` | Connection name
-cluster_id | `integer` | `True` | FK to [Cluster](#cluster)
-filesystem_id | `integer` | `True` | FK to [File system](#file-system)
+Name | Type | Required | Nullable | Description
+---: | --- | --- | --- | ---
+id | `integer` | `False` | `False` | Auto generated Object Id
+name | `string` | `True` | `False` | Connection name
+cluster_id | `integer` | `True` | `False` | FK to [Cluster](#cluster)
+filesystem_id | `integer` | `True` | `False` | FK to [File system](#file-system)
 
 
 ### Backup
@@ -110,9 +158,33 @@ POST | `True`
 
 #### Fields
 
-Name | Type | Required | Description
----: | --- | --- | ---
-id | `integer` | `False` | Auto generated Object Id
-name | `string` | `True` | Backup name
-cluster_id | `integer` | `True` | FK to [Cluster](#cluster)
-filesystem_id | `integer` | `True` | FK to [File system](#file-system)
+Name | Type | Required | Nullable | Description
+---: | --- | --- | --- | ---
+id | `integer` | `False` | `False` | Auto generated Object Id
+name | `string` | `True` | `False` | Backup name
+cluster_id | `integer` | `True` | `False` | FK to [Cluster](#cluster)
+filesystem_id | `integer` | `True` | `False` | FK to [File system](#file-system)
+
+
+### Restore
+
+Restore data from backup.
+
+Endpoint: _/restore/_
+
+#### Allowed methods
+
+Name | Allowed
+---: | ---
+GET  | `True`
+LIST | `True`
+POST | `True`
+
+#### Fields
+
+Name | Type | Required | Nullable | Description
+---: | --- | --- | --- | ---
+id | `integer` | `False` | `False` | Auto generated Object Id
+name | `string` | `True` | `False` | Backup name
+timeout | `integer` | `True` | `True` | Timeout for restore execution. Unlimited if null
+backup_id | `integer` | `True` | `False` | FK to [Backup](#backup)
