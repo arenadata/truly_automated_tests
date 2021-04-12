@@ -1,0 +1,273 @@
+{
+  "uid" : "ce601f0761f4f9d6",
+  "name" : "test_post_body_positive[file-system_POST_positive_All fields with special valid values2]",
+  "fullName" : "api.test_request_body.test_post#test_post_body_positive",
+  "historyId" : "dcf2e50db7f5cb1118c4875530762560",
+  "time" : {
+    "start" : 1618225468760,
+    "stop" : 1618225468840,
+    "duration" : 80
+  },
+  "description" : "\n    Positive cases of request body testing\n    Includes sets of correct field values - boundary values, nullable and required if possible.\n    ",
+  "descriptionHtml" : "<pre><code>Positive cases of request body testing\nIncludes sets of correct field values - boundary values, nullable and required if possible.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "prepare_post_body_data",
+    "time" : {
+      "start" : 1618225468758,
+      "stop" : 1618225468759,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generate valid request data",
+      "time" : {
+        "start" : 1618225468758,
+        "stop" : 1618225468759,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "endpoint",
+        "value" : "<Endpoints.FileSystem: Endpoint(path='file-system', methods=[<Methods.GET: Method(function=<function get at 0x7fc86ac56a60>, url_template='/{name}/{id}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.LIST: Method(function=<function get at 0x7fc86ac56a60>, url_template='/{name}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.POST: Method(function=<function post at 0x7fc86ac56c10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>], data_class=<class 'tests.utils.data_classes.FileSystemFields'>)>"
+      }, {
+        "name" : "method",
+        "value" : "<Methods.POST: Method(function=<function post at 0x7fc86ac56c10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "app_fs",
+    "time" : {
+      "start" : 1618225467091,
+      "stop" : 1618225468758,
+      "duration" : 1667
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: local/app:AFyzxnrCmQ",
+      "time" : {
+        "start" : 1618225467108,
+        "stop" : 1618225467706,
+        "duration" : 598
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "cmd_opts",
+    "time" : {
+      "start" : 1618225445707,
+      "stop" : 1618225445707,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "image",
+    "time" : {
+      "start" : 1618225445707,
+      "stop" : 1618225449064,
+      "duration" : 3357
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: app:refs_pull_6_merge",
+      "time" : {
+        "start" : 1618225445753,
+        "stop" : 1618225446248,
+        "duration" : 495
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    Positive cases of request body testing\n    Includes sets of correct field values - boundary values, nullable and required if possible.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Assert - All fields without body checks - Generated value: description, name",
+      "time" : {
+        "start" : 1618225468760,
+        "stop" : 1618225468839,
+        "duration" : 79
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /file-system/",
+        "time" : {
+          "start" : 1618225468760,
+          "stop" : 1618225468839,
+          "duration" : 79
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.CREATED: 201>",
+          "time" : {
+            "start" : 1618225468839,
+            "stop" : 1618225468839,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [201]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.CREATED: 201>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "2ec440d2ad958c9b",
+          "name" : "Full request log",
+          "source" : "2ec440d2ad958c9b.txt",
+          "type" : "text/plain",
+          "size" : 1406
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "app_fs::fin",
+    "time" : {
+      "start" : 1618225468842,
+      "stop" : 1618225469150,
+      "duration" : 308
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "image::fin",
+    "time" : {
+      "start" : 1618225489600,
+      "stop" : 1618225489625,
+      "duration" : 25
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "subSuite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "API"
+  }, {
+    "name" : "suite",
+    "value" : "Body tests"
+  }, {
+    "name" : "tag",
+    "value" : "positive"
+  }, {
+    "name" : "host",
+    "value" : "fv-az127-839"
+  }, {
+    "name" : "thread",
+    "value" : "4835-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "api.test_request_body.test_post"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "prepare_post_body_data",
+    "value" : "[TestDataWithPreparedBody(test_data=POST file-system and expect 201 status code. at 0x7fc86a9b1190, test_body={'description': PreparedFieldValue(value=None, generated_value=True, error_messages=None, f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value='EYYgEOnceGTJtfuecCOywDUXCXSZXnyfelXXQeqihQepVsIdxtbvORxOwfEdnRpKwEodIFykfykhyjJJEVPZNkCnNkTNEXItglwNyLIcHGnxGxKicJPOgDeoJhBwdLZfImMbxJOKCqEQAdLxVfhwPXvmLqtngkBvokFKztpWYaTFhPbvzUgemaUGSgKhemMwsDULEKIOQbodSGwDaaLPRhstZQLWJMeGlMPQUYzJlfYtdRuHwttRgqgJibRFuGYrnFYPUsoCzEuczLFoomJbFYIhdZxrYAQOKgTCLyifNoLQFhFxCwzVDvswcCJUSFMAlggSPpxGRDVtJUIeAUSjMscdEvbPLpkXbOKzGsihWognfOzFCKfnswpULVMZAzCvOgOsLKlKZLblqeoZBumeAfiznqAbLQLrWvmsyfetATMSYVdoRPpnYHBPJNFxZWDGTwxKYEzumYTQeXRBTQFMglogMDuVINwQOMIYYOMElXCEQKMbPyXvEtZtILIUTQSDDRwcZMYKAlaIScYUVCcdmiyfTtvocqhwIRGJEfoEmdwPNFOhQSWyHDDcDMqzZceemUpzXWKDTCwXpDhkNxrKQxRVNdmDQdDlyFzsucCVNnkQmAvdxumqJxeYaSXTGzPWUxdpXQsirYKhOkbfnxmLQlQxuKSzPCkzyudBTPmfaOsYtBICIPngnnmiGuYrhQudpIMFSGRtsMiunHZmvVQUonjzZTaTSnEPJqBAchfSmmVaOhTzYNhaiuSmsAEjkLfJAcTqZVNsSMNhAXuKIpYoMjVCnaUAxsIJiOgGMiylBpUGkFRnNoBWzryXijCowReuvKKVFCCpktzlBNvSPrLgMgwlUTJwHrYRksryFFseImzPJilkdIxLYmgzrTfrafVkgrDSlYpbAMnwjqikRROaRdgCJPwlIovjPSfwcIlIebYzEHbSXmYMDqnXinxGIbhqfriySRvdCfqySvVGechHaEKUUCApdZMOLmdXrGwWdxfMSNfXAtqXYzpexgTRkGxdqYzQzAMKJqTuIYDcRiuTNFtLrCPtuKmhSmOPKfKVylDNxlLfZqAhelBfxVQRCQOEktdzGbmOADzZvZQMNlqhhdTARqkvBDrnHFMGeMKJWdHiPKUpbhaDVeyzUgXUaMEzsDxUKgPnAKaQyYaSMnpobIyMxPdQrNukiIUOOIsvwBdmPGdLulueVpPELzzXMvqGghQmTkWpfJMfkHxAcwHTsZrqafZZZvkmBJXCzcYcWLFbRguTmjSwIWHDvVAYSPNLXPyICacqWSaajahOZHXzeIhFOlLQVZHomleusvdSnqyWtLuKtrWxOdazXwRawSLtSBJhWrLHVvbGaAmjixNpTsesyiDsaBrcJUieKzARpxvDBuVtOKhDnvBXxKbakldYsXqXNncyPYxWNGRqnQvgQzMxmXNZicbzUacrvhcfkEgsrwMsAJOLUoAuXHDWIGDIjkaLxhwFKfsEOSNnwNlHymEstSxrGiMnMZfUfKAhglnTxCjuhmOZhxnYjZIfkaFYNHdVDlfzsGZLxBpUZLcUSFwYWovYbSNidIKuRDHKmcVxupkTSQUxDbKuLXlsPxhPfBdIEdsDjCESYlnhwnETklYlGlOgGQXZOqZwcAXyszUybLMyQcopMEuopmxskqzSKgGZEFfPgqbgoZzLCCByWwRmGsxHdHEzDsgIGswgZgqrmlJIJVLxJUfDQBzzSpxspHbxwBYJnwrzaknjiRotiwwTKqnmJJlwppkveIBXaGPLBKHVwacluhcefrBIHqJLOojfNMLOaHcGJLhQFBZQTmCYOLqduAyCDTWOvxmdwDZGGchMIvMWCTuDOqgtJxksNopVkTZawQlSPDqbdYlFAXRowOmweeBGmMMmOFOIZQxoEocsMtWOCZEqTTYDaCrPlFyADKsuaFSkZzgGMVaTBGlJgeIWpihQjKfxLXKluzdCjstOeidhSdikJMLTirWVYwbRxvFFLdhCeqAPq', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=..., drop_key=False)]), drop_key=False), 'name': PreparedFieldValue(value='ZEYixtqJhSvvKohhcedrbArOQjMfvSARxthqWHMrUQLUBIdhjejfPlQlkgoDxOxdNwqKLwULjrdGhemxFlFGjTyshOtrLMVKKoHKuSLbJeMQBlGuGPPofTliEPxSsoqWwhUnBHXhAaBjMKKsxxdJNTvQeBfNuuIADlkNWzWaVrjOfyLbBkxELFCkWJsLKwEhmOjcDFQdPuZnGWNLgaaPxOlABrSBxPfiNdTkbHjIVtQJVcFFhKDOpCEgPSvFaeb', generated_value=False, error_messages=None, f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'ZEYixtqJhSvvKohhcedrbArOQjMfvSARxthqWHMrUQLUBIdhjejfPlQlkgoDxOxdNwqKLwULjrdGhemxFlFGjTyshOtrLMVKKoHKuSLbJeMQBlGuGPPofTliEPxSsoqWwhUnBHXhAaBjMKKsxxdJNTvQeBfNuuIADlkNWzWaVrjOfyLbBkxELFCkWJsLKwEhmOjcDFQdPuZnGWNLgaaPxOlABrSBxPfiNdTkbHjIVtQJVcFFhKDOpCEgPSvFaeb'], _sp_vals_negative=[PreparedFieldValue(value='yinnloDaDtFwCGrusfCWhkxMjRcSTdUXWgvkNzqgiOpveFSckoqPvejjxSWKSDrwnPMyFeqdxiNuiBkBjkkFWFjijUDyUPDZyiwPhdYRXMSAJQrPFnbzrUetJtqBoYOkfxTHVXIAEMmuVVTcTeQLpOubRIGBavIoNbOCshUEoFjstvjfypeaNywjGWwbsqlFYWbVRxPoMUuMVaEKXfcLgYwLSYCZJzZSpwPszWiYFFkUabIFPDtFVrKQWghwpmPz', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=False)})]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "positive" ]
+  },
+  "source" : "ce601f0761f4f9d6.json",
+  "parameterValues" : [ "[TestDataWithPreparedBody(test_data=POST file-system and expect 201 status code. at 0x7fc86a9b1190, test_body={'description': PreparedFieldValue(value=None, generated_value=True, error_messages=None, f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value='EYYgEOnceGTJtfuecCOywDUXCXSZXnyfelXXQeqihQepVsIdxtbvORxOwfEdnRpKwEodIFykfykhyjJJEVPZNkCnNkTNEXItglwNyLIcHGnxGxKicJPOgDeoJhBwdLZfImMbxJOKCqEQAdLxVfhwPXvmLqtngkBvokFKztpWYaTFhPbvzUgemaUGSgKhemMwsDULEKIOQbodSGwDaaLPRhstZQLWJMeGlMPQUYzJlfYtdRuHwttRgqgJibRFuGYrnFYPUsoCzEuczLFoomJbFYIhdZxrYAQOKgTCLyifNoLQFhFxCwzVDvswcCJUSFMAlggSPpxGRDVtJUIeAUSjMscdEvbPLpkXbOKzGsihWognfOzFCKfnswpULVMZAzCvOgOsLKlKZLblqeoZBumeAfiznqAbLQLrWvmsyfetATMSYVdoRPpnYHBPJNFxZWDGTwxKYEzumYTQeXRBTQFMglogMDuVINwQOMIYYOMElXCEQKMbPyXvEtZtILIUTQSDDRwcZMYKAlaIScYUVCcdmiyfTtvocqhwIRGJEfoEmdwPNFOhQSWyHDDcDMqzZceemUpzXWKDTCwXpDhkNxrKQxRVNdmDQdDlyFzsucCVNnkQmAvdxumqJxeYaSXTGzPWUxdpXQsirYKhOkbfnxmLQlQxuKSzPCkzyudBTPmfaOsYtBICIPngnnmiGuYrhQudpIMFSGRtsMiunHZmvVQUonjzZTaTSnEPJqBAchfSmmVaOhTzYNhaiuSmsAEjkLfJAcTqZVNsSMNhAXuKIpYoMjVCnaUAxsIJiOgGMiylBpUGkFRnNoBWzryXijCowReuvKKVFCCpktzlBNvSPrLgMgwlUTJwHrYRksryFFseImzPJilkdIxLYmgzrTfrafVkgrDSlYpbAMnwjqikRROaRdgCJPwlIovjPSfwcIlIebYzEHbSXmYMDqnXinxGIbhqfriySRvdCfqySvVGechHaEKUUCApdZMOLmdXrGwWdxfMSNfXAtqXYzpexgTRkGxdqYzQzAMKJqTuIYDcRiuTNFtLrCPtuKmhSmOPKfKVylDNxlLfZqAhelBfxVQRCQOEktdzGbmOADzZvZQMNlqhhdTARqkvBDrnHFMGeMKJWdHiPKUpbhaDVeyzUgXUaMEzsDxUKgPnAKaQyYaSMnpobIyMxPdQrNukiIUOOIsvwBdmPGdLulueVpPELzzXMvqGghQmTkWpfJMfkHxAcwHTsZrqafZZZvkmBJXCzcYcWLFbRguTmjSwIWHDvVAYSPNLXPyICacqWSaajahOZHXzeIhFOlLQVZHomleusvdSnqyWtLuKtrWxOdazXwRawSLtSBJhWrLHVvbGaAmjixNpTsesyiDsaBrcJUieKzARpxvDBuVtOKhDnvBXxKbakldYsXqXNncyPYxWNGRqnQvgQzMxmXNZicbzUacrvhcfkEgsrwMsAJOLUoAuXHDWIGDIjkaLxhwFKfsEOSNnwNlHymEstSxrGiMnMZfUfKAhglnTxCjuhmOZhxnYjZIfkaFYNHdVDlfzsGZLxBpUZLcUSFwYWovYbSNidIKuRDHKmcVxupkTSQUxDbKuLXlsPxhPfBdIEdsDjCESYlnhwnETklYlGlOgGQXZOqZwcAXyszUybLMyQcopMEuopmxskqzSKgGZEFfPgqbgoZzLCCByWwRmGsxHdHEzDsgIGswgZgqrmlJIJVLxJUfDQBzzSpxspHbxwBYJnwrzaknjiRotiwwTKqnmJJlwppkveIBXaGPLBKHVwacluhcefrBIHqJLOojfNMLOaHcGJLhQFBZQTmCYOLqduAyCDTWOvxmdwDZGGchMIvMWCTuDOqgtJxksNopVkTZawQlSPDqbdYlFAXRowOmweeBGmMMmOFOIZQxoEocsMtWOCZEqTTYDaCrPlFyADKsuaFSkZzgGMVaTBGlJgeIWpihQjKfxLXKluzdCjstOeidhSdikJMLTirWVYwbRxvFFLdhCeqAPq', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=..., drop_key=False)]), drop_key=False), 'name': PreparedFieldValue(value='ZEYixtqJhSvvKohhcedrbArOQjMfvSARxthqWHMrUQLUBIdhjejfPlQlkgoDxOxdNwqKLwULjrdGhemxFlFGjTyshOtrLMVKKoHKuSLbJeMQBlGuGPPofTliEPxSsoqWwhUnBHXhAaBjMKKsxxdJNTvQeBfNuuIADlkNWzWaVrjOfyLbBkxELFCkWJsLKwEhmOjcDFQdPuZnGWNLgaaPxOlABrSBxPfiNdTkbHjIVtQJVcFFhKDOpCEgPSvFaeb', generated_value=False, error_messages=None, f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'ZEYixtqJhSvvKohhcedrbArOQjMfvSARxthqWHMrUQLUBIdhjejfPlQlkgoDxOxdNwqKLwULjrdGhemxFlFGjTyshOtrLMVKKoHKuSLbJeMQBlGuGPPofTliEPxSsoqWwhUnBHXhAaBjMKKsxxdJNTvQeBfNuuIADlkNWzWaVrjOfyLbBkxELFCkWJsLKwEhmOjcDFQdPuZnGWNLgaaPxOlABrSBxPfiNdTkbHjIVtQJVcFFhKDOpCEgPSvFaeb'], _sp_vals_negative=[PreparedFieldValue(value='yinnloDaDtFwCGrusfCWhkxMjRcSTdUXWgvkNzqgiOpveFSckoqPvejjxSWKSDrwnPMyFeqdxiNuiBkBjkkFWFjijUDyUPDZyiwPhdYRXMSAJQrPFnbzrUetJtqBoYOkfxTHVXIAEMmuVVTcTeQLpOubRIGBavIoNbOCshUEoFjstvjfypeaNywjGWwbsqlFYWbVRxPoMUuMVaEKXfcLgYwLSYCZJzZSpwPszWiYFFkUabIFPDtFVrKQWghwpmPz', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=False)})]" ]
+}
