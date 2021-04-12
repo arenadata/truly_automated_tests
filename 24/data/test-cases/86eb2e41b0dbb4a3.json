@@ -1,0 +1,306 @@
+{
+  "uid" : "86eb2e41b0dbb4a3",
+  "name" : "test_post_body_negative[file-system_POST_negative_Drop fields with Required=True]",
+  "fullName" : "api.test_request_body.test_post#test_post_body_negative",
+  "historyId" : "cc724870b665c85e9769bda2833504a3",
+  "time" : {
+    "start" : 1618209918189,
+    "stop" : 1618209918225,
+    "duration" : 36
+  },
+  "description" : "\n    Negative cases of request body testing\n    Includes sets of invalid field values - out of boundary values,\n    nullable and required if not possible, fields with incorrect types etc.\n    ",
+  "descriptionHtml" : "<pre><code>Negative cases of request body testing\nIncludes sets of invalid field values - out of boundary values,\nnullable and required if not possible, fields with incorrect types etc.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "cmd_opts",
+    "time" : {
+      "start" : 1618209884901,
+      "stop" : 1618209884902,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "image",
+    "time" : {
+      "start" : 1618209884902,
+      "stop" : 1618209888601,
+      "duration" : 3699
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: app:master",
+      "time" : {
+        "start" : 1618209884931,
+        "stop" : 1618209885535,
+        "duration" : 604
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "app_fs",
+    "time" : {
+      "start" : 1618209916806,
+      "stop" : 1618209918187,
+      "duration" : 1381
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: local/app:AJzztjXdLm",
+      "time" : {
+        "start" : 1618209916821,
+        "stop" : 1618209917153,
+        "duration" : 332
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "prepare_post_body_data",
+    "time" : {
+      "start" : 1618209918188,
+      "stop" : 1618209918188,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generate valid request data",
+      "time" : {
+        "start" : 1618209918188,
+        "stop" : 1618209918188,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "endpoint",
+        "value" : "<Endpoints.FileSystem: Endpoint(path='file-system', methods=[<Methods.GET: Method(function=<function get at 0x7f78c5984a60>, url_template='/{name}/{id}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.LIST: Method(function=<function get at 0x7f78c5984a60>, url_template='/{name}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.POST: Method(function=<function post at 0x7f78c5984c10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>], data_class=<class 'tests.utils.data_classes.FileSystemFields'>)>"
+      }, {
+        "name" : "method",
+        "value" : "<Methods.POST: Method(function=<function post at 0x7f78c5984c10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    Negative cases of request body testing\n    Includes sets of invalid field values - out of boundary values,\n    nullable and required if not possible, fields with incorrect types etc.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Assert - name: ['The name field is required.']",
+      "time" : {
+        "start" : 1618209918189,
+        "stop" : 1618209918225,
+        "duration" : 36
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /file-system/",
+        "time" : {
+          "start" : 1618209918189,
+          "stop" : 1618209918225,
+          "duration" : 36
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618209918224,
+            "stop" : 1618209918224,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Response body should be",
+          "time" : {
+            "start" : 1618209918224,
+            "stop" : 1618209918225,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "d6ade79531ead203",
+            "name" : "Expected body",
+            "source" : "d6ade79531ead203.json",
+            "type" : "application/json",
+            "size" : 53
+          }, {
+            "uid" : "5cbac267fe2958",
+            "name" : "Actual body",
+            "source" : "5cbac267fe2958.json",
+            "type" : "application/json",
+            "size" : 53
+          } ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "expected_body",
+            "value" : "{'name': ['The name field is required.']}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "96c86f5dc1a2eff1",
+          "name" : "Full request log",
+          "source" : "96c86f5dc1a2eff1.txt",
+          "type" : "text/plain",
+          "size" : 657
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 3,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "image::fin",
+    "time" : {
+      "start" : 1618209922443,
+      "stop" : 1618209922460,
+      "duration" : 17
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "app_fs::fin",
+    "time" : {
+      "start" : 1618209918226,
+      "stop" : 1618209918413,
+      "duration" : 187
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Body tests"
+  }, {
+    "name" : "parentSuite",
+    "value" : "API"
+  }, {
+    "name" : "subSuite",
+    "value" : "POST"
+  }, {
+    "name" : "tag",
+    "value" : "negative"
+  }, {
+    "name" : "host",
+    "value" : "fv-az133-698"
+  }, {
+    "name" : "thread",
+    "value" : "4704-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "api.test_request_body.test_post"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "prepare_post_body_data",
+    "value" : "[TestDataWithPreparedBody(test_data=POST file-system and expect 422 status code. at 0x7f78c570a040, test_body={'name': PreparedFieldValue(value=None, generated_value=False, error_messages=['The name field is required.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'BunkGAxTHskhLpZkylQCYrapJpKqPVRQxUOXMxjcqJZaEnbpCIDqajWpFzsQucJlfUyDoaNpqfdXEkLkNuJADzWNyisxFNtAZuXLkDQMvIylpxRDnshGrONRyslnBMXaQFTuRQEiOexgItnirhvLRvsGJLTiejkgcOuZrSZznziQrqyzEcskVkSKqujaUTSCkugfmgeJKDUeuTVEekwqromYLVGQUxwOIBMQEJMysWoWLxWBsOfhnOTXaqBqcnJ'], _sp_vals_negative=[PreparedFieldValue(value='UisceZmlbRVkLWMDuybidfqiRqVaEWPrjXnfPXsHtFAqtHMqDBuZIUPVCAkUhNWgyVJTmfcwADaTNQVIQpSOWeAkfzAYHrQkANmQYsLuWigzRyrFQVhpgHVQdSjuxDvgLrmsuTbkCMMsOYtVGUyZbyzFBfpTIzllWVeUpJtjerfnjrjRySkIxmmnoGwQqUHLzMelwYGIzmrNXSArbEIBOqUOwldbffZbxwBrgpEFLTuhAalekFBggMKOGwanEEvd', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=True)})]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "negative" ]
+  },
+  "source" : "86eb2e41b0dbb4a3.json",
+  "parameterValues" : [ "[TestDataWithPreparedBody(test_data=POST file-system and expect 422 status code. at 0x7f78c570a040, test_body={'name': PreparedFieldValue(value=None, generated_value=False, error_messages=['The name field is required.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'BunkGAxTHskhLpZkylQCYrapJpKqPVRQxUOXMxjcqJZaEnbpCIDqajWpFzsQucJlfUyDoaNpqfdXEkLkNuJADzWNyisxFNtAZuXLkDQMvIylpxRDnshGrONRyslnBMXaQFTuRQEiOexgItnirhvLRvsGJLTiejkgcOuZrSZznziQrqyzEcskVkSKqujaUTSCkugfmgeJKDUeuTVEekwqromYLVGQUxwOIBMQEJMysWoWLxWBsOfhnOTXaqBqcnJ'], _sp_vals_negative=[PreparedFieldValue(value='UisceZmlbRVkLWMDuybidfqiRqVaEWPrjXnfPXsHtFAqtHMqDBuZIUPVCAkUhNWgyVJTmfcwADaTNQVIQpSOWeAkfzAYHrQkANmQYsLuWigzRyrFQVhpgHVQdSjuxDvgLrmsuTbkCMMsOYtVGUyZbyzFBfpTIzllWVeUpJtjerfnjrjRySkIxmmnoGwQqUHLzMelwYGIzmrNXSArbEIBOqUOwldbffZbxwBrgpEFLTuhAalekFBggMKOGwanEEvd', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=True)})]" ]
+}
