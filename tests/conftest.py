@@ -74,9 +74,7 @@ def _image(request, cmd_opts):
     params = dict()
 
     if cmd_opts.app_image:
-        params["app_repo"], params["app_tag"] = split_tag(
-            image_name=cmd_opts.app_image
-        )
+        params["app_repo"], params["app_tag"] = split_tag(image_name=cmd_opts.app_image)
 
     init_image = get_initialized_app_image(dc=dc, **params)
 

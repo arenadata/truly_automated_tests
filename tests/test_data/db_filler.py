@@ -49,8 +49,11 @@ class DbFiller:
             self._get_or_create_multiple_data_for_endpoint(endpoint=endpoint, count=3)
             return {"data": None, "url_params": {}}
 
-        full_item = get_object_data(app=self.app, endpoint=endpoint,
-                                    object_id=self._get_or_create_data_for_endpoint(endpoint=endpoint)[0]["id"])
+        full_item = get_object_data(
+            app=self.app,
+            endpoint=endpoint,
+            object_id=self._get_or_create_data_for_endpoint(endpoint=endpoint)[0]["id"],
+        )
         # GET
         if method == Methods.GET:
             return {"data": None, "url_params": {}, "object_id": full_item["id"]}
@@ -173,8 +176,11 @@ class DbFiller:
                 data_class=fk_data_class, fk_data_class=child_fk_field.f_type.fk_link
             )
             for fk_id in fk_ids:
-                fk_data = get_object_data(app=self.app, endpoint=Endpoints.get_by_data_class(fk_data_class),
-                                          object_id=fk_id)
+                fk_data = get_object_data(
+                    app=self.app,
+                    endpoint=Endpoints.get_by_data_class(fk_data_class),
+                    object_id=fk_id,
+                )
                 self._available_fkeys[child_fk_field.f_type.fk_link.__name__].add(
                     fk_data[fk_field_name]["id"]
                 )
