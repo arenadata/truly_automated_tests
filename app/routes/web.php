@@ -23,10 +23,20 @@ $router->group(['prefix' => 'cluster'], function () use ($router) {
     $router->get('/{id}', 'ClusterController@show');
 });
 
+$router->group(['prefix' => 'cluster-type'], function () use ($router) {
+    $router->get('/', 'ClusterTypeController@index');
+    $router->get('/{id}', 'ClusterTypeController@show');
+});
+
 $router->group(['prefix' => 'file-system'], function () use ($router) {
     $router->get('/', 'FileSystemController@index');
     $router->post('/', 'FileSystemController@store');
     $router->get('/{id}', 'FileSystemController@show');
+});
+
+$router->group(['prefix' => 'fs-type'], function () use ($router) {
+    $router->get('/', 'FileSystemTypeController@index');
+    $router->get('/{id}', 'FileSystemTypeController@show');
 });
 
 $router->group(['prefix' => 'connection'], function () use ($router) {
@@ -39,4 +49,10 @@ $router->group(['prefix' => 'backup'], function () use ($router) {
     $router->get('/', 'BackupController@index');
     $router->post('/', 'BackupController@store');
     $router->get('/{id}', 'BackupController@show');
+});
+
+$router->group(['prefix' => 'restore'], function () use ($router) {
+    $router->get('/', 'RestoreController@index');
+    $router->post('/', 'RestoreController@store');
+    $router->get('/{id}', 'RestoreController@show');
 });

@@ -97,7 +97,7 @@ fs_type_id | `integer` | `True` | `False` | FK to [File system type](#file-syste
 Predefined File system types
 A list of file system types should be predefined and only available for reading
 
-**Endpoint:** _/cluster-type/_
+**Endpoint:** _/fs-type/_
 
 #### Allowed methods
 

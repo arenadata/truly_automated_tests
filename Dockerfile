@@ -23,6 +23,7 @@ ENV DB_CONNECTION=sqlite
 ENV DB_DATABASE=/var/www/html/storage/app/arenadata_db.sqlite
 ENV DB_FOREIGN_KEYS=true
 RUN php artisan migrate --force
+RUN php artisan db:seed --force
 # Fix permissions
 RUN chgrp -R www-data storage /var/www/html/storage
 RUN chmod -R ug+rwx storage /var/www/html/storage

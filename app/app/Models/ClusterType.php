@@ -6,25 +6,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class FileSystem extends Model
+class ClusterType extends Model
 {
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'fs_type_id',
-    ];
-
-    protected $attributes = [
-        'description' => 'no description provided',
+        'name',
     ];
 
     public $timestamps = false;
 
     public function clusters()
     {
-        return $this->hasManyThrough(Cluster::class, Connection::class);
+        return $this->hasMany(Cluster::class);
     }
 }

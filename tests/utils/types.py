@@ -149,17 +149,17 @@ class PositiveInt(BaseType):
             PreparedFieldValue(
                 self._min_int32 - 1,
                 f_type=self,
-                error_messages=["Ensure this value is greater than or equal to 0."],
+                error_messages=["The {name} must be at least 0."],
             ),
             PreparedFieldValue(
                 self._max_int32 + 1,
                 f_type=self,
                 error_messages=[
-                    f"Ensure this value is less than or equal to {self._max_int32}."
+                    f"The {{name}} may not be greater than {self._max_int32}."
                 ],
             ),
         ]
-        self.error_message_invalid_data = "A valid integer is required."
+        self.error_message_invalid_data = "The {name} must be an integer."
 
     def generate(self, **kwargs):
         return randint(self._min_int32, self._max_int32)
