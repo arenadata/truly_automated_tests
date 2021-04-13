@@ -1,0 +1,398 @@
+{
+  "uid" : "41872c00a43e81f2",
+  "name" : "test_post_body_negative[cluster_POST_negative_Invalid field types and values]",
+  "fullName" : "api.test_request_body.test_post#test_post_body_negative",
+  "historyId" : "9eed0a2ec490d3cd939827a17adbcc8a",
+  "time" : {
+    "start" : 1618295193953,
+    "stop" : 1618295194077,
+    "duration" : 124
+  },
+  "description" : "\n    Negative cases of request body testing\n    Includes sets of invalid field values - out of boundary values,\n    nullable and required if not possible, fields with incorrect types etc.\n    ",
+  "descriptionHtml" : "<pre><code>Negative cases of request body testing\nIncludes sets of invalid field values - out of boundary values,\nnullable and required if not possible, fields with incorrect types etc.\n</code></pre>\n",
+  "status" : "failed",
+  "statusMessage" : "tests.steps.asserts.BodyAssertionError: Response body assertion failed!",
+  "statusTrace" : "response = <Response [422]>\nexpected_body = {'description': ['The description may not be greater than 2000 characters.']}\n\n    @allure.step(\"Response body should be\")\n    def body_should_be(response: Response, expected_body=None):\n        \"\"\"Assert response body and attach it\"\"\"\n        actual_body = response.json()\n        allure.attach(\n            json.dumps(expected_body, indent=2),\n            name=\"Expected body\",\n            attachment_type=allure.attachment_type.JSON,\n        )\n        allure.attach(\n            json.dumps(actual_body, indent=2),\n            name=\"Actual body\",\n            attachment_type=allure.attachment_type.JSON,\n        )\n        try:\n>           assert actual_body == expected_body, \"Response body assertion failed!\"\nE           AssertionError: Response body assertion failed!\n\ntests/steps/asserts.py:36: AssertionError\n\nThe above exception was the direct cause of the following exception:\n\nprepare_post_body_data = (<tests.utils.api_objects.APPApi object at 0x7f3460517340>, [POST cluster and expect 422 status code. at 0x7f34606d570...OST cluster and expect 422 status code. at 0x7f34606d5820, POST cluster and expect 422 status code. at 0x7f34606d5910])\n\n    @pytest.mark.parametrize(\n        \"prepare_post_body_data\", get_negative_data_for_post_body_check(), indirect=True\n    )\n    def test_post_body_negative(prepare_post_body_data):\n        \"\"\"\n        Negative cases of request body testing\n        Includes sets of invalid field values - out of boundary values,\n        nullable and required if not possible, fields with incorrect types etc.\n        \"\"\"\n        app, test_data_list = prepare_post_body_data\n        for test_data in test_data_list:\n            with allure.step(title=f\"Assert - {test_data.description}\"):\n>               app.exec_request(\n                    request=test_data.request, expected_response=test_data.response\n                )\n\ntests/api/test_request_body/test_post.py:86: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/utils/api_objects.py:77: in exec_request\n    body_should_be(response=response, expected_body=expected_response.body)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [422]>\nexpected_body = {'description': ['The description may not be greater than 2000 characters.']}\n\n    @allure.step(\"Response body should be\")\n    def body_should_be(response: Response, expected_body=None):\n        \"\"\"Assert response body and attach it\"\"\"\n        actual_body = response.json()\n        allure.attach(\n            json.dumps(expected_body, indent=2),\n            name=\"Expected body\",\n            attachment_type=allure.attachment_type.JSON,\n        )\n        allure.attach(\n            json.dumps(actual_body, indent=2),\n            name=\"Actual body\",\n            attachment_type=allure.attachment_type.JSON,\n        )\n        try:\n            assert actual_body == expected_body, \"Response body assertion failed!\"\n        except AssertionError as error:\n>           raise BodyAssertionError(error) from error\nE           tests.steps.asserts.BodyAssertionError: Response body assertion failed!\n\ntests/steps/asserts.py:38: BodyAssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "cmd_opts",
+    "time" : {
+      "start" : 1618295160425,
+      "stop" : 1618295160425,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "app_fs",
+    "time" : {
+      "start" : 1618295192504,
+      "stop" : 1618295193951,
+      "duration" : 1447
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: local/app:smBLoPUSna",
+      "time" : {
+        "start" : 1618295192519,
+        "stop" : 1618295192890,
+        "duration" : 371
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "prepare_post_body_data",
+    "time" : {
+      "start" : 1618295193952,
+      "stop" : 1618295193952,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generate valid request data",
+      "time" : {
+        "start" : 1618295193952,
+        "stop" : 1618295193952,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "endpoint",
+        "value" : "<Endpoints.Cluster: Endpoint(path='cluster', methods=[<Methods.GET: Method(function=<function get at 0x7f3460942a60>, url_template='/{name}/{id}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.LIST: Method(function=<function get at 0x7f3460942a60>, url_template='/{name}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.POST: Method(function=<function post at 0x7f3460942c10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>], data_class=<class 'tests.utils.data_classes.ClusterFields'>)>"
+      }, {
+        "name" : "method",
+        "value" : "<Methods.POST: Method(function=<function post at 0x7f3460942c10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "image",
+    "time" : {
+      "start" : 1618295160425,
+      "stop" : 1618295164299,
+      "duration" : 3874
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: app:refs_pull_6_merge",
+      "time" : {
+        "start" : 1618295160461,
+        "stop" : 1618295161098,
+        "duration" : 637
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    Negative cases of request body testing\n    Includes sets of invalid field values - out of boundary values,\n    nullable and required if not possible, fields with incorrect types etc.\n    ",
+    "status" : "failed",
+    "statusMessage" : "tests.steps.asserts.BodyAssertionError: Response body assertion failed!",
+    "statusTrace" : "response = <Response [422]>\nexpected_body = {'description': ['The description may not be greater than 2000 characters.']}\n\n    @allure.step(\"Response body should be\")\n    def body_should_be(response: Response, expected_body=None):\n        \"\"\"Assert response body and attach it\"\"\"\n        actual_body = response.json()\n        allure.attach(\n            json.dumps(expected_body, indent=2),\n            name=\"Expected body\",\n            attachment_type=allure.attachment_type.JSON,\n        )\n        allure.attach(\n            json.dumps(actual_body, indent=2),\n            name=\"Actual body\",\n            attachment_type=allure.attachment_type.JSON,\n        )\n        try:\n>           assert actual_body == expected_body, \"Response body assertion failed!\"\nE           AssertionError: Response body assertion failed!\n\ntests/steps/asserts.py:36: AssertionError\n\nThe above exception was the direct cause of the following exception:\n\nprepare_post_body_data = (<tests.utils.api_objects.APPApi object at 0x7f3460517340>, [POST cluster and expect 422 status code. at 0x7f34606d570...OST cluster and expect 422 status code. at 0x7f34606d5820, POST cluster and expect 422 status code. at 0x7f34606d5910])\n\n    @pytest.mark.parametrize(\n        \"prepare_post_body_data\", get_negative_data_for_post_body_check(), indirect=True\n    )\n    def test_post_body_negative(prepare_post_body_data):\n        \"\"\"\n        Negative cases of request body testing\n        Includes sets of invalid field values - out of boundary values,\n        nullable and required if not possible, fields with incorrect types etc.\n        \"\"\"\n        app, test_data_list = prepare_post_body_data\n        for test_data in test_data_list:\n            with allure.step(title=f\"Assert - {test_data.description}\"):\n>               app.exec_request(\n                    request=test_data.request, expected_response=test_data.response\n                )\n\ntests/api/test_request_body/test_post.py:86: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/utils/api_objects.py:77: in exec_request\n    body_should_be(response=response, expected_body=expected_response.body)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [422]>\nexpected_body = {'description': ['The description may not be greater than 2000 characters.']}\n\n    @allure.step(\"Response body should be\")\n    def body_should_be(response: Response, expected_body=None):\n        \"\"\"Assert response body and attach it\"\"\"\n        actual_body = response.json()\n        allure.attach(\n            json.dumps(expected_body, indent=2),\n            name=\"Expected body\",\n            attachment_type=allure.attachment_type.JSON,\n        )\n        allure.attach(\n            json.dumps(actual_body, indent=2),\n            name=\"Actual body\",\n            attachment_type=allure.attachment_type.JSON,\n        )\n        try:\n            assert actual_body == expected_body, \"Response body assertion failed!\"\n        except AssertionError as error:\n>           raise BodyAssertionError(error) from error\nE           tests.steps.asserts.BodyAssertionError: Response body assertion failed!\n\ntests/steps/asserts.py:38: BodyAssertionError",
+    "steps" : [ {
+      "name" : "Assert - All fields without body checks - Special values: description, name",
+      "time" : {
+        "start" : 1618295193953,
+        "stop" : 1618295194003,
+        "duration" : 50
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618295193953,
+          "stop" : 1618295194003,
+          "duration" : 50
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618295194003,
+            "stop" : 1618295194003,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "e034fdddac589418",
+          "name" : "Full request log",
+          "source" : "e034fdddac589418.txt",
+          "type" : "text/plain",
+          "size" : 3009
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert - description: ['The description may not be greater than 2000 characters.']",
+      "time" : {
+        "start" : 1618295194003,
+        "stop" : 1618295194077,
+        "duration" : 74
+      },
+      "status" : "failed",
+      "statusMessage" : "tests.steps.asserts.BodyAssertionError: Response body assertion failed!\n",
+      "statusTrace" : "  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/api/test_request_body/test_post.py\", line 86, in test_post_body_negative\n    app.exec_request(\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/utils/api_objects.py\", line 77, in exec_request\n    body_should_be(response=response, expected_body=expected_response.body)\n  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/steps/asserts.py\", line 38, in body_should_be\n    raise BodyAssertionError(error) from error\n",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618295194003,
+          "stop" : 1618295194077,
+          "duration" : 74
+        },
+        "status" : "failed",
+        "statusMessage" : "tests.steps.asserts.BodyAssertionError: Response body assertion failed!\n",
+        "statusTrace" : "  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/utils/api_objects.py\", line 77, in exec_request\n    body_should_be(response=response, expected_body=expected_response.body)\n  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/steps/asserts.py\", line 38, in body_should_be\n    raise BodyAssertionError(error) from error\n",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618295194076,
+            "stop" : 1618295194076,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Response body should be",
+          "time" : {
+            "start" : 1618295194076,
+            "stop" : 1618295194077,
+            "duration" : 1
+          },
+          "status" : "failed",
+          "statusMessage" : "tests.steps.asserts.BodyAssertionError: Response body assertion failed!\n",
+          "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/steps/asserts.py\", line 38, in body_should_be\n    raise BodyAssertionError(error) from error\n",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "f7070cd9b3cb8c85",
+            "name" : "Expected body",
+            "source" : "f7070cd9b3cb8c85.json",
+            "type" : "application/json",
+            "size" : 89
+          }, {
+            "uid" : "c2766ab27a95fb16",
+            "name" : "Actual body",
+            "source" : "c2766ab27a95fb16.json",
+            "type" : "application/json",
+            "size" : 162
+          } ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "expected_body",
+            "value" : "{'description': ['The description may not be greater than 2000 characters.']}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : true,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "fbe833026c77dbc4",
+          "name" : "Full request log",
+          "source" : "fbe833026c77dbc4.txt",
+          "type" : "text/plain",
+          "size" : 2756
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 3,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "app_fs::fin",
+    "time" : {
+      "start" : 1618295194089,
+      "stop" : 1618295194396,
+      "duration" : 307
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Gather /var/www/html/storage/app/ from APP container: 9587bb7461a2be21835721493eca439485c72124e33c442aea642f6e034fdea3",
+      "time" : {
+        "start" : 1618295194089,
+        "stop" : 1618295194171,
+        "duration" : 82
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "8011672ec814a7f5",
+        "name" : "test_post_body_negative[cluster_POST_negative_Invalid field types and values]_1618295194.088643.tgz",
+        "source" : "8011672ec814a7f5.tgz",
+        "type" : "application/gzip",
+        "size" : 1102
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "image::fin",
+    "time" : {
+      "start" : 1618295200177,
+      "stop" : 1618295200189,
+      "duration" : 12
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Body tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "API"
+  }, {
+    "name" : "tag",
+    "value" : "negative"
+  }, {
+    "name" : "host",
+    "value" : "fv-az178-863"
+  }, {
+    "name" : "thread",
+    "value" : "5034-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "api.test_request_body.test_post"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "prepare_post_body_data",
+    "value" : "[TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f34606d5700, test_body={'description': PreparedFieldValue(value='fdfqnKRFJgfFgXlwRUKSqaktrhqDiAPjmrnowWHuLdCSrvkqAAWFMAaXOWDxIyDikCfotmftYnYQdxZCToXSgLZacvFZLYQQxUsImYFREGiOtMgamOTgIPMsNkVMGMbHgLNLzoRbpfCRCKPIiLBLHCEcoYULyhDjboHZKzAtHactOSqYDcCoWSiuaeHCyWPuRremkHeigZXSXPVCHpsKtBQeDGKYQgWzcAUTZgCPUwYGWtsfDqNVQNSSIxmuCeaJcnqDkwdAWCgjsfOgpGSPVPfWJFCDLhKLlsRGPrvWINXuDCeVwuwVUHqzxcwqzYaQvpfcbQZuazbFERdCgTVTwIRUVyyYebBfYfZosKdjIWCqAgpwlyNLNgTmuOQchrMNDXRqscVOyDFtIbVUAMBgJKQTfqZwOVsPqJklPMlxQFAzpoArzWarTeoLTeNNZBJryKSUhXmRVrrNFqzZfMcUBQXATGGkqPKHVZHkDzQIfOIxbNTiDqSxwkYtKUaTeXqOwlOdlYSJHyaNNFHlUKGnUjersbpIVYmhesktoASDkuxlPgmVfXNgOCnCnqBCzlLpdDfViRaRcNqFTkmKWMpcdNOcsJgPvIEAUfPLxtejwkSNNIjtDixSdEgwNFWHfEskkQkgoITtjGZMBDbyHjdoVjuvINqOgDiOnRZHyizOPnbPGBTdPyZQGcRObStNVWQvoZsyJwupSDnlWYgntHjBYkbMafyTTNBBQfcmyWXphTGBOoyhOoGTGzevofiQSmgvZZKVBzHyzAkkDvNysTGWdIeClcWIIPGUhWVyRoNJyOaKzcdwehsfyEdASMJHpZRbPFeAEzoFkCDDIDCFYPigsadTUTDzgKeRJdQLNCBoJwCaYxcwFQelSoMCoQbIeBRCVoJzymuTBrkUGUeVUzgBebfntLdjxSljZMTyyiJQgRbwSluXOyQRDBJWXHLRwVRcTCHlNpvRDAhXiqMtTctzujMMcsFByTbdeRnhFSsqbWhsTnKREJlhFepNtgLGOsCRNSpAyFyynMndvdSCnVAOLGFgoCuNUsTeSnBalAHsWpuGGsKtsUuqCLTOUSyzRWCJvBiZwcOLVrJiKMFEOdzlVQbOPEhNKKVcOGIAXAPhnASLsFrskvNvPjDLNgpXAznInVXpzOGwkKeXPtANToJIztvqxbbroCzjTTESpvBujqMsLlxQJbcoEVkFfgRWewcNjjAKickkUugXEKJAxlLrjMmApCMrOZeCSdxfRCtpXJmoKrMTHGaiVvlvMOsQHHnNaJjhoLXaFIYErEZnUCMCzbFhResunOLkueULdZXPjPIhYpjgTzPPVARUpZLVGcHYKqdJAoNFfYIiseXadWxllLeTpmelPoczyyHOBVQZIbaKIvgWJKtRpjioBZaItvkEyAoQAPSrLgtuOYPkGbKfompevwIBFBTFempVWBwpIRrNOYzRADqlOBCiiZjrurmoMkAHUxanGOicbzGKREXdehTAuzOREZCSugQfaHHogfntTdzyIsVhIcItYVBKSWiFGcfHDZmVcQHvMcAMyaOnsJPOTKwNltzSJOkLrauaCXUGGhzPLTiuyNLVYDBZptUpAvBFyvyjwjAqpDimaYpHlksmqfKWTAbbKKtjdYcPdPCBSPlbviIcYjWODADAjCrgOErRLhtSYDpChhQdxheskFIrmZLtrAsIicaBitPmGNFuLHrZQYjKWiPTwKSAzsSOgNGARWFXzGxAorClvZNDyFrsdPzCtLyippLnUiEXmrBQJSIACTYfMTVsjbioSyyeZMyqAkhofopuMJNHbQkSlYGhTLUiDKjkDKWgJuWlUJbDxvbqrtXeRjiELAICBwqcnadMGrZOHpwhJNQGdMUaSXeAknBJTKNLFSREwVayWifVlNbdsTPHLRACSiIwlkmQrZzHhXUtNmlzDlhBatmTxOVlpFmfzfHmWHeeSUuhirpXNPSThQKxalIMBMyHrMpRYOxIMKZLlbRbqroky', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[...]), drop_key=False), 'name': PreparedFieldValue(value='nAlHfyxtJmoosOhzsrWgbJlNNzcijqwhIKKwWhxCJJGtPucZxQIpQOHzANYTFgFFLWSbOvbmhGgIzOTfdPgoQDUClvFOqPGxeeTfsMYPFHbTzJiZLwvFgRpMrmPBTBznQFCWQXXcEcXDGJGIXslMfHMPVEgbtCbuSMpiGcegwCQrLcWggLUYHEiCiDPCBmPBYyZAFSbXFgiKUNqlYcsoQslHsDuIHSLqQIXvasXmrJXyaVNAbRgwmpvvzwQWrtyO', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'MtEAVApKvYgZpJUSQUDmcwFopHWlKuyesnylqUmhVksGmoOnstDWFyycOAWnNKrxYWOLUxGaGqdfwlBGRrJBmypbfvLAYTldBGtgcZulTVRGHNJYuRQwzbtLTYWsTYYFABZupFzkNkNqgOcTbpZdxYqTaYnRDsSrgcstvsIlRBrPLThtOGudCrUbAEUHaYtqYYNXRUDutwLPeYoZNGqdnLqMDBpryOTJezsdZlVEhpOeamfCKcYWodYXbwwljrg'], _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f34606d5820, test_body={'description': PreparedFieldValue(value='fdfqnKRFJgfFgXlwRUKSqaktrhqDiAPjmrnowWHuLdCSrvkqAAWFMAaXOWDxIyDikCfotmftYnYQdxZCToXSgLZacvFZLYQQxUsImYFREGiOtMgamOTgIPMsNkVMGMbHgLNLzoRbpfCRCKPIiLBLHCEcoYULyhDjboHZKzAtHactOSqYDcCoWSiuaeHCyWPuRremkHeigZXSXPVCHpsKtBQeDGKYQgWzcAUTZgCPUwYGWtsfDqNVQNSSIxmuCeaJcnqDkwdAWCgjsfOgpGSPVPfWJFCDLhKLlsRGPrvWINXuDCeVwuwVUHqzxcwqzYaQvpfcbQZuazbFERdCgTVTwIRUVyyYebBfYfZosKdjIWCqAgpwlyNLNgTmuOQchrMNDXRqscVOyDFtIbVUAMBgJKQTfqZwOVsPqJklPMlxQFAzpoArzWarTeoLTeNNZBJryKSUhXmRVrrNFqzZfMcUBQXATGGkqPKHVZHkDzQIfOIxbNTiDqSxwkYtKUaTeXqOwlOdlYSJHyaNNFHlUKGnUjersbpIVYmhesktoASDkuxlPgmVfXNgOCnCnqBCzlLpdDfViRaRcNqFTkmKWMpcdNOcsJgPvIEAUfPLxtejwkSNNIjtDixSdEgwNFWHfEskkQkgoITtjGZMBDbyHjdoVjuvINqOgDiOnRZHyizOPnbPGBTdPyZQGcRObStNVWQvoZsyJwupSDnlWYgntHjBYkbMafyTTNBBQfcmyWXphTGBOoyhOoGTGzevofiQSmgvZZKVBzHyzAkkDvNysTGWdIeClcWIIPGUhWVyRoNJyOaKzcdwehsfyEdASMJHpZRbPFeAEzoFkCDDIDCFYPigsadTUTDzgKeRJdQLNCBoJwCaYxcwFQelSoMCoQbIeBRCVoJzymuTBrkUGUeVUzgBebfntLdjxSljZMTyyiJQgRbwSluXOyQRDBJWXHLRwVRcTCHlNpvRDAhXiqMtTctzujMMcsFByTbdeRnhFSsqbWhsTnKREJlhFepNtgLGOsCRNSpAyFyynMndvdSCnVAOLGFgoCuNUsTeSnBalAHsWpuGGsKtsUuqCLTOUSyzRWCJvBiZwcOLVrJiKMFEOdzlVQbOPEhNKKVcOGIAXAPhnASLsFrskvNvPjDLNgpXAznInVXpzOGwkKeXPtANToJIztvqxbbroCzjTTESpvBujqMsLlxQJbcoEVkFfgRWewcNjjAKickkUugXEKJAxlLrjMmApCMrOZeCSdxfRCtpXJmoKrMTHGaiVvlvMOsQHHnNaJjhoLXaFIYErEZnUCMCzbFhResunOLkueULdZXPjPIhYpjgTzPPVARUpZLVGcHYKqdJAoNFfYIiseXadWxllLeTpmelPoczyyHOBVQZIbaKIvgWJKtRpjioBZaItvkEyAoQAPSrLgtuOYPkGbKfompevwIBFBTFempVWBwpIRrNOYzRADqlOBCiiZjrurmoMkAHUxanGOicbzGKREXdehTAuzOREZCSugQfaHHogfntTdzyIsVhIcItYVBKSWiFGcfHDZmVcQHvMcAMyaOnsJPOTKwNltzSJOkLrauaCXUGGhzPLTiuyNLVYDBZptUpAvBFyvyjwjAqpDimaYpHlksmqfKWTAbbKKtjdYcPdPCBSPlbviIcYjWODADAjCrgOErRLhtSYDpChhQdxheskFIrmZLtrAsIicaBitPmGNFuLHrZQYjKWiPTwKSAzsSOgNGARWFXzGxAorClvZNDyFrsdPzCtLyippLnUiEXmrBQJSIACTYfMTVsjbioSyyeZMyqAkhofopuMJNHbQkSlYGhTLUiDKjkDKWgJuWlUJbDxvbqrtXeRjiELAICBwqcnadMGrZOHpwhJNQGdMUaSXeAknBJTKNLFSREwVayWifVlNbdsTPHLRACSiIwlkmQrZzHhXUtNmlzDlhBatmTxOVlpFmfzfHmWHeeSUuhirpXNPSThQKxalIMBMyHrMpRYOxIMKZLlbRbqroky', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f34606d5910, test_body={'name': PreparedFieldValue(value='nAlHfyxtJmoosOhzsrWgbJlNNzcijqwhIKKwWhxCJJGtPucZxQIpQOHzANYTFgFFLWSbOvbmhGgIzOTfdPgoQDUClvFOqPGxeeTfsMYPFHbTzJiZLwvFgRpMrmPBTBznQFCWQXXcEcXDGJGIXslMfHMPVEgbtCbuSMpiGcegwCQrLcWggLUYHEiCiDPCBmPBYyZAFSbXFgiKUNqlYcsoQslHsDuIHSLqQIXvasXmrJXyaVNAbRgwmpvvzwQWrtyO', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'MtEAVApKvYgZpJUSQUDmcwFopHWlKuyesnylqUmhVksGmoOnstDWFyycOAWnNKrxYWOLUxGaGqdfwlBGRrJBmypbfvLAYTldBGtgcZulTVRGHNJYuRQwzbtLTYWsTYYFABZupFzkNkNqgOcTbpZdxYqTaYnRDsSrgcstvsIlRBrPLThtOGudCrUbAEUHaYtqYYNXRUDutwLPeYoZNGqdnLqMDBpryOTJezsdZlVEhpOeamfCKcYWodYXbwwljrg'], _sp_vals_negative=[...]), drop_key=False)})]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "negative" ]
+  },
+  "source" : "41872c00a43e81f2.json",
+  "parameterValues" : [ "[TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f34606d5700, test_body={'description': PreparedFieldValue(value='fdfqnKRFJgfFgXlwRUKSqaktrhqDiAPjmrnowWHuLdCSrvkqAAWFMAaXOWDxIyDikCfotmftYnYQdxZCToXSgLZacvFZLYQQxUsImYFREGiOtMgamOTgIPMsNkVMGMbHgLNLzoRbpfCRCKPIiLBLHCEcoYULyhDjboHZKzAtHactOSqYDcCoWSiuaeHCyWPuRremkHeigZXSXPVCHpsKtBQeDGKYQgWzcAUTZgCPUwYGWtsfDqNVQNSSIxmuCeaJcnqDkwdAWCgjsfOgpGSPVPfWJFCDLhKLlsRGPrvWINXuDCeVwuwVUHqzxcwqzYaQvpfcbQZuazbFERdCgTVTwIRUVyyYebBfYfZosKdjIWCqAgpwlyNLNgTmuOQchrMNDXRqscVOyDFtIbVUAMBgJKQTfqZwOVsPqJklPMlxQFAzpoArzWarTeoLTeNNZBJryKSUhXmRVrrNFqzZfMcUBQXATGGkqPKHVZHkDzQIfOIxbNTiDqSxwkYtKUaTeXqOwlOdlYSJHyaNNFHlUKGnUjersbpIVYmhesktoASDkuxlPgmVfXNgOCnCnqBCzlLpdDfViRaRcNqFTkmKWMpcdNOcsJgPvIEAUfPLxtejwkSNNIjtDixSdEgwNFWHfEskkQkgoITtjGZMBDbyHjdoVjuvINqOgDiOnRZHyizOPnbPGBTdPyZQGcRObStNVWQvoZsyJwupSDnlWYgntHjBYkbMafyTTNBBQfcmyWXphTGBOoyhOoGTGzevofiQSmgvZZKVBzHyzAkkDvNysTGWdIeClcWIIPGUhWVyRoNJyOaKzcdwehsfyEdASMJHpZRbPFeAEzoFkCDDIDCFYPigsadTUTDzgKeRJdQLNCBoJwCaYxcwFQelSoMCoQbIeBRCVoJzymuTBrkUGUeVUzgBebfntLdjxSljZMTyyiJQgRbwSluXOyQRDBJWXHLRwVRcTCHlNpvRDAhXiqMtTctzujMMcsFByTbdeRnhFSsqbWhsTnKREJlhFepNtgLGOsCRNSpAyFyynMndvdSCnVAOLGFgoCuNUsTeSnBalAHsWpuGGsKtsUuqCLTOUSyzRWCJvBiZwcOLVrJiKMFEOdzlVQbOPEhNKKVcOGIAXAPhnASLsFrskvNvPjDLNgpXAznInVXpzOGwkKeXPtANToJIztvqxbbroCzjTTESpvBujqMsLlxQJbcoEVkFfgRWewcNjjAKickkUugXEKJAxlLrjMmApCMrOZeCSdxfRCtpXJmoKrMTHGaiVvlvMOsQHHnNaJjhoLXaFIYErEZnUCMCzbFhResunOLkueULdZXPjPIhYpjgTzPPVARUpZLVGcHYKqdJAoNFfYIiseXadWxllLeTpmelPoczyyHOBVQZIbaKIvgWJKtRpjioBZaItvkEyAoQAPSrLgtuOYPkGbKfompevwIBFBTFempVWBwpIRrNOYzRADqlOBCiiZjrurmoMkAHUxanGOicbzGKREXdehTAuzOREZCSugQfaHHogfntTdzyIsVhIcItYVBKSWiFGcfHDZmVcQHvMcAMyaOnsJPOTKwNltzSJOkLrauaCXUGGhzPLTiuyNLVYDBZptUpAvBFyvyjwjAqpDimaYpHlksmqfKWTAbbKKtjdYcPdPCBSPlbviIcYjWODADAjCrgOErRLhtSYDpChhQdxheskFIrmZLtrAsIicaBitPmGNFuLHrZQYjKWiPTwKSAzsSOgNGARWFXzGxAorClvZNDyFrsdPzCtLyippLnUiEXmrBQJSIACTYfMTVsjbioSyyeZMyqAkhofopuMJNHbQkSlYGhTLUiDKjkDKWgJuWlUJbDxvbqrtXeRjiELAICBwqcnadMGrZOHpwhJNQGdMUaSXeAknBJTKNLFSREwVayWifVlNbdsTPHLRACSiIwlkmQrZzHhXUtNmlzDlhBatmTxOVlpFmfzfHmWHeeSUuhirpXNPSThQKxalIMBMyHrMpRYOxIMKZLlbRbqroky', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[...]), drop_key=False), 'name': PreparedFieldValue(value='nAlHfyxtJmoosOhzsrWgbJlNNzcijqwhIKKwWhxCJJGtPucZxQIpQOHzANYTFgFFLWSbOvbmhGgIzOTfdPgoQDUClvFOqPGxeeTfsMYPFHbTzJiZLwvFgRpMrmPBTBznQFCWQXXcEcXDGJGIXslMfHMPVEgbtCbuSMpiGcegwCQrLcWggLUYHEiCiDPCBmPBYyZAFSbXFgiKUNqlYcsoQslHsDuIHSLqQIXvasXmrJXyaVNAbRgwmpvvzwQWrtyO', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'MtEAVApKvYgZpJUSQUDmcwFopHWlKuyesnylqUmhVksGmoOnstDWFyycOAWnNKrxYWOLUxGaGqdfwlBGRrJBmypbfvLAYTldBGtgcZulTVRGHNJYuRQwzbtLTYWsTYYFABZupFzkNkNqgOcTbpZdxYqTaYnRDsSrgcstvsIlRBrPLThtOGudCrUbAEUHaYtqYYNXRUDutwLPeYoZNGqdnLqMDBpryOTJezsdZlVEhpOeamfCKcYWodYXbwwljrg'], _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f34606d5820, test_body={'description': PreparedFieldValue(value='fdfqnKRFJgfFgXlwRUKSqaktrhqDiAPjmrnowWHuLdCSrvkqAAWFMAaXOWDxIyDikCfotmftYnYQdxZCToXSgLZacvFZLYQQxUsImYFREGiOtMgamOTgIPMsNkVMGMbHgLNLzoRbpfCRCKPIiLBLHCEcoYULyhDjboHZKzAtHactOSqYDcCoWSiuaeHCyWPuRremkHeigZXSXPVCHpsKtBQeDGKYQgWzcAUTZgCPUwYGWtsfDqNVQNSSIxmuCeaJcnqDkwdAWCgjsfOgpGSPVPfWJFCDLhKLlsRGPrvWINXuDCeVwuwVUHqzxcwqzYaQvpfcbQZuazbFERdCgTVTwIRUVyyYebBfYfZosKdjIWCqAgpwlyNLNgTmuOQchrMNDXRqscVOyDFtIbVUAMBgJKQTfqZwOVsPqJklPMlxQFAzpoArzWarTeoLTeNNZBJryKSUhXmRVrrNFqzZfMcUBQXATGGkqPKHVZHkDzQIfOIxbNTiDqSxwkYtKUaTeXqOwlOdlYSJHyaNNFHlUKGnUjersbpIVYmhesktoASDkuxlPgmVfXNgOCnCnqBCzlLpdDfViRaRcNqFTkmKWMpcdNOcsJgPvIEAUfPLxtejwkSNNIjtDixSdEgwNFWHfEskkQkgoITtjGZMBDbyHjdoVjuvINqOgDiOnRZHyizOPnbPGBTdPyZQGcRObStNVWQvoZsyJwupSDnlWYgntHjBYkbMafyTTNBBQfcmyWXphTGBOoyhOoGTGzevofiQSmgvZZKVBzHyzAkkDvNysTGWdIeClcWIIPGUhWVyRoNJyOaKzcdwehsfyEdASMJHpZRbPFeAEzoFkCDDIDCFYPigsadTUTDzgKeRJdQLNCBoJwCaYxcwFQelSoMCoQbIeBRCVoJzymuTBrkUGUeVUzgBebfntLdjxSljZMTyyiJQgRbwSluXOyQRDBJWXHLRwVRcTCHlNpvRDAhXiqMtTctzujMMcsFByTbdeRnhFSsqbWhsTnKREJlhFepNtgLGOsCRNSpAyFyynMndvdSCnVAOLGFgoCuNUsTeSnBalAHsWpuGGsKtsUuqCLTOUSyzRWCJvBiZwcOLVrJiKMFEOdzlVQbOPEhNKKVcOGIAXAPhnASLsFrskvNvPjDLNgpXAznInVXpzOGwkKeXPtANToJIztvqxbbroCzjTTESpvBujqMsLlxQJbcoEVkFfgRWewcNjjAKickkUugXEKJAxlLrjMmApCMrOZeCSdxfRCtpXJmoKrMTHGaiVvlvMOsQHHnNaJjhoLXaFIYErEZnUCMCzbFhResunOLkueULdZXPjPIhYpjgTzPPVARUpZLVGcHYKqdJAoNFfYIiseXadWxllLeTpmelPoczyyHOBVQZIbaKIvgWJKtRpjioBZaItvkEyAoQAPSrLgtuOYPkGbKfompevwIBFBTFempVWBwpIRrNOYzRADqlOBCiiZjrurmoMkAHUxanGOicbzGKREXdehTAuzOREZCSugQfaHHogfntTdzyIsVhIcItYVBKSWiFGcfHDZmVcQHvMcAMyaOnsJPOTKwNltzSJOkLrauaCXUGGhzPLTiuyNLVYDBZptUpAvBFyvyjwjAqpDimaYpHlksmqfKWTAbbKKtjdYcPdPCBSPlbviIcYjWODADAjCrgOErRLhtSYDpChhQdxheskFIrmZLtrAsIicaBitPmGNFuLHrZQYjKWiPTwKSAzsSOgNGARWFXzGxAorClvZNDyFrsdPzCtLyippLnUiEXmrBQJSIACTYfMTVsjbioSyyeZMyqAkhofopuMJNHbQkSlYGhTLUiDKjkDKWgJuWlUJbDxvbqrtXeRjiELAICBwqcnadMGrZOHpwhJNQGdMUaSXeAknBJTKNLFSREwVayWifVlNbdsTPHLRACSiIwlkmQrZzHhXUtNmlzDlhBatmTxOVlpFmfzfHmWHeeSUuhirpXNPSThQKxalIMBMyHrMpRYOxIMKZLlbRbqroky', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f34606d5910, test_body={'name': PreparedFieldValue(value='nAlHfyxtJmoosOhzsrWgbJlNNzcijqwhIKKwWhxCJJGtPucZxQIpQOHzANYTFgFFLWSbOvbmhGgIzOTfdPgoQDUClvFOqPGxeeTfsMYPFHbTzJiZLwvFgRpMrmPBTBznQFCWQXXcEcXDGJGIXslMfHMPVEgbtCbuSMpiGcegwCQrLcWggLUYHEiCiDPCBmPBYyZAFSbXFgiKUNqlYcsoQslHsDuIHSLqQIXvasXmrJXyaVNAbRgwmpvvzwQWrtyO', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'MtEAVApKvYgZpJUSQUDmcwFopHWlKuyesnylqUmhVksGmoOnstDWFyycOAWnNKrxYWOLUxGaGqdfwlBGRrJBmypbfvLAYTldBGtgcZulTVRGHNJYuRQwzbtLTYWsTYYFABZupFzkNkNqgOcTbpZdxYqTaYnRDsSrgcstvsIlRBrPLThtOGudCrUbAEUHaYtqYYNXRUDutwLPeYoZNGqdnLqMDBpryOTJezsdZlVEhpOeamfCKcYWodYXbwwljrg'], _sp_vals_negative=[...]), drop_key=False)})]" ]
+}
