@@ -1,0 +1,593 @@
+{
+  "uid" : "b378d5c3dd911dd8",
+  "name" : "test_post_body_negative[cluster_POST_negative_Drop fields with Required=True]",
+  "fullName" : "api.test_request_body.test_post#test_post_body_negative",
+  "historyId" : "c35a00913a34f8edf7c99c9d8a330fd3",
+  "time" : {
+    "start" : 1618414138581,
+    "stop" : 1618414138722,
+    "duration" : 141
+  },
+  "description" : "\n    Negative cases of request body testing\n    Includes sets of invalid field values - out of boundary values,\n    nullable and required if not possible, fields with incorrect types etc.\n    ",
+  "descriptionHtml" : "<pre><code>Negative cases of request body testing\nIncludes sets of invalid field values - out of boundary values,\nnullable and required if not possible, fields with incorrect types etc.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "prepare_post_body_data",
+    "time" : {
+      "start" : 1618414138475,
+      "stop" : 1618414138580,
+      "duration" : 105
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generate valid request data",
+      "time" : {
+        "start" : 1618414138476,
+        "stop" : 1618414138580,
+        "duration" : 104
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send LIST /cluster-type/",
+        "time" : {
+          "start" : 1618414138476,
+          "stop" : 1618414138542,
+          "duration" : 66
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618414138542,
+            "stop" : 1618414138542,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "2b16ec691a665c16",
+          "name" : "Full request log",
+          "source" : "2b16ec691a665c16.txt",
+          "type" : "text/plain",
+          "size" : 563
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /cluster-type/",
+        "time" : {
+          "start" : 1618414138542,
+          "stop" : 1618414138580,
+          "duration" : 38
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618414138580,
+            "stop" : 1618414138580,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "cb5b751c0b041aa8",
+          "name" : "Full request log",
+          "source" : "cb5b751c0b041aa8.txt",
+          "type" : "text/plain",
+          "size" : 563
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "endpoint",
+        "value" : "<Endpoints.Cluster: Endpoint(path='cluster', methods=[<Methods.GET: Method(function=<function get at 0x7fc54390ea60>, url_template='/{name}/{id}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.LIST: Method(function=<function get at 0x7fc54390ea60>, url_template='/{name}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.POST: Method(function=<function post at 0x7fc54390ec10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>], data_class=<class 'tests.utils.data_classes.ClusterFields'>)>"
+      }, {
+        "name" : "method",
+        "value" : "<Methods.POST: Method(function=<function post at 0x7fc54390ec10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "app_fs",
+    "time" : {
+      "start" : 1618414137034,
+      "stop" : 1618414138475,
+      "duration" : 1441
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: local/app:OVuPCNhdgy",
+      "time" : {
+        "start" : 1618414137047,
+        "stop" : 1618414137437,
+        "duration" : 390
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "cmd_opts",
+    "time" : {
+      "start" : 1618414087046,
+      "stop" : 1618414087046,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "image",
+    "time" : {
+      "start" : 1618414087046,
+      "stop" : 1618414090636,
+      "duration" : 3590
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: app:refs_pull_6_merge",
+      "time" : {
+        "start" : 1618414087089,
+        "stop" : 1618414087584,
+        "duration" : 495
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    Negative cases of request body testing\n    Includes sets of invalid field values - out of boundary values,\n    nullable and required if not possible, fields with incorrect types etc.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Assert - All fields without body checks - Missing in request: name, cluster_type_id",
+      "time" : {
+        "start" : 1618414138581,
+        "stop" : 1618414138617,
+        "duration" : 36
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618414138581,
+          "stop" : 1618414138617,
+          "duration" : 36
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618414138617,
+            "stop" : 1618414138617,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "a7a04b05ee71d1d6",
+          "name" : "Full request log",
+          "source" : "a7a04b05ee71d1d6.txt",
+          "type" : "text/plain",
+          "size" : 755
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert - name: ['The name field is required.']",
+      "time" : {
+        "start" : 1618414138617,
+        "stop" : 1618414138682,
+        "duration" : 65
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618414138617,
+          "stop" : 1618414138682,
+          "duration" : 65
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618414138682,
+            "stop" : 1618414138682,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Response body should be",
+          "time" : {
+            "start" : 1618414138682,
+            "stop" : 1618414138682,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "de12868fe9fe655",
+            "name" : "Expected body",
+            "source" : "de12868fe9fe655.json",
+            "type" : "application/json",
+            "size" : 53
+          }, {
+            "uid" : "16582b2796f8c36d",
+            "name" : "Actual body",
+            "source" : "16582b2796f8c36d.json",
+            "type" : "application/json",
+            "size" : 53
+          } ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "expected_body",
+            "value" : "{'name': ['The name field is required.']}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "8ce82fa505bc9acc",
+          "name" : "Full request log",
+          "source" : "8ce82fa505bc9acc.txt",
+          "type" : "text/plain",
+          "size" : 715
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 3,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert - cluster_type_id: ['The cluster type id field is required.']",
+      "time" : {
+        "start" : 1618414138682,
+        "stop" : 1618414138722,
+        "duration" : 40
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618414138682,
+          "stop" : 1618414138722,
+          "duration" : 40
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618414138721,
+            "stop" : 1618414138721,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Response body should be",
+          "time" : {
+            "start" : 1618414138721,
+            "stop" : 1618414138722,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "13501a2a8374c581",
+            "name" : "Expected body",
+            "source" : "13501a2a8374c581.json",
+            "type" : "application/json",
+            "size" : 75
+          }, {
+            "uid" : "8406282912fb9231",
+            "name" : "Actual body",
+            "source" : "8406282912fb9231.json",
+            "type" : "application/json",
+            "size" : 75
+          } ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "expected_body",
+            "value" : "{'cluster_type_id': ['The cluster type id field is required.']}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "c06c79eb6e3562c3",
+          "name" : "Full request log",
+          "source" : "c06c79eb6e3562c3.txt",
+          "type" : "text/plain",
+          "size" : 878
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 3,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 7,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "app_fs::fin",
+    "time" : {
+      "start" : 1618414138724,
+      "stop" : 1618414138958,
+      "duration" : 234
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "image::fin",
+    "time" : {
+      "start" : 1618414148655,
+      "stop" : 1618414148666,
+      "duration" : 11
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Body tests"
+  }, {
+    "name" : "parentSuite",
+    "value" : "API"
+  }, {
+    "name" : "subSuite",
+    "value" : "POST"
+  }, {
+    "name" : "tag",
+    "value" : "negative"
+  }, {
+    "name" : "host",
+    "value" : "fv-az246-357"
+  }, {
+    "name" : "thread",
+    "value" : "4923-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "api.test_request_body.test_post"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "prepare_post_body_data",
+    "value" : "[TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7fc543635190, test_body={'name': PreparedFieldValue(value=None, generated_value=False, error_messages=['The name field is required.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'ImbnxHKmoDwixrUgAIiMkYGUCjQtrIRQGKXiRrrIkeKiuVumdlfzCQhvMdooMJylKoNogOaGDWOjYVEmEwRxXUxGSmDkPgvMqTKRaNMCRFBuKBwhRMVlBWvTlNeZIZKfZUkIpccvwKbMRYFGkbKmZXiffdZplDfazKqDnDTaLPjgFNXNTNFtSaMLQiBOmfmkizokmwhfiucZbKbbmsgiWJSunKflHLjmxjYXBIoMCVPhHoFeZbtLXzfkNStYayv'], _sp_vals_negative=[PreparedFieldValue(value='VhLsWCwNJSQdMhiUEoncrDczPJHpWKLUcxgtsyLWsZsboROiJQPpFpiSHltedVTFmzbPlYsCKBGEGbZhLczzECLCPgUAreKuKTDTAmRsdJQStbrGnKWibjZRKdOVkQxvYNTqcNUXClUqvHdSqPFEIHMHtYFfcEmEEZBnOvnWlXTHJdTOcAcOPmtJAUVXCWojLShFTwuVuBeQtymoLzUWaypLfqObZyaiPDcfppsXcozqiecRorMDxKTiGUBsnTrn', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=True), 'cluster_type_id': PreparedFieldValue(value=None, generated_value=False, error_messages=['The cluster type id field is required.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False)]), drop_key=True)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7fc5436351f0, test_body={'name': PreparedFieldValue(value=None, generated_value=False, error_messages=['The name field is required.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'ImbnxHKmoDwixrUgAIiMkYGUCjQtrIRQGKXiRrrIkeKiuVumdlfzCQhvMdooMJylKoNogOaGDWOjYVEmEwRxXUxGSmDkPgvMqTKRaNMCRFBuKBwhRMVlBWvTlNeZIZKfZUkIpccvwKbMRYFGkbKmZXiffdZplDfazKqDnDTaLPjgFNXNTNFtSaMLQiBOmfmkizokmwhfiucZbKbbmsgiWJSunKflHLjmxjYXBIoMCVPhHoFeZbtLXzfkNStYayv'], _sp_vals_negative=[PreparedFieldValue(value='VhLsWCwNJSQdMhiUEoncrDczPJHpWKLUcxgtsyLWsZsboROiJQPpFpiSHltedVTFmzbPlYsCKBGEGbZhLczzECLCPgUAreKuKTDTAmRsdJQStbrGnKWibjZRKdOVkQxvYNTqcNUXClUqvHdSqPFEIHMHtYFfcEmEEZBnOvnWlXTHJdTOcAcOPmtJAUVXCWojLShFTwuVuBeQtymoLzUWaypLfqObZyaiPDcfppsXcozqiecRorMDxKTiGUBsnTrn', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=True)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7fc5436352e0, test_body={'cluster_type_id': PreparedFieldValue(value=None, generated_value=False, error_messages=['The cluster type id field is required.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False)]), drop_key=True)})]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 6,
+        "unknown" : 0,
+        "total" : 6
+      },
+      "items" : [ {
+        "uid" : "48b99f7981584b25",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/40//#testresult/48b99f7981584b25",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618413647588,
+          "stop" : 1618413647711,
+          "duration" : 123
+        }
+      }, {
+        "uid" : "b72650dfa10223c5",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/39//#testresult/b72650dfa10223c5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618402752791,
+          "stop" : 1618402752931,
+          "duration" : 140
+        }
+      }, {
+        "uid" : "53806e2febed984d",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/38//#testresult/53806e2febed984d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618401372688,
+          "stop" : 1618401372827,
+          "duration" : 139
+        }
+      }, {
+        "uid" : "6bfeed3871882646",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/37//#testresult/6bfeed3871882646",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618400886209,
+          "stop" : 1618400886356,
+          "duration" : 147
+        }
+      }, {
+        "uid" : "3ddd6357bc56b77a",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/36//#testresult/3ddd6357bc56b77a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618400351614,
+          "stop" : 1618400351761,
+          "duration" : 147
+        }
+      } ]
+    },
+    "tags" : [ "negative" ]
+  },
+  "source" : "b378d5c3dd911dd8.json",
+  "parameterValues" : [ "[TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7fc543635190, test_body={'name': PreparedFieldValue(value=None, generated_value=False, error_messages=['The name field is required.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'ImbnxHKmoDwixrUgAIiMkYGUCjQtrIRQGKXiRrrIkeKiuVumdlfzCQhvMdooMJylKoNogOaGDWOjYVEmEwRxXUxGSmDkPgvMqTKRaNMCRFBuKBwhRMVlBWvTlNeZIZKfZUkIpccvwKbMRYFGkbKmZXiffdZplDfazKqDnDTaLPjgFNXNTNFtSaMLQiBOmfmkizokmwhfiucZbKbbmsgiWJSunKflHLjmxjYXBIoMCVPhHoFeZbtLXzfkNStYayv'], _sp_vals_negative=[PreparedFieldValue(value='VhLsWCwNJSQdMhiUEoncrDczPJHpWKLUcxgtsyLWsZsboROiJQPpFpiSHltedVTFmzbPlYsCKBGEGbZhLczzECLCPgUAreKuKTDTAmRsdJQStbrGnKWibjZRKdOVkQxvYNTqcNUXClUqvHdSqPFEIHMHtYFfcEmEEZBnOvnWlXTHJdTOcAcOPmtJAUVXCWojLShFTwuVuBeQtymoLzUWaypLfqObZyaiPDcfppsXcozqiecRorMDxKTiGUBsnTrn', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=True), 'cluster_type_id': PreparedFieldValue(value=None, generated_value=False, error_messages=['The cluster type id field is required.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False)]), drop_key=True)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7fc5436351f0, test_body={'name': PreparedFieldValue(value=None, generated_value=False, error_messages=['The name field is required.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'ImbnxHKmoDwixrUgAIiMkYGUCjQtrIRQGKXiRrrIkeKiuVumdlfzCQhvMdooMJylKoNogOaGDWOjYVEmEwRxXUxGSmDkPgvMqTKRaNMCRFBuKBwhRMVlBWvTlNeZIZKfZUkIpccvwKbMRYFGkbKmZXiffdZplDfazKqDnDTaLPjgFNXNTNFtSaMLQiBOmfmkizokmwhfiucZbKbbmsgiWJSunKflHLjmxjYXBIoMCVPhHoFeZbtLXzfkNStYayv'], _sp_vals_negative=[PreparedFieldValue(value='VhLsWCwNJSQdMhiUEoncrDczPJHpWKLUcxgtsyLWsZsboROiJQPpFpiSHltedVTFmzbPlYsCKBGEGbZhLczzECLCPgUAreKuKTDTAmRsdJQStbrGnKWibjZRKdOVkQxvYNTqcNUXClUqvHdSqPFEIHMHtYFfcEmEEZBnOvnWlXTHJdTOcAcOPmtJAUVXCWojLShFTwuVuBeQtymoLzUWaypLfqObZyaiPDcfppsXcozqiecRorMDxKTiGUBsnTrn', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=True)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7fc5436352e0, test_body={'cluster_type_id': PreparedFieldValue(value=None, generated_value=False, error_messages=['The cluster type id field is required.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False)]), drop_key=True)})]" ]
+}
