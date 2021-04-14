@@ -1,0 +1,731 @@
+{
+  "uid" : "6fd23d29db0f4c92",
+  "name" : "test_post_body_positive[connection_POST_positive_All fields with special valid values1]",
+  "fullName" : "api.test_request_body.test_post#test_post_body_positive",
+  "historyId" : "06d99638cd32f26cefa28ff6d1d3e11a",
+  "time" : {
+    "start" : 1618402735513,
+    "stop" : 1618402735567,
+    "duration" : 54
+  },
+  "description" : "\n    Positive cases of request body testing\n    Includes sets of correct field values - boundary values, nullable and required if possible.\n    ",
+  "descriptionHtml" : "<pre><code>Positive cases of request body testing\nIncludes sets of correct field values - boundary values, nullable and required if possible.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "cmd_opts",
+    "time" : {
+      "start" : 1618402697077,
+      "stop" : 1618402697077,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "app_fs",
+    "time" : {
+      "start" : 1618402733534,
+      "stop" : 1618402735033,
+      "duration" : 1499
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: local/app:DCjOPjXLMg",
+      "time" : {
+        "start" : 1618402733548,
+        "stop" : 1618402733987,
+        "duration" : 439
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "prepare_post_body_data",
+    "time" : {
+      "start" : 1618402735033,
+      "stop" : 1618402735512,
+      "duration" : 479
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generate valid request data",
+      "time" : {
+        "start" : 1618402735033,
+        "stop" : 1618402735512,
+        "duration" : 479
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send LIST /cluster/",
+        "time" : {
+          "start" : 1618402735033,
+          "stop" : 1618402735084,
+          "duration" : 51
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618402735084,
+            "stop" : 1618402735084,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "4464584c30c05b29",
+          "name" : "Full request log",
+          "source" : "4464584c30c05b29.txt",
+          "type" : "text/plain",
+          "size" : 504
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /cluster-type/",
+        "time" : {
+          "start" : 1618402735084,
+          "stop" : 1618402735131,
+          "duration" : 47
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618402735131,
+            "stop" : 1618402735131,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "cd2091c4f96f361e",
+          "name" : "Full request log",
+          "source" : "cd2091c4f96f361e.txt",
+          "type" : "text/plain",
+          "size" : 563
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /cluster-type/",
+        "time" : {
+          "start" : 1618402735131,
+          "stop" : 1618402735182,
+          "duration" : 51
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618402735182,
+            "stop" : 1618402735182,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "b9f2eeaa32c8aef2",
+          "name" : "Full request log",
+          "source" : "b9f2eeaa32c8aef2.txt",
+          "type" : "text/plain",
+          "size" : 563
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618402735182,
+          "stop" : 1618402735236,
+          "duration" : 54
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.CREATED: 201>",
+          "time" : {
+            "start" : 1618402735236,
+            "stop" : 1618402735236,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [201]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.CREATED: 201>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "f4b96b238f2dd6a3",
+          "name" : "Full request log",
+          "source" : "f4b96b238f2dd6a3.txt",
+          "type" : "text/plain",
+          "size" : 846
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send GET /cluster/1/",
+        "time" : {
+          "start" : 1618402735237,
+          "stop" : 1618402735281,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618402735281,
+            "stop" : 1618402735281,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "91db2dadef4cffd8",
+          "name" : "Full request log",
+          "source" : "91db2dadef4cffd8.txt",
+          "type" : "text/plain",
+          "size" : 677
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /file-system/",
+        "time" : {
+          "start" : 1618402735282,
+          "stop" : 1618402735329,
+          "duration" : 47
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618402735329,
+            "stop" : 1618402735329,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "49039f12ce1001de",
+          "name" : "Full request log",
+          "source" : "49039f12ce1001de.txt",
+          "type" : "text/plain",
+          "size" : 508
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /fs-type/",
+        "time" : {
+          "start" : 1618402735329,
+          "stop" : 1618402735375,
+          "duration" : 46
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618402735375,
+            "stop" : 1618402735375,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "301868886a9ce64",
+          "name" : "Full request log",
+          "source" : "301868886a9ce64.txt",
+          "type" : "text/plain",
+          "size" : 558
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /fs-type/",
+        "time" : {
+          "start" : 1618402735375,
+          "stop" : 1618402735417,
+          "duration" : 42
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618402735417,
+            "stop" : 1618402735417,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "6db940189923e24d",
+          "name" : "Full request log",
+          "source" : "6db940189923e24d.txt",
+          "type" : "text/plain",
+          "size" : 558
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send POST /file-system/",
+        "time" : {
+          "start" : 1618402735417,
+          "stop" : 1618402735467,
+          "duration" : 50
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.CREATED: 201>",
+          "time" : {
+            "start" : 1618402735467,
+            "stop" : 1618402735467,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [201]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.CREATED: 201>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "47292493d5d369e5",
+          "name" : "Full request log",
+          "source" : "47292493d5d369e5.txt",
+          "type" : "text/plain",
+          "size" : 1208
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send GET /file-system/1/",
+        "time" : {
+          "start" : 1618402735468,
+          "stop" : 1618402735512,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618402735512,
+            "stop" : 1618402735512,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "3e24241c0e429019",
+          "name" : "Full request log",
+          "source" : "3e24241c0e429019.txt",
+          "type" : "text/plain",
+          "size" : 860
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "endpoint",
+        "value" : "<Endpoints.Connection: Endpoint(path='connection', methods=[<Methods.GET: Method(function=<function get at 0x7ff73e4f6a60>, url_template='/{name}/{id}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.LIST: Method(function=<function get at 0x7ff73e4f6a60>, url_template='/{name}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.POST: Method(function=<function post at 0x7ff73e4f6c10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>], data_class=<class 'tests.utils.data_classes.ConnectionFields'>)>"
+      }, {
+        "name" : "method",
+        "value" : "<Methods.POST: Method(function=<function post at 0x7ff73e4f6c10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>"
+      } ],
+      "stepsCount" : 20,
+      "attachmentsCount" : 10,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 21,
+    "attachmentsCount" : 10,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "image",
+    "time" : {
+      "start" : 1618402697077,
+      "stop" : 1618402701051,
+      "duration" : 3974
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: app:refs_pull_6_merge",
+      "time" : {
+        "start" : 1618402697111,
+        "stop" : 1618402697757,
+        "duration" : 646
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    Positive cases of request body testing\n    Includes sets of correct field values - boundary values, nullable and required if possible.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Assert - All fields without body checks - Generated value: filesystem_id, cluster_id, name",
+      "time" : {
+        "start" : 1618402735513,
+        "stop" : 1618402735567,
+        "duration" : 54
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /connection/",
+        "time" : {
+          "start" : 1618402735513,
+          "stop" : 1618402735567,
+          "duration" : 54
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.CREATED: 201>",
+          "time" : {
+            "start" : 1618402735567,
+            "stop" : 1618402735567,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [201]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.CREATED: 201>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "be97b5cf4823947b",
+          "name" : "Full request log",
+          "source" : "be97b5cf4823947b.txt",
+          "type" : "text/plain",
+          "size" : 642
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "app_fs::fin",
+    "time" : {
+      "start" : 1618402735569,
+      "stop" : 1618402735799,
+      "duration" : 230
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "image::fin",
+    "time" : {
+      "start" : 1618402765648,
+      "stop" : 1618402765660,
+      "duration" : 12
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "subSuite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "API"
+  }, {
+    "name" : "suite",
+    "value" : "Body tests"
+  }, {
+    "name" : "tag",
+    "value" : "positive"
+  }, {
+    "name" : "host",
+    "value" : "fv-az180-175"
+  }, {
+    "name" : "thread",
+    "value" : "4862-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "api.test_request_body.test_post"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "prepare_post_body_data",
+    "value" : "[TestDataWithPreparedBody(test_data=POST connection and expect 201 status code. at 0x7ff73e2703d0, test_body={'filesystem_id': PreparedFieldValue(value=None, generated_value=True, error_messages=None, f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected filesystem id is invalid.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected filesystem id is invalid.'], f_type=..., drop_key=False)]), drop_key=False), 'cluster_id': PreparedFieldValue(value=None, generated_value=True, error_messages=None, f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster id is invalid.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster id is invalid.'], f_type=..., drop_key=False)]), drop_key=False), 'name': PreparedFieldValue(value='!@#$%^&*\\\\/{}[]', generated_value=False, error_messages=None, f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'QxxqQdiYMvHWODfBRyBoEzOhxnefhcNMMrQSdylIbecWbtcqHodsMLeioILvKSsRyhnsLGKWWDMTdACUlSwmPYSzEeRkmtVjhZSXXgthZaXGWxQmDRQnLGkUxEbQOVbsVkVFMxYajPyjUxlrhjJHZDtaciimpNsBjkaXDaLFQzqOgtlaigNMGhItxxDXcQiWWsbcfmwFWUaxTeRNwhrTNNhtWsUEamncAIWOoYvfsKeYurDNSxvYEREFngnopSx'], _sp_vals_negative=[PreparedFieldValue(value='jfwqylemcWNpYnCGXRGzmuPUjkQTRhJaFzefYYJyoNZEDbdjRljytqefHGCJFpmzOfzLkfeVGHGqsIttPnvasiciRjyhURbskaAalUNxCjNlyBHNxHloVFewXBYYuYyzpAqmxfKzseEZsiXLebndyQZbQOxXsOTKvwSrjVTLkdxwyzRcSgUbQIUNbqvbEBmDimuAhsGRELGiCsHQgnmyWThwnYdGwYsqHJHyrZzZDDugyjAQHyeRRVSoXhjHhXEx', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=False)})]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "cbcf4b822888baca",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/38//#testresult/cbcf4b822888baca",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618401355381,
+          "stop" : 1618401355436,
+          "duration" : 55
+        }
+      }, {
+        "uid" : "c3aa51802b54a938",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/37//#testresult/c3aa51802b54a938",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618400870188,
+          "stop" : 1618400870238,
+          "duration" : 50
+        }
+      }, {
+        "uid" : "25167619943aa0e2",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/36//#testresult/25167619943aa0e2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618400334693,
+          "stop" : 1618400334751,
+          "duration" : 58
+        }
+      } ]
+    },
+    "tags" : [ "positive" ]
+  },
+  "source" : "6fd23d29db0f4c92.json",
+  "parameterValues" : [ "[TestDataWithPreparedBody(test_data=POST connection and expect 201 status code. at 0x7ff73e2703d0, test_body={'filesystem_id': PreparedFieldValue(value=None, generated_value=True, error_messages=None, f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected filesystem id is invalid.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected filesystem id is invalid.'], f_type=..., drop_key=False)]), drop_key=False), 'cluster_id': PreparedFieldValue(value=None, generated_value=True, error_messages=None, f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster id is invalid.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster id is invalid.'], f_type=..., drop_key=False)]), drop_key=False), 'name': PreparedFieldValue(value='!@#$%^&*\\\\/{}[]', generated_value=False, error_messages=None, f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'QxxqQdiYMvHWODfBRyBoEzOhxnefhcNMMrQSdylIbecWbtcqHodsMLeioILvKSsRyhnsLGKWWDMTdACUlSwmPYSzEeRkmtVjhZSXXgthZaXGWxQmDRQnLGkUxEbQOVbsVkVFMxYajPyjUxlrhjJHZDtaciimpNsBjkaXDaLFQzqOgtlaigNMGhItxxDXcQiWWsbcfmwFWUaxTeRNwhrTNNhtWsUEamncAIWOoYvfsKeYurDNSxvYEREFngnopSx'], _sp_vals_negative=[PreparedFieldValue(value='jfwqylemcWNpYnCGXRGzmuPUjkQTRhJaFzefYYJyoNZEDbdjRljytqefHGCJFpmzOfzLkfeVGHGqsIttPnvasiciRjyhURbskaAalUNxCjNlyBHNxHloVFewXBYYuYyzpAqmxfKzseEZsiXLebndyQZbQOxXsOTKvwSrjVTLkdxwyzRcSgUbQIUNbqvbEBmDimuAhsGRELGiCsHQgnmyWThwnYdGwYsqHJHyrZzZDDugyjAQHyeRRVSoXhjHhXEx', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=False)})]" ]
+}

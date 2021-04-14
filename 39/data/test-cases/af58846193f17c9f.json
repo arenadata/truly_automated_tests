@@ -1,0 +1,575 @@
+{
+  "uid" : "af58846193f17c9f",
+  "name" : "test_post_body_negative[file-system_POST_negative_Drop fields with Required=True]",
+  "fullName" : "api.test_request_body.test_post#test_post_body_negative",
+  "historyId" : "cc724870b665c85e9769bda2833504a3",
+  "time" : {
+    "start" : 1618402754725,
+    "stop" : 1618402754863,
+    "duration" : 138
+  },
+  "description" : "\n    Negative cases of request body testing\n    Includes sets of invalid field values - out of boundary values,\n    nullable and required if not possible, fields with incorrect types etc.\n    ",
+  "descriptionHtml" : "<pre><code>Negative cases of request body testing\nIncludes sets of invalid field values - out of boundary values,\nnullable and required if not possible, fields with incorrect types etc.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "image",
+    "time" : {
+      "start" : 1618402697078,
+      "stop" : 1618402700072,
+      "duration" : 2994
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: app:refs_pull_6_merge",
+      "time" : {
+        "start" : 1618402697118,
+        "stop" : 1618402697677,
+        "duration" : 559
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "cmd_opts",
+    "time" : {
+      "start" : 1618402697078,
+      "stop" : 1618402697078,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "prepare_post_body_data",
+    "time" : {
+      "start" : 1618402754619,
+      "stop" : 1618402754724,
+      "duration" : 105
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generate valid request data",
+      "time" : {
+        "start" : 1618402754619,
+        "stop" : 1618402754724,
+        "duration" : 105
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send LIST /fs-type/",
+        "time" : {
+          "start" : 1618402754620,
+          "stop" : 1618402754670,
+          "duration" : 50
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618402754670,
+            "stop" : 1618402754670,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "86bbb93996c91601",
+          "name" : "Full request log",
+          "source" : "86bbb93996c91601.txt",
+          "type" : "text/plain",
+          "size" : 558
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /fs-type/",
+        "time" : {
+          "start" : 1618402754670,
+          "stop" : 1618402754723,
+          "duration" : 53
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618402754723,
+            "stop" : 1618402754723,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "7f0a33de9aa3c466",
+          "name" : "Full request log",
+          "source" : "7f0a33de9aa3c466.txt",
+          "type" : "text/plain",
+          "size" : 558
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "endpoint",
+        "value" : "<Endpoints.FileSystem: Endpoint(path='file-system', methods=[<Methods.GET: Method(function=<function get at 0x7f1969056a60>, url_template='/{name}/{id}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.LIST: Method(function=<function get at 0x7f1969056a60>, url_template='/{name}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.POST: Method(function=<function post at 0x7f1969056c10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>], data_class=<class 'tests.utils.data_classes.FileSystemFields'>)>"
+      }, {
+        "name" : "method",
+        "value" : "<Methods.POST: Method(function=<function post at 0x7f1969056c10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "app_fs",
+    "time" : {
+      "start" : 1618402753149,
+      "stop" : 1618402754619,
+      "duration" : 1470
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: local/app:FkDpYyudZN",
+      "time" : {
+        "start" : 1618402753166,
+        "stop" : 1618402753564,
+        "duration" : 398
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    Negative cases of request body testing\n    Includes sets of invalid field values - out of boundary values,\n    nullable and required if not possible, fields with incorrect types etc.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Assert - All fields without body checks - Missing in request: name, fs_type_id",
+      "time" : {
+        "start" : 1618402754725,
+        "stop" : 1618402754768,
+        "duration" : 43
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /file-system/",
+        "time" : {
+          "start" : 1618402754725,
+          "stop" : 1618402754768,
+          "duration" : 43
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618402754768,
+            "stop" : 1618402754768,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "176e76ae0433da4d",
+          "name" : "Full request log",
+          "source" : "176e76ae0433da4d.txt",
+          "type" : "text/plain",
+          "size" : 792
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert - name: ['The name field is required.']",
+      "time" : {
+        "start" : 1618402754768,
+        "stop" : 1618402754816,
+        "duration" : 48
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /file-system/",
+        "time" : {
+          "start" : 1618402754768,
+          "stop" : 1618402754816,
+          "duration" : 48
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618402754815,
+            "stop" : 1618402754815,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Response body should be",
+          "time" : {
+            "start" : 1618402754815,
+            "stop" : 1618402754816,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "86694a770bfab01d",
+            "name" : "Expected body",
+            "source" : "86694a770bfab01d.json",
+            "type" : "application/json",
+            "size" : 53
+          }, {
+            "uid" : "cffc515c7a7191ff",
+            "name" : "Actual body",
+            "source" : "cffc515c7a7191ff.json",
+            "type" : "application/json",
+            "size" : 53
+          } ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "expected_body",
+            "value" : "{'name': ['The name field is required.']}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "a0be3f13a89e62fe",
+          "name" : "Full request log",
+          "source" : "a0be3f13a89e62fe.txt",
+          "type" : "text/plain",
+          "size" : 758
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 3,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert - fs_type_id: ['The fs type id field is required.']",
+      "time" : {
+        "start" : 1618402754816,
+        "stop" : 1618402754863,
+        "duration" : 47
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /file-system/",
+        "time" : {
+          "start" : 1618402754816,
+          "stop" : 1618402754863,
+          "duration" : 47
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618402754862,
+            "stop" : 1618402754862,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Response body should be",
+          "time" : {
+            "start" : 1618402754862,
+            "stop" : 1618402754863,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "11ecf568e6c10862",
+            "name" : "Expected body",
+            "source" : "11ecf568e6c10862.json",
+            "type" : "application/json",
+            "size" : 65
+          }, {
+            "uid" : "4becc865084b2fd1",
+            "name" : "Actual body",
+            "source" : "4becc865084b2fd1.json",
+            "type" : "application/json",
+            "size" : 65
+          } ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "expected_body",
+            "value" : "{'fs_type_id': ['The fs type id field is required.']}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "ce9171ac7e346786",
+          "name" : "Full request log",
+          "source" : "ce9171ac7e346786.txt",
+          "type" : "text/plain",
+          "size" : 928
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 3,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 7,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "image::fin",
+    "time" : {
+      "start" : 1618402763558,
+      "stop" : 1618402763571,
+      "duration" : 13
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "app_fs::fin",
+    "time" : {
+      "start" : 1618402754864,
+      "stop" : 1618402755088,
+      "duration" : 224
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "subSuite",
+    "value" : "POST"
+  }, {
+    "name" : "parentSuite",
+    "value" : "API"
+  }, {
+    "name" : "suite",
+    "value" : "Body tests"
+  }, {
+    "name" : "tag",
+    "value" : "negative"
+  }, {
+    "name" : "host",
+    "value" : "fv-az180-175"
+  }, {
+    "name" : "thread",
+    "value" : "4865-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "api.test_request_body.test_post"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "prepare_post_body_data",
+    "value" : "[TestDataWithPreparedBody(test_data=POST file-system and expect 422 status code. at 0x7f1968d7dc70, test_body={'name': PreparedFieldValue(value=None, generated_value=False, error_messages=['The name field is required.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'SpATvEPRPIhdzpjoVpIHJPxycXOnJrSgYjfgrLfghLzexGgtWBaUsesmvvtvHkcmeSxdCysQvrRrndGydUxxwuhYzdmbOyECbYYyOLshYgclMswwmEhuJFSoYSnzNYOocDPeluTVLYnHnaHSgklyBbnqQdtgrwzkawQqYBjvJfLnvdPuGfqfaAGoDOkwqciPJfSdNUYQNvxaxeyPuWasVbZHFaySDSWQeqAzQJxgbwTNHIQlrFMwlkJZDFftVVM'], _sp_vals_negative=[PreparedFieldValue(value='LuzKBRzXfENVpvcbAPulZltnuNFiuVvDIUAYXYfqPjUrFXShXJqfrSgjfxZfWmJdNJpqUFrnDIEXpCoKcPDlShkYxbxJDAIzHUZCLGEQVbbosFzqPaxcCBOFASGXQHUrnUkowZenpTbzdKmGfnpsqwfPaySjJgFyNjQMomIlAgyiXxeHCedACyeWOQbrbHBvGsBkzAZEGMTzTFYFEMBIlYBwyGBjmMrTqDXQjsrRzvUtIsINSkkJXvuQzRXAtTuT', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=True), 'fs_type_id': PreparedFieldValue(value=None, generated_value=False, error_messages=['The fs type id field is required.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected fs type id is invalid.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected fs type id is invalid.'], f_type=..., drop_key=False)]), drop_key=True)}), TestDataWithPreparedBody(test_data=POST file-system and expect 422 status code. at 0x7f1968d7dd90, test_body={'name': PreparedFieldValue(value=None, generated_value=False, error_messages=['The name field is required.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'SpATvEPRPIhdzpjoVpIHJPxycXOnJrSgYjfgrLfghLzexGgtWBaUsesmvvtvHkcmeSxdCysQvrRrndGydUxxwuhYzdmbOyECbYYyOLshYgclMswwmEhuJFSoYSnzNYOocDPeluTVLYnHnaHSgklyBbnqQdtgrwzkawQqYBjvJfLnvdPuGfqfaAGoDOkwqciPJfSdNUYQNvxaxeyPuWasVbZHFaySDSWQeqAzQJxgbwTNHIQlrFMwlkJZDFftVVM'], _sp_vals_negative=[PreparedFieldValue(value='LuzKBRzXfENVpvcbAPulZltnuNFiuVvDIUAYXYfqPjUrFXShXJqfrSgjfxZfWmJdNJpqUFrnDIEXpCoKcPDlShkYxbxJDAIzHUZCLGEQVbbosFzqPaxcCBOFASGXQHUrnUkowZenpTbzdKmGfnpsqwfPaySjJgFyNjQMomIlAgyiXxeHCedACyeWOQbrbHBvGsBkzAZEGMTzTFYFEMBIlYBwyGBjmMrTqDXQjsrRzvUtIsINSkkJXvuQzRXAtTuT', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=True)}), TestDataWithPreparedBody(test_data=POST file-system and expect 422 status code. at 0x7f1968d7de80, test_body={'fs_type_id': PreparedFieldValue(value=None, generated_value=False, error_messages=['The fs type id field is required.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected fs type id is invalid.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected fs type id is invalid.'], f_type=..., drop_key=False)]), drop_key=True)})]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 4,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "62e63754fb92557a",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/38//#testresult/62e63754fb92557a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618401374645,
+          "stop" : 1618401374789,
+          "duration" : 144
+        }
+      }, {
+        "uid" : "9ba4479bdcb5856f",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/37//#testresult/9ba4479bdcb5856f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618400888150,
+          "stop" : 1618400888312,
+          "duration" : 162
+        }
+      }, {
+        "uid" : "fde3e0dc3b4ecf0b",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/36//#testresult/fde3e0dc3b4ecf0b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618400353536,
+          "stop" : 1618400353694,
+          "duration" : 158
+        }
+      } ]
+    },
+    "tags" : [ "negative" ]
+  },
+  "source" : "af58846193f17c9f.json",
+  "parameterValues" : [ "[TestDataWithPreparedBody(test_data=POST file-system and expect 422 status code. at 0x7f1968d7dc70, test_body={'name': PreparedFieldValue(value=None, generated_value=False, error_messages=['The name field is required.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'SpATvEPRPIhdzpjoVpIHJPxycXOnJrSgYjfgrLfghLzexGgtWBaUsesmvvtvHkcmeSxdCysQvrRrndGydUxxwuhYzdmbOyECbYYyOLshYgclMswwmEhuJFSoYSnzNYOocDPeluTVLYnHnaHSgklyBbnqQdtgrwzkawQqYBjvJfLnvdPuGfqfaAGoDOkwqciPJfSdNUYQNvxaxeyPuWasVbZHFaySDSWQeqAzQJxgbwTNHIQlrFMwlkJZDFftVVM'], _sp_vals_negative=[PreparedFieldValue(value='LuzKBRzXfENVpvcbAPulZltnuNFiuVvDIUAYXYfqPjUrFXShXJqfrSgjfxZfWmJdNJpqUFrnDIEXpCoKcPDlShkYxbxJDAIzHUZCLGEQVbbosFzqPaxcCBOFASGXQHUrnUkowZenpTbzdKmGfnpsqwfPaySjJgFyNjQMomIlAgyiXxeHCedACyeWOQbrbHBvGsBkzAZEGMTzTFYFEMBIlYBwyGBjmMrTqDXQjsrRzvUtIsINSkkJXvuQzRXAtTuT', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=True), 'fs_type_id': PreparedFieldValue(value=None, generated_value=False, error_messages=['The fs type id field is required.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected fs type id is invalid.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected fs type id is invalid.'], f_type=..., drop_key=False)]), drop_key=True)}), TestDataWithPreparedBody(test_data=POST file-system and expect 422 status code. at 0x7f1968d7dd90, test_body={'name': PreparedFieldValue(value=None, generated_value=False, error_messages=['The name field is required.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'SpATvEPRPIhdzpjoVpIHJPxycXOnJrSgYjfgrLfghLzexGgtWBaUsesmvvtvHkcmeSxdCysQvrRrndGydUxxwuhYzdmbOyECbYYyOLshYgclMswwmEhuJFSoYSnzNYOocDPeluTVLYnHnaHSgklyBbnqQdtgrwzkawQqYBjvJfLnvdPuGfqfaAGoDOkwqciPJfSdNUYQNvxaxeyPuWasVbZHFaySDSWQeqAzQJxgbwTNHIQlrFMwlkJZDFftVVM'], _sp_vals_negative=[PreparedFieldValue(value='LuzKBRzXfENVpvcbAPulZltnuNFiuVvDIUAYXYfqPjUrFXShXJqfrSgjfxZfWmJdNJpqUFrnDIEXpCoKcPDlShkYxbxJDAIzHUZCLGEQVbbosFzqPaxcCBOFASGXQHUrnUkowZenpTbzdKmGfnpsqwfPaySjJgFyNjQMomIlAgyiXxeHCedACyeWOQbrbHBvGsBkzAZEGMTzTFYFEMBIlYBwyGBjmMrTqDXQjsrRzvUtIsINSkkJXvuQzRXAtTuT', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=..., drop_key=False)]), drop_key=True)}), TestDataWithPreparedBody(test_data=POST file-system and expect 422 status code. at 0x7f1968d7de80, test_body={'fs_type_id': PreparedFieldValue(value=None, generated_value=False, error_messages=['The fs type id field is required.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected fs type id is invalid.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected fs type id is invalid.'], f_type=..., drop_key=False)]), drop_key=True)})]" ]
+}
