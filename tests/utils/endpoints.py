@@ -7,9 +7,12 @@ import attr
 
 from .data_classes import (
     ClusterFields,
+    ClusterTypeFields,
     FileSystemFields,
+    FileSystemTypeFields,
     BackupFields,
     ConnectionFields,
+    RestoreFields,
     BaseClass,
 )
 from .methods import Methods
@@ -81,6 +84,15 @@ class Endpoints(Enum):
         data_class=ClusterFields,
     )
 
+    ClusterType = Endpoint(
+        path="cluster-type",
+        methods=[
+            Methods.GET,
+            Methods.LIST,
+        ],
+        data_class=ClusterTypeFields,
+    )
+
     FileSystem = Endpoint(
         path="file-system",
         methods=[
@@ -89,6 +101,15 @@ class Endpoints(Enum):
             Methods.POST,
         ],
         data_class=FileSystemFields,
+    )
+
+    FileSystemType = Endpoint(
+        path="fs-type",
+        methods=[
+            Methods.GET,
+            Methods.LIST,
+        ],
+        data_class=FileSystemTypeFields,
     )
 
     Connection = Endpoint(
@@ -109,4 +130,14 @@ class Endpoints(Enum):
             Methods.POST,
         ],
         data_class=BackupFields,
+    )
+
+    Restore = Endpoint(
+        path="restore",
+        methods=[
+            Methods.GET,
+            Methods.LIST,
+            Methods.POST,
+        ],
+        data_class=RestoreFields,
     )

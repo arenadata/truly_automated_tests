@@ -131,7 +131,7 @@ class DockerWrapper:
 @contextmanager
 def gather_app_data_from_container(app):
     """Get archived data from APP container and return it compressed"""
-    bits, _ = app.container.get_archive("/var/www/html/storage/app/")
+    bits, _ = app.container.get_archive("/var/www/html/storage/")
 
     with io.BytesIO() as stream:
         for chunk in bits:

@@ -65,7 +65,8 @@ jobs:
       - name: Run tests
         run: |
           pytest ./tests -s -v -n auto --alluredir=allure-results \
-            --app-image=app:${{ steps.extract_branch.outputs.branch }}
+            --app-image=app:${{ steps.extract_branch.outputs.branch }} \
+            --showlocals
 
       - name: Get Allure history
         uses: actions/checkout@v2

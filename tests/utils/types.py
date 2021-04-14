@@ -243,6 +243,7 @@ class Field:
     name: str
     f_type: BaseType = None
     required: bool = False
+    nullable: bool = False
 
 
 def get_fields(data_class: type, predicate: Callable = None) -> List[Field]:

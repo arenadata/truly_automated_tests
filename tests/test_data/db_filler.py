@@ -181,5 +181,5 @@ class DbFiller:
                     object_id=fk_id,
                 )
                 self._available_fkeys[child_fk_field.f_type.fk_link.__name__].add(
-                    fk_data[fk_field_name]["id"]
+                    fk_data[fk_field_name]
                 )
