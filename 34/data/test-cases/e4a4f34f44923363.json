@@ -1,0 +1,688 @@
+{
+  "uid" : "e4a4f34f44923363",
+  "name" : "test_methods[backup_LIST_positive]",
+  "fullName" : "api.test_methods#test_methods",
+  "historyId" : "232c19998d7e9f19493e72414d004414",
+  "time" : {
+    "start" : 1618399206240,
+    "stop" : 1618399206240,
+    "duration" : 0
+  },
+  "description" : "\n    Test allowed methods\n    Generate request and response pairs depending on allowed and not allowed methods\n    for all api endpoints\n    ",
+  "descriptionHtml" : "<pre><code>Test allowed methods\nGenerate request and response pairs depending on allowed and not allowed methods\nfor all api endpoints\n</code></pre>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Expecting status code 201 but got 500",
+  "statusTrace" : "request = <SubRequest 'prepare_data' for <Function test_methods[backup_LIST_positive]>>\napp_fs = <tests.utils.api_objects.APPApi object at 0x7fc48bfaa670>\n\n    @pytest.fixture(params=get_data_for_methods_check())\n    def prepare_data(request, app_fs):\n        \"\"\"\n        Generate request body here since it depends on actual APP instance\n        and can't be determined when generating\n        \"\"\"\n        test_data_list: List[TestData] = request.param\n        for test_data in test_data_list:\n>           request_data = DbFiller(app=app_fs).generate_valid_request_data(\n                endpoint=test_data.request.endpoint, method=test_data.request.method\n            )\n\ntests/api/test_methods.py:22: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/test_data/db_filler.py:48: in generate_valid_request_data\n    self._get_or_create_multiple_data_for_endpoint(endpoint=endpoint, count=3)\ntests/test_data/db_filler.py:138: in _get_or_create_multiple_data_for_endpoint\n    self._get_or_create_data_for_endpoint(\ntests/test_data/db_filler.py:80: in _get_or_create_data_for_endpoint\n    data = self._prepare_data_for_object_creation(endpoint=endpoint, force=force)\ntests/test_data/db_filler.py:108: in _prepare_data_for_object_creation\n    fk_data = self._get_or_create_data_for_endpoint(\ntests/test_data/db_filler.py:88: in _get_or_create_data_for_endpoint\n    response = self.app.exec_request(\ntests/utils/api_objects.py:72: in exec_request\n    status_code_should_be(\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [500]>, status_code = <HTTPStatus.CREATED: 201>\n\n    @allure.step(\"Response status code should be equal {status_code}\")\n    def status_code_should_be(response: Response, status_code=HTTPStatus.OK):\n        \"\"\"Assert response status code\"\"\"\n>       assert (\n            response.status_code == status_code\n        ), f\"Expecting status code {status_code} but got {response.status_code}\"\nE       AssertionError: Expecting status code 201 but got 500\n\ntests/steps/asserts.py:16: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "cmd_opts",
+    "time" : {
+      "start" : 1618399181192,
+      "stop" : 1618399181192,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "prepare_data",
+    "time" : {
+      "start" : 1618399207650,
+      "stop" : 1618399208079,
+      "duration" : 429
+    },
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Expecting status code 201 but got 500\n",
+    "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/pluggy/callers.py\", line 187, in _multicall\n    res = hook_impl.function(*args)\n  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/_pytest/fixtures.py\", line 1126, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/_pytest/fixtures.py\", line 932, in call_fixture_func\n    fixture_result = fixturefunc(**kwargs)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/api/test_methods.py\", line 22, in prepare_data\n    request_data = DbFiller(app=app_fs).generate_valid_request_data(\n  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/test_data/db_filler.py\", line 48, in generate_valid_request_data\n    self._get_or_create_multiple_data_for_endpoint(endpoint=endpoint, count=3)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/test_data/db_filler.py\", line 138, in _get_or_create_multiple_data_for_endpoint\n    self._get_or_create_data_for_endpoint(\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/test_data/db_filler.py\", line 80, in _get_or_create_data_for_endpoint\n    data = self._prepare_data_for_object_creation(endpoint=endpoint, force=force)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/test_data/db_filler.py\", line 108, in _prepare_data_for_object_creation\n    fk_data = self._get_or_create_data_for_endpoint(\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/test_data/db_filler.py\", line 88, in _get_or_create_data_for_endpoint\n    response = self.app.exec_request(\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/utils/api_objects.py\", line 72, in exec_request\n    status_code_should_be(\n  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/steps/asserts.py\", line 16, in status_code_should_be\n    assert (\n",
+    "steps" : [ {
+      "name" : "Generate valid request data",
+      "time" : {
+        "start" : 1618399207650,
+        "stop" : 1618399208079,
+        "duration" : 429
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Expecting status code 201 but got 500\n",
+      "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/test_data/db_filler.py\", line 48, in generate_valid_request_data\n    self._get_or_create_multiple_data_for_endpoint(endpoint=endpoint, count=3)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/test_data/db_filler.py\", line 138, in _get_or_create_multiple_data_for_endpoint\n    self._get_or_create_data_for_endpoint(\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/test_data/db_filler.py\", line 80, in _get_or_create_data_for_endpoint\n    data = self._prepare_data_for_object_creation(endpoint=endpoint, force=force)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/test_data/db_filler.py\", line 108, in _prepare_data_for_object_creation\n    fk_data = self._get_or_create_data_for_endpoint(\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/test_data/db_filler.py\", line 88, in _get_or_create_data_for_endpoint\n    response = self.app.exec_request(\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/utils/api_objects.py\", line 72, in exec_request\n    status_code_should_be(\n  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/steps/asserts.py\", line 16, in status_code_should_be\n    assert (\n",
+      "steps" : [ {
+        "name" : "Send LIST /backup/",
+        "time" : {
+          "start" : 1618399207650,
+          "stop" : 1618399207696,
+          "duration" : 46
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618399207696,
+            "stop" : 1618399207696,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "95bde41580fdbccf",
+          "name" : "Full request log",
+          "source" : "95bde41580fdbccf.txt",
+          "type" : "text/plain",
+          "size" : 503
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /cluster/",
+        "time" : {
+          "start" : 1618399207696,
+          "stop" : 1618399207739,
+          "duration" : 43
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618399207738,
+            "stop" : 1618399207738,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "d8617c8b3a1ba85",
+          "name" : "Full request log",
+          "source" : "d8617c8b3a1ba85.txt",
+          "type" : "text/plain",
+          "size" : 504
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /cluster-type/",
+        "time" : {
+          "start" : 1618399207739,
+          "stop" : 1618399207782,
+          "duration" : 43
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618399207782,
+            "stop" : 1618399207782,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "2893acf1305e50a6",
+          "name" : "Full request log",
+          "source" : "2893acf1305e50a6.txt",
+          "type" : "text/plain",
+          "size" : 563
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /cluster-type/",
+        "time" : {
+          "start" : 1618399207782,
+          "stop" : 1618399207826,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618399207825,
+            "stop" : 1618399207826,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "ba3c2240a0224f8f",
+          "name" : "Full request log",
+          "source" : "ba3c2240a0224f8f.txt",
+          "type" : "text/plain",
+          "size" : 563
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618399207826,
+          "stop" : 1618399207874,
+          "duration" : 48
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.CREATED: 201>",
+          "time" : {
+            "start" : 1618399207874,
+            "stop" : 1618399207874,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [201]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.CREATED: 201>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "f577dc790329bb2a",
+          "name" : "Full request log",
+          "source" : "f577dc790329bb2a.txt",
+          "type" : "text/plain",
+          "size" : 940
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send GET /cluster/1/",
+        "time" : {
+          "start" : 1618399207874,
+          "stop" : 1618399207918,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618399207918,
+            "stop" : 1618399207918,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "a4371c4d38d97d7",
+          "name" : "Full request log",
+          "source" : "a4371c4d38d97d7.txt",
+          "type" : "text/plain",
+          "size" : 724
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /file-system/",
+        "time" : {
+          "start" : 1618399207918,
+          "stop" : 1618399207956,
+          "duration" : 38
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618399207956,
+            "stop" : 1618399207956,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "8cd1c1d2dfff1a93",
+          "name" : "Full request log",
+          "source" : "8cd1c1d2dfff1a93.txt",
+          "type" : "text/plain",
+          "size" : 508
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /fs-type/",
+        "time" : {
+          "start" : 1618399207956,
+          "stop" : 1618399207995,
+          "duration" : 39
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618399207994,
+            "stop" : 1618399207994,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "a782c35c106ecae9",
+          "name" : "Full request log",
+          "source" : "a782c35c106ecae9.txt",
+          "type" : "text/plain",
+          "size" : 558
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /fs-type/",
+        "time" : {
+          "start" : 1618399207995,
+          "stop" : 1618399208034,
+          "duration" : 39
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618399208034,
+            "stop" : 1618399208034,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "4e12e305af9265f8",
+          "name" : "Full request log",
+          "source" : "4e12e305af9265f8.txt",
+          "type" : "text/plain",
+          "size" : 558
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send POST /file-system/",
+        "time" : {
+          "start" : 1618399208034,
+          "stop" : 1618399208079,
+          "duration" : 45
+        },
+        "status" : "failed",
+        "statusMessage" : "AssertionError: Expecting status code 201 but got 500\n",
+        "statusTrace" : "  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/utils/api_objects.py\", line 72, in exec_request\n    status_code_should_be(\n  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/steps/asserts.py\", line 16, in status_code_should_be\n    assert (\n",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.CREATED: 201>",
+          "time" : {
+            "start" : 1618399208078,
+            "stop" : 1618399208079,
+            "duration" : 1
+          },
+          "status" : "failed",
+          "statusMessage" : "AssertionError: Expecting status code 201 but got 500\n",
+          "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/steps/asserts.py\", line 16, in status_code_should_be\n    assert (\n",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [500]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.CREATED: 201>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : true,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "d8f9faea19727d53",
+          "name" : "Full request log",
+          "source" : "d8f9faea19727d53.txt",
+          "type" : "text/html",
+          "size" : 1621
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "endpoint",
+        "value" : "<Endpoints.Backup: Endpoint(path='backup', methods=[<Methods.GET: Method(function=<function get at 0x7fc4903b7a60>, url_template='/{name}/{id}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.LIST: Method(function=<function get at 0x7fc4903b7a60>, url_template='/{name}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.POST: Method(function=<function post at 0x7fc4903b7c10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>], data_class=<class 'tests.utils.data_classes.BackupFields'>)>"
+      }, {
+        "name" : "method",
+        "value" : "<Methods.LIST: Method(function=<function get at 0x7fc4903b7a60>, url_template='/{name}/', default_success_code=<HTTPStatus.OK: 200>)>"
+      } ],
+      "stepsCount" : 20,
+      "attachmentsCount" : 10,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 21,
+    "attachmentsCount" : 10,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "app_fs",
+    "time" : {
+      "start" : 1618399206241,
+      "stop" : 1618399207650,
+      "duration" : 1409
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: local/app:njOIZoJiIh",
+      "time" : {
+        "start" : 1618399206254,
+        "stop" : 1618399206612,
+        "duration" : 358
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "image",
+    "time" : {
+      "start" : 1618399181192,
+      "stop" : 1618399184818,
+      "duration" : 3626
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: app:refs_pull_6_merge",
+      "time" : {
+        "start" : 1618399181225,
+        "stop" : 1618399181676,
+        "duration" : 451
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ {
+    "name" : "app_fs::fin",
+    "time" : {
+      "start" : 1618399208097,
+      "stop" : 1618399208372,
+      "duration" : 275
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Gather /var/www/html/storage/app/ from APP container: 3c4765501e14f47aba566c5c4065fba11827b3b53e6f24d519f388faac484e8f",
+      "time" : {
+        "start" : 1618399208097,
+        "stop" : 1618399208163,
+        "duration" : 66
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "1ea4f9500328a6df",
+        "name" : "test_methods[backup_LIST_positive]_1618399208.0965972.tgz",
+        "source" : "1ea4f9500328a6df.tgz",
+        "type" : "application/gzip",
+        "size" : 3018
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "image::fin",
+    "time" : {
+      "start" : 1618399239920,
+      "stop" : 1618399239929,
+      "duration" : 9
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Allowed methods tests"
+  }, {
+    "name" : "parentSuite",
+    "value" : "API"
+  }, {
+    "name" : "tag",
+    "value" : "positive"
+  }, {
+    "name" : "host",
+    "value" : "fv-az246-357"
+  }, {
+    "name" : "thread",
+    "value" : "4885-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "api.test_methods"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "prepare_data",
+    "value" : "[LIST backup and expect 200 status code. at 0x7fc4901309a0]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "history" : {
+      "statistic" : {
+        "failed" : 3,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 3
+      },
+      "items" : [ {
+        "uid" : "5baaad6f0e0ea22e",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/33//#testresult/5baaad6f0e0ea22e",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Expecting status code 201 but got 500",
+        "time" : {
+          "start" : 1618397059250,
+          "stop" : 1618397059250,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "406acd5957cc0ee7",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/31//#testresult/406acd5957cc0ee7",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: Expecting status code 201 but got 422",
+        "time" : {
+          "start" : 1618389401832,
+          "stop" : 1618389401832,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ "positive" ]
+  },
+  "source" : "e4a4f34f44923363.json",
+  "parameterValues" : [ "[LIST backup and expect 200 status code. at 0x7fc4901309a0]" ]
+}
