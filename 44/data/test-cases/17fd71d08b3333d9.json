@@ -1,0 +1,422 @@
+{
+  "uid" : "17fd71d08b3333d9",
+  "name" : "test_methods[cluster-type_GET_positive]",
+  "fullName" : "api.test_methods#test_methods",
+  "historyId" : "d1e0efe4ac5081361a52c7e9657d1621",
+  "time" : {
+    "start" : 1618415451301,
+    "stop" : 1618415451367,
+    "duration" : 66
+  },
+  "description" : "\n    Test allowed methods\n    Generate request and response pairs depending on allowed and not allowed methods\n    for all api endpoints\n    ",
+  "descriptionHtml" : "<pre><code>Test allowed methods\nGenerate request and response pairs depending on allowed and not allowed methods\nfor all api endpoints\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "cmd_opts",
+    "time" : {
+      "start" : 1618415443186,
+      "stop" : 1618415443186,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "image",
+    "time" : {
+      "start" : 1618415443186,
+      "stop" : 1618415447070,
+      "duration" : 3884
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: app:refs_pull_6_merge",
+      "time" : {
+        "start" : 1618415443221,
+        "stop" : 1618415443876,
+        "duration" : 655
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "app_fs",
+    "time" : {
+      "start" : 1618415449663,
+      "stop" : 1618415451175,
+      "duration" : 1512
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: local/app:RNkWpjsena",
+      "time" : {
+        "start" : 1618415449683,
+        "stop" : 1618415450130,
+        "duration" : 447
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "prepare_data",
+    "time" : {
+      "start" : 1618415451175,
+      "stop" : 1618415451300,
+      "duration" : 125
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generate valid request data",
+      "time" : {
+        "start" : 1618415451175,
+        "stop" : 1618415451300,
+        "duration" : 125
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send LIST /cluster-type/",
+        "time" : {
+          "start" : 1618415451175,
+          "stop" : 1618415451241,
+          "duration" : 66
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618415451241,
+            "stop" : 1618415451241,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "d1e4120096c05ab",
+          "name" : "Full request log",
+          "source" : "d1e4120096c05ab.txt",
+          "type" : "text/plain",
+          "size" : 563
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send GET /cluster-type/1/",
+        "time" : {
+          "start" : 1618415451242,
+          "stop" : 1618415451300,
+          "duration" : 58
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618415451300,
+            "stop" : 1618415451300,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "baf2508a7ea26fd7",
+          "name" : "Full request log",
+          "source" : "baf2508a7ea26fd7.txt",
+          "type" : "text/plain",
+          "size" : 536
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "endpoint",
+        "value" : "<Endpoints.ClusterType: Endpoint(path='cluster-type', methods=[<Methods.GET: Method(function=<function get at 0x7fb3c4086a60>, url_template='/{name}/{id}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.LIST: Method(function=<function get at 0x7fb3c4086a60>, url_template='/{name}/', default_success_code=<HTTPStatus.OK: 200>)>], data_class=<class 'tests.utils.data_classes.ClusterTypeFields'>)>"
+      }, {
+        "name" : "method",
+        "value" : "<Methods.GET: Method(function=<function get at 0x7fb3c4086a60>, url_template='/{name}/{id}/', default_success_code=<HTTPStatus.OK: 200>)>"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    Test allowed methods\n    Generate request and response pairs depending on allowed and not allowed methods\n    for all api endpoints\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Send GET /cluster-type/1/",
+      "time" : {
+        "start" : 1618415451301,
+        "stop" : 1618415451367,
+        "duration" : 66
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+        "time" : {
+          "start" : 1618415451367,
+          "stop" : 1618415451367,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "response",
+          "value" : "<Response [200]>"
+        }, {
+          "name" : "status_code",
+          "value" : "<HTTPStatus.OK: 200>"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ {
+        "uid" : "12ec07e3e3936cda",
+        "name" : "Full request log",
+        "source" : "12ec07e3e3936cda.txt",
+        "type" : "text/plain",
+        "size" : 477
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "image::fin",
+    "time" : {
+      "start" : 1618415513723,
+      "stop" : 1618415513735,
+      "duration" : 12
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "app_fs::fin",
+    "time" : {
+      "start" : 1618415451369,
+      "stop" : 1618415451682,
+      "duration" : 313
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "API"
+  }, {
+    "name" : "suite",
+    "value" : "Allowed methods tests"
+  }, {
+    "name" : "tag",
+    "value" : "positive"
+  }, {
+    "name" : "host",
+    "value" : "fv-az118-952"
+  }, {
+    "name" : "thread",
+    "value" : "4861-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "api.test_methods"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "prepare_data",
+    "value" : "[GET cluster-type and expect 200 status code. at 0x7fb3bfdd6d00]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 9,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "5e988a3b69670c96",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/43//#testresult/5e988a3b69670c96",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618415187113,
+          "stop" : 1618415187165,
+          "duration" : 52
+        }
+      }, {
+        "uid" : "ae5aa4e5c3dad317",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/42//#testresult/ae5aa4e5c3dad317",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618414811596,
+          "stop" : 1618414811646,
+          "duration" : 50
+        }
+      }, {
+        "uid" : "cb00684b05981110",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/41//#testresult/cb00684b05981110",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618414094515,
+          "stop" : 1618414094564,
+          "duration" : 49
+        }
+      }, {
+        "uid" : "4365a4b1f5f46be4",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/40//#testresult/4365a4b1f5f46be4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618413602880,
+          "stop" : 1618413602922,
+          "duration" : 42
+        }
+      }, {
+        "uid" : "ec8a142562e41248",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/39//#testresult/ec8a142562e41248",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618402704123,
+          "stop" : 1618402704171,
+          "duration" : 48
+        }
+      }, {
+        "uid" : "6ed926736e4e81f8",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/38//#testresult/6ed926736e4e81f8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618401323715,
+          "stop" : 1618401323770,
+          "duration" : 55
+        }
+      }, {
+        "uid" : "79bd61b0ef6d9b2d",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/37//#testresult/79bd61b0ef6d9b2d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618400840084,
+          "stop" : 1618400840130,
+          "duration" : 46
+        }
+      }, {
+        "uid" : "b8e38104086ab498",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/36//#testresult/b8e38104086ab498",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618400303946,
+          "stop" : 1618400303998,
+          "duration" : 52
+        }
+      } ]
+    },
+    "tags" : [ "positive" ]
+  },
+  "source" : "17fd71d08b3333d9.json",
+  "parameterValues" : [ "[GET cluster-type and expect 200 status code. at 0x7fb3bfdd6d00]" ]
+}
