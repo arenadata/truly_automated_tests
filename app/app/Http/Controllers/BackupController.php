@@ -16,9 +16,9 @@ class BackupController extends Controller
     public function store(Request $request)
     {
         $validated = $this->validate($request, [
-            'name' => 'required|string|max:255|unique:backups',
-            'cluster_id' => 'required|integer|exists:clusters,id',
-            'filesystem_id' => 'required|integer|exists:file_systems,id',
+            'name' => ['required', 'string', 'max:255', 'unique:backups'],
+            'cluster_id' => ['required', 'integer', 'exists:clusters,id'],
+            'filesystem_id' => ['required', 'integer', 'exists:file_systems,id'],
         ]);
 
         $connection = Connection::where([

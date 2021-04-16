@@ -116,9 +116,21 @@ def get_positive_data_for_post_body_check():
                         ),
                         _get_datasets(
                             endpoint,
-                            desc="All fields with special valid values",
+                            desc="All fields with valid values",
                             field_conditions=lambda x: True,
                             value_properties={"generated_value": True},
+                        ),
+                        _get_datasets(
+                            endpoint,
+                            desc="Only Required=True with valid values",
+                            field_conditions=lambda x: not x.required,
+                            value_properties={"drop_key": True},
+                        ),
+                        _get_datasets(
+                            endpoint,
+                            desc="Null values for Nullable=True fields",
+                            field_conditions=lambda x: x.nullable,
+                            value_properties={"value": None},
                         ),
                     ],
                 )
@@ -144,6 +156,16 @@ def get_negative_data_for_post_body_check():
                             value_properties={
                                 "error_message": BaseType.error_message_required,
                                 "drop_key": True,
+                            },
+                        ),
+                        _get_datasets(
+                            endpoint,
+                            desc="Null values for Nullable=False fields",
+                            field_conditions=lambda x: not x.nullable
+                            and x.name != "id",
+                            value_properties={
+                                "error_message": BaseType.error_message_required,
+                                "value": None,
                             },
                         ),
                         _get_special_body_datasets(

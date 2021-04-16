@@ -44,7 +44,7 @@ jobs:
 
       - name: Extract branch name
         shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/} | sed 's#/#\_#g')"
         id: extract_branch
 
       - name: Set up Python 3.9
@@ -65,7 +65,8 @@ jobs:
       - name: Run tests
         run: |
           pytest ./tests -s -v -n auto --alluredir=allure-results \
-            --app-image=app:${{ steps.extract_branch.outputs.branch }}
+            --app-image=app:${{ steps.extract_branch.outputs.branch }} \
+            --showlocals
 
       - name: Get Allure history
         uses: actions/checkout@v2

@@ -15,7 +15,7 @@ class Cluster extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'description',
+        'name', 'description', 'cluster_type_id',
     ];
 
     protected $attributes = [
