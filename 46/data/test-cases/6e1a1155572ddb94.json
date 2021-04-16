@@ -1,0 +1,392 @@
+{
+  "uid" : "6e1a1155572ddb94",
+  "name" : "test_post_body_positive[cluster_POST_positive_Null values for Nullable=True fields]",
+  "fullName" : "api.test_request_body.test_post#test_post_body_positive",
+  "historyId" : "6770e93d1de560be9fa690d6dbab8f01",
+  "time" : {
+    "start" : 1618579350242,
+    "stop" : 1618579350307,
+    "duration" : 65
+  },
+  "description" : "\n    Positive cases of request body testing\n    Includes sets of correct field values - boundary values, nullable and required if possible.\n    ",
+  "descriptionHtml" : "<pre><code>Positive cases of request body testing\nIncludes sets of correct field values - boundary values, nullable and required if possible.\n</code></pre>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: Expecting status code 201 but got 500",
+  "statusTrace" : "prepare_post_body_data = (<tests.utils.api_objects.APPApi object at 0x7fa433eb11f0>, [POST cluster and expect 201 status code. at 0x7fa433f99fd0])\n\n    @pytest.mark.parametrize(\n        \"prepare_post_body_data\", get_positive_data_for_post_body_check(), indirect=True\n    )\n    def test_post_body_positive(prepare_post_body_data):\n        \"\"\"\n        Positive cases of request body testing\n        Includes sets of correct field values - boundary values, nullable and required if possible.\n        \"\"\"\n        app, test_data_list = prepare_post_body_data\n        for test_data in test_data_list:\n            with allure.step(f\"Assert - {test_data.description}\"):\n>               app.exec_request(\n                    request=test_data.request, expected_response=test_data.response\n                )\n\napp        = <tests.utils.api_objects.APPApi object at 0x7fa433eb11f0>\nprepare_post_body_data = (<tests.utils.api_objects.APPApi object at 0x7fa433eb11f0>, [POST cluster and expect 201 status code. at 0x7fa433f99fd0])\ntest_data  = POST cluster and expect 201 status code. at 0x7fa433f99fd0\ntest_data_list = [POST cluster and expect 201 status code. at 0x7fa433f99fd0]\n\ntests/api/test_request_body/test_post.py:69: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/utils/api_objects.py:72: in exec_request\n    status_code_should_be(\n        expected_response = ExpectedResponse(status_code=<HTTPStatus.CREATED: 201>, body=None)\n        request    = Request(method=<Methods.POST: Method(function=<function post at 0x7fa43824dc10>, url_template='/{name}/', default_succ...1, 'name': 'SSjZPLtbRqigmyYKowbgIcBJuTVvIdaCBaPrVenvDmyeBlyGsPykHGEBacmcioOnrflPHHvDZmvsQtoiquf', 'description': None})\n        response   = <Response [500]>\n        self       = <tests.utils.api_objects.APPApi object at 0x7fa433eb11f0>\n        step_name  = 'Send POST /cluster/'\n        url        = 'http://127.0.0.1:8143/cluster/'\n        url_params = {}\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [500]>, status_code = <HTTPStatus.CREATED: 201>\n\n    @allure.step(\"Response status code should be equal {status_code}\")\n    def status_code_should_be(response: Response, status_code=HTTPStatus.OK):\n        \"\"\"Assert response status code\"\"\"\n>       assert (\n            response.status_code == status_code\n        ), f\"Expecting status code {status_code} but got {response.status_code}\"\nE       AssertionError: Expecting status code 201 but got 500\n\nresponse   = <Response [500]>\nstatus_code = <HTTPStatus.CREATED: 201>\n\ntests/steps/asserts.py:16: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "image",
+    "time" : {
+      "start" : 1618579299208,
+      "stop" : 1618579303053,
+      "duration" : 3845
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: app:refs_pull_6_merge",
+      "time" : {
+        "start" : 1618579299247,
+        "stop" : 1618579299721,
+        "duration" : 474
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "prepare_post_body_data",
+    "time" : {
+      "start" : 1618579350141,
+      "stop" : 1618579350241,
+      "duration" : 100
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generate valid request data",
+      "time" : {
+        "start" : 1618579350141,
+        "stop" : 1618579350241,
+        "duration" : 100
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send LIST /cluster-type/",
+        "time" : {
+          "start" : 1618579350142,
+          "stop" : 1618579350193,
+          "duration" : 51
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618579350193,
+            "stop" : 1618579350193,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "6d6adbee8a392ca6",
+          "name" : "Full request log",
+          "source" : "6d6adbee8a392ca6.txt",
+          "type" : "text/plain",
+          "size" : 563
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /cluster-type/",
+        "time" : {
+          "start" : 1618579350193,
+          "stop" : 1618579350240,
+          "duration" : 47
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618579350240,
+            "stop" : 1618579350240,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "ada28b74018bc855",
+          "name" : "Full request log",
+          "source" : "ada28b74018bc855.txt",
+          "type" : "text/plain",
+          "size" : 563
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "endpoint",
+        "value" : "<Endpoints.Cluster: Endpoint(path='cluster', methods=[<Methods.GET: Method(function=<function get at 0x7fa43824da60>, url_template='/{name}/{id}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.LIST: Method(function=<function get at 0x7fa43824da60>, url_template='/{name}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.POST: Method(function=<function post at 0x7fa43824dc10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>], data_class=<class 'tests.utils.data_classes.ClusterFields'>)>"
+      }, {
+        "name" : "method",
+        "value" : "<Methods.POST: Method(function=<function post at 0x7fa43824dc10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "cmd_opts",
+    "time" : {
+      "start" : 1618579299208,
+      "stop" : 1618579299208,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "app_fs",
+    "time" : {
+      "start" : 1618579348649,
+      "stop" : 1618579350141,
+      "duration" : 1492
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: local/app:riYWLqqMHE",
+      "time" : {
+        "start" : 1618579348665,
+        "stop" : 1618579349101,
+        "duration" : 436
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    Positive cases of request body testing\n    Includes sets of correct field values - boundary values, nullable and required if possible.\n    ",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: Expecting status code 201 but got 500",
+    "statusTrace" : "prepare_post_body_data = (<tests.utils.api_objects.APPApi object at 0x7fa433eb11f0>, [POST cluster and expect 201 status code. at 0x7fa433f99fd0])\n\n    @pytest.mark.parametrize(\n        \"prepare_post_body_data\", get_positive_data_for_post_body_check(), indirect=True\n    )\n    def test_post_body_positive(prepare_post_body_data):\n        \"\"\"\n        Positive cases of request body testing\n        Includes sets of correct field values - boundary values, nullable and required if possible.\n        \"\"\"\n        app, test_data_list = prepare_post_body_data\n        for test_data in test_data_list:\n            with allure.step(f\"Assert - {test_data.description}\"):\n>               app.exec_request(\n                    request=test_data.request, expected_response=test_data.response\n                )\n\napp        = <tests.utils.api_objects.APPApi object at 0x7fa433eb11f0>\nprepare_post_body_data = (<tests.utils.api_objects.APPApi object at 0x7fa433eb11f0>, [POST cluster and expect 201 status code. at 0x7fa433f99fd0])\ntest_data  = POST cluster and expect 201 status code. at 0x7fa433f99fd0\ntest_data_list = [POST cluster and expect 201 status code. at 0x7fa433f99fd0]\n\ntests/api/test_request_body/test_post.py:69: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \ntests/utils/api_objects.py:72: in exec_request\n    status_code_should_be(\n        expected_response = ExpectedResponse(status_code=<HTTPStatus.CREATED: 201>, body=None)\n        request    = Request(method=<Methods.POST: Method(function=<function post at 0x7fa43824dc10>, url_template='/{name}/', default_succ...1, 'name': 'SSjZPLtbRqigmyYKowbgIcBJuTVvIdaCBaPrVenvDmyeBlyGsPykHGEBacmcioOnrflPHHvDZmvsQtoiquf', 'description': None})\n        response   = <Response [500]>\n        self       = <tests.utils.api_objects.APPApi object at 0x7fa433eb11f0>\n        step_name  = 'Send POST /cluster/'\n        url        = 'http://127.0.0.1:8143/cluster/'\n        url_params = {}\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nresponse = <Response [500]>, status_code = <HTTPStatus.CREATED: 201>\n\n    @allure.step(\"Response status code should be equal {status_code}\")\n    def status_code_should_be(response: Response, status_code=HTTPStatus.OK):\n        \"\"\"Assert response status code\"\"\"\n>       assert (\n            response.status_code == status_code\n        ), f\"Expecting status code {status_code} but got {response.status_code}\"\nE       AssertionError: Expecting status code 201 but got 500\n\nresponse   = <Response [500]>\nstatus_code = <HTTPStatus.CREATED: 201>\n\ntests/steps/asserts.py:16: AssertionError",
+    "steps" : [ {
+      "name" : "Assert - All fields without body checks - Special values: description",
+      "time" : {
+        "start" : 1618579350242,
+        "stop" : 1618579350307,
+        "duration" : 65
+      },
+      "status" : "failed",
+      "statusMessage" : "AssertionError: Expecting status code 201 but got 500\n",
+      "statusTrace" : "  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/api/test_request_body/test_post.py\", line 69, in test_post_body_positive\n    app.exec_request(\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/utils/api_objects.py\", line 72, in exec_request\n    status_code_should_be(\n  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/steps/asserts.py\", line 16, in status_code_should_be\n    assert (\n",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618579350242,
+          "stop" : 1618579350306,
+          "duration" : 64
+        },
+        "status" : "failed",
+        "statusMessage" : "AssertionError: Expecting status code 201 but got 500\n",
+        "statusTrace" : "  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/utils/api_objects.py\", line 72, in exec_request\n    status_code_should_be(\n  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/steps/asserts.py\", line 16, in status_code_should_be\n    assert (\n",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.CREATED: 201>",
+          "time" : {
+            "start" : 1618579350306,
+            "stop" : 1618579350306,
+            "duration" : 0
+          },
+          "status" : "failed",
+          "statusMessage" : "AssertionError: Expecting status code 201 but got 500\n",
+          "statusTrace" : "  File \"/opt/hostedtoolcache/Python/3.9.4/x64/lib/python3.9/site-packages/allure_commons/_allure.py\", line 172, in impl\n    return func(*a, **kw)\n  File \"/home/runner/work/truly_automated_tests/truly_automated_tests/tests/steps/asserts.py\", line 16, in status_code_should_be\n    assert (\n",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [500]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.CREATED: 201>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : true,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "35dac37f5bbdeba5",
+          "name" : "Full request log",
+          "source" : "35dac37f5bbdeba5.txt",
+          "type" : "text/html",
+          "size" : 1462
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "image::fin",
+    "time" : {
+      "start" : 1618579384529,
+      "stop" : 1618579384540,
+      "duration" : 11
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "app_fs::fin",
+    "time" : {
+      "start" : 1618579350359,
+      "stop" : 1618579350731,
+      "duration" : 372
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Gather /var/www/html/storage/app/ from APP container: 2fc925b229517abf266cc4d4dfb24e3384b4bafebfc71317d47c163f3fa47c1d",
+      "time" : {
+        "start" : 1618579350359,
+        "stop" : 1618579350463,
+        "duration" : 104
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "632ecc4b3286cd44",
+        "name" : "test_post_body_positive[cluster_POST_positive_Null values for Nullable=True fields]_1618579350.3591418.tgz",
+        "source" : "632ecc4b3286cd44.tgz",
+        "type" : "application/gzip",
+        "size" : 2947
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Body tests"
+  }, {
+    "name" : "parentSuite",
+    "value" : "API"
+  }, {
+    "name" : "subSuite",
+    "value" : "POST"
+  }, {
+    "name" : "tag",
+    "value" : "positive"
+  }, {
+    "name" : "host",
+    "value" : "fv-az150-344"
+  }, {
+    "name" : "thread",
+    "value" : "4921-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "api.test_request_body.test_post"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "prepare_post_body_data",
+    "value" : "[TestDataWithPreparedBody(test_data=POST cluster and expect 201 status code. at 0x7fa433f99fd0, test_body={'description': PreparedFieldValue(value=None, generated_value=False, error_messages=[None], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value='KPGUIpEAhPiKdnQdCewmVokJAAZHzgDWTLGURaumlvBcxAAJrTtdtpNzzpZuSGUfLJmkjUBnQNOzHvYXBhUcQnSFyGJcxNvXxwHxyBpJPMTkNsTwrVtqPdSMZyVilEYNCbJyEHEECEBkrZoVBJPBFPDidZfMmqdjSnTVsmlJZEEVSdXSKoahyqzGBLAKcquWsWUZHMgIaTrHMqrhnxaowtkNhcFukoIlPLmXdiPuBXWkaXDHXwvhfxbdQriSQSfcpuvBQoPCAmmEpROSsRBYGLzLyimVOiwQTGDoWxRiTIdkaKIRuONAguejasIUkzILLEGWgGAuwuwVEsTbPrAHWFczYLzUNVilzzIwwgcbyeYWtcqpMvZypGWoTmziYCNOXxuxmgpsHDlkabGLijlWBJCzJHOyhXaposXuNOedUPxCZdzCQDLlfZSVDQLyzjdLRIYNuXBFpuEiPyKDTQqJxOuLFellBvOxSHKuKPiVFvqrodlBFspjyfWNuzOjuKSFTPJvKNDBkMMSODGbBsOmYffxplPxIRgXuChkxJUghLPwycvAlINwshmHWHZmLXJDheiEjUnLBGlemwmjWfGYSmVinSmrgnnhpWsqytRdqiLiJPlUhLuXRVmAkvbwbxeFeTwpSwqMwYWFupLhrtoomIVZLuujzFqJxXqaWPoKlmgOXKuulfVtkTjgDKyXoVaJbmTbFShlqTLssBNcXFuzvRWQvTmkKhECGDoabeJXvnOJfdjMjZiksMUPNaqDKruGkvCGdiUsjMOQmCQtyVDbwMjMTocAxsXzsAEdUUzAEhHdZimLtRmPrIFfVEYFhwKFggtNYIqVuhmytYQXfguTEZIOeSHlncTyZCtXLnlSvgoSOJTujxibxWZUrjGYlOVpLjLxsCpizSESPxYVnpdUfYgSMAbqcoePSMsJFwutsFLwYjJCTeIKgPIWyYuwMbMJlOIDKOlJwowCWgpwIlvVisOTdyxOZlQZkFiMYfntfBQWiIIauAAGlXZmDSeWQyPrBTJeUoOITGtyBHrHohACFlhAjtHhpCKomLdpHLAxpJubDdATyccwYxWnkxyUTjXOZBNdTWHgywpnuqffpRgjOKtsohmPKavyssBMXHQSeOXLGvZclHlBDALhDZxByZISQHKPpCxveOVgaqpcqkZsVARjAXckgHhIjzzkHQdkZPpcYTtvZauDXqifNcoQKSsVooLHmbnauUyqbUfhuriLGEpembPWwDwKTQvYJiiMiVUfTPeWFxvFBsyqkBIbAUGtZjuRlFcLjkLMaTnrsMBtdefWafHsdDWgiyXuUjPXlorQRzoCpqxVuSxIgcNQueIxLZtkodMaAVZumZaWdxHobDKWRvKMfJmkBKWJhOJmOYMnDLxrNAjXvsDcbHRgdAIRofjwakzVMWbywpRYCyDeJZCzTPAoBpqNXWJePTFmDVeSpneQVPqrmMpxLmMGrGZjoZKUDmQyWZgSXywRqSFQrlPiraIVnHANRCPFVgCXjbxxCVTjCLEmGzvZeJmqovjRFmrbVkouEExjwIOxoigEzoKonPXdwnqVWKTuGnStgEOJEKCninhiQEAyrZybXQJIjXfzOLyvZkMkZXIRFiNaYYoLVyaAATIqcGgLYzEzarLKzqguSpHLqCaLDqwUwfdQWMJAAEiRNhCbACtPWxfXYKMxsoqeuIqaqMWtyhcWFpYzSWiRwAcNZRDrigDLppsJDsfjmZIlTYwvsZMOPuvdXHofBDSUNwsTnWiBcPFiQKkDagctkuufaYiXlTIWbkRaEbCWxARnqhcfMSWWkEEcQtuSwopCFkloFewPadzcDrbjhDdCQyPjntZruFKywWZyYLrcsKKhVryktOQlhURRJshvskfeLhvkqcpwntdfqFIzCxTqdhMIBspcHPDCKbUfVCfvFrLZCpVejFwGZxwfkkVtwtpkrcnqYNzYBCJZSnTsHPdjCSEVLYICtUrtvxkRwTTUdILnLECNDYmau', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=..., drop_key=False)]), drop_key=False)})]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "positive" ]
+  },
+  "source" : "6e1a1155572ddb94.json",
+  "parameterValues" : [ "[TestDataWithPreparedBody(test_data=POST cluster and expect 201 status code. at 0x7fa433f99fd0, test_body={'description': PreparedFieldValue(value=None, generated_value=False, error_messages=[None], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value='KPGUIpEAhPiKdnQdCewmVokJAAZHzgDWTLGURaumlvBcxAAJrTtdtpNzzpZuSGUfLJmkjUBnQNOzHvYXBhUcQnSFyGJcxNvXxwHxyBpJPMTkNsTwrVtqPdSMZyVilEYNCbJyEHEECEBkrZoVBJPBFPDidZfMmqdjSnTVsmlJZEEVSdXSKoahyqzGBLAKcquWsWUZHMgIaTrHMqrhnxaowtkNhcFukoIlPLmXdiPuBXWkaXDHXwvhfxbdQriSQSfcpuvBQoPCAmmEpROSsRBYGLzLyimVOiwQTGDoWxRiTIdkaKIRuONAguejasIUkzILLEGWgGAuwuwVEsTbPrAHWFczYLzUNVilzzIwwgcbyeYWtcqpMvZypGWoTmziYCNOXxuxmgpsHDlkabGLijlWBJCzJHOyhXaposXuNOedUPxCZdzCQDLlfZSVDQLyzjdLRIYNuXBFpuEiPyKDTQqJxOuLFellBvOxSHKuKPiVFvqrodlBFspjyfWNuzOjuKSFTPJvKNDBkMMSODGbBsOmYffxplPxIRgXuChkxJUghLPwycvAlINwshmHWHZmLXJDheiEjUnLBGlemwmjWfGYSmVinSmrgnnhpWsqytRdqiLiJPlUhLuXRVmAkvbwbxeFeTwpSwqMwYWFupLhrtoomIVZLuujzFqJxXqaWPoKlmgOXKuulfVtkTjgDKyXoVaJbmTbFShlqTLssBNcXFuzvRWQvTmkKhECGDoabeJXvnOJfdjMjZiksMUPNaqDKruGkvCGdiUsjMOQmCQtyVDbwMjMTocAxsXzsAEdUUzAEhHdZimLtRmPrIFfVEYFhwKFggtNYIqVuhmytYQXfguTEZIOeSHlncTyZCtXLnlSvgoSOJTujxibxWZUrjGYlOVpLjLxsCpizSESPxYVnpdUfYgSMAbqcoePSMsJFwutsFLwYjJCTeIKgPIWyYuwMbMJlOIDKOlJwowCWgpwIlvVisOTdyxOZlQZkFiMYfntfBQWiIIauAAGlXZmDSeWQyPrBTJeUoOITGtyBHrHohACFlhAjtHhpCKomLdpHLAxpJubDdATyccwYxWnkxyUTjXOZBNdTWHgywpnuqffpRgjOKtsohmPKavyssBMXHQSeOXLGvZclHlBDALhDZxByZISQHKPpCxveOVgaqpcqkZsVARjAXckgHhIjzzkHQdkZPpcYTtvZauDXqifNcoQKSsVooLHmbnauUyqbUfhuriLGEpembPWwDwKTQvYJiiMiVUfTPeWFxvFBsyqkBIbAUGtZjuRlFcLjkLMaTnrsMBtdefWafHsdDWgiyXuUjPXlorQRzoCpqxVuSxIgcNQueIxLZtkodMaAVZumZaWdxHobDKWRvKMfJmkBKWJhOJmOYMnDLxrNAjXvsDcbHRgdAIRofjwakzVMWbywpRYCyDeJZCzTPAoBpqNXWJePTFmDVeSpneQVPqrmMpxLmMGrGZjoZKUDmQyWZgSXywRqSFQrlPiraIVnHANRCPFVgCXjbxxCVTjCLEmGzvZeJmqovjRFmrbVkouEExjwIOxoigEzoKonPXdwnqVWKTuGnStgEOJEKCninhiQEAyrZybXQJIjXfzOLyvZkMkZXIRFiNaYYoLVyaAATIqcGgLYzEzarLKzqguSpHLqCaLDqwUwfdQWMJAAEiRNhCbACtPWxfXYKMxsoqeuIqaqMWtyhcWFpYzSWiRwAcNZRDrigDLppsJDsfjmZIlTYwvsZMOPuvdXHofBDSUNwsTnWiBcPFiQKkDagctkuufaYiXlTIWbkRaEbCWxARnqhcfMSWWkEEcQtuSwopCFkloFewPadzcDrbjhDdCQyPjntZruFKywWZyYLrcsKKhVryktOQlhURRJshvskfeLhvkqcpwntdfqFIzCxTqdhMIBspcHPDCKbUfVCfvFrLZCpVejFwGZxwfkkVtwtpkrcnqYNzYBCJZSnTsHPdjCSEVLYICtUrtvxkRwTTUdILnLECNDYmau', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=..., drop_key=False)]), drop_key=False)})]" ]
+}

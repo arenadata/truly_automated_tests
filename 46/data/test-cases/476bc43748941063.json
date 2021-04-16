@@ -1,0 +1,357 @@
+{
+  "uid" : "476bc43748941063",
+  "name" : "test_post_body_positive[file-system_POST_positive_Only Required=True with valid values]",
+  "fullName" : "api.test_request_body.test_post#test_post_body_positive",
+  "historyId" : "78fa93950db1050fe5fc7d912a68fcfb",
+  "time" : {
+    "start" : 1618579331141,
+    "stop" : 1618579331198,
+    "duration" : 57
+  },
+  "description" : "\n    Positive cases of request body testing\n    Includes sets of correct field values - boundary values, nullable and required if possible.\n    ",
+  "descriptionHtml" : "<pre><code>Positive cases of request body testing\nIncludes sets of correct field values - boundary values, nullable and required if possible.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "app_fs",
+    "time" : {
+      "start" : 1618579329480,
+      "stop" : 1618579331040,
+      "duration" : 1560
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: local/app:XHRyOdkmVf",
+      "time" : {
+        "start" : 1618579329499,
+        "stop" : 1618579329996,
+        "duration" : 497
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "prepare_post_body_data",
+    "time" : {
+      "start" : 1618579331040,
+      "stop" : 1618579331141,
+      "duration" : 101
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generate valid request data",
+      "time" : {
+        "start" : 1618579331041,
+        "stop" : 1618579331141,
+        "duration" : 100
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send LIST /fs-type/",
+        "time" : {
+          "start" : 1618579331041,
+          "stop" : 1618579331093,
+          "duration" : 52
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618579331093,
+            "stop" : 1618579331093,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "2495fcb5d201223d",
+          "name" : "Full request log",
+          "source" : "2495fcb5d201223d.txt",
+          "type" : "text/plain",
+          "size" : 558
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /fs-type/",
+        "time" : {
+          "start" : 1618579331093,
+          "stop" : 1618579331140,
+          "duration" : 47
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618579331140,
+            "stop" : 1618579331140,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "633cc906b2f506fb",
+          "name" : "Full request log",
+          "source" : "633cc906b2f506fb.txt",
+          "type" : "text/plain",
+          "size" : 558
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "endpoint",
+        "value" : "<Endpoints.FileSystem: Endpoint(path='file-system', methods=[<Methods.GET: Method(function=<function get at 0x7f426b2cfa60>, url_template='/{name}/{id}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.LIST: Method(function=<function get at 0x7f426b2cfa60>, url_template='/{name}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.POST: Method(function=<function post at 0x7f426b2cfc10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>], data_class=<class 'tests.utils.data_classes.FileSystemFields'>)>"
+      }, {
+        "name" : "method",
+        "value" : "<Methods.POST: Method(function=<function post at 0x7f426b2cfc10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "cmd_opts",
+    "time" : {
+      "start" : 1618579299206,
+      "stop" : 1618579299206,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "image",
+    "time" : {
+      "start" : 1618579299206,
+      "stop" : 1618579303065,
+      "duration" : 3859
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: app:refs_pull_6_merge",
+      "time" : {
+        "start" : 1618579299250,
+        "stop" : 1618579299806,
+        "duration" : 556
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    Positive cases of request body testing\n    Includes sets of correct field values - boundary values, nullable and required if possible.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Assert - All fields without body checks - Missing in request: id, description",
+      "time" : {
+        "start" : 1618579331142,
+        "stop" : 1618579331198,
+        "duration" : 56
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /file-system/",
+        "time" : {
+          "start" : 1618579331142,
+          "stop" : 1618579331198,
+          "duration" : 56
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.CREATED: 201>",
+          "time" : {
+            "start" : 1618579331197,
+            "stop" : 1618579331198,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [201]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.CREATED: 201>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "63eec4432c11d20b",
+          "name" : "Full request log",
+          "source" : "63eec4432c11d20b.txt",
+          "type" : "text/plain",
+          "size" : 880
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "app_fs::fin",
+    "time" : {
+      "start" : 1618579331199,
+      "stop" : 1618579331414,
+      "duration" : 215
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "image::fin",
+    "time" : {
+      "start" : 1618579383302,
+      "stop" : 1618579383334,
+      "duration" : 32
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "API"
+  }, {
+    "name" : "suite",
+    "value" : "Body tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "POST"
+  }, {
+    "name" : "tag",
+    "value" : "positive"
+  }, {
+    "name" : "host",
+    "value" : "fv-az150-344"
+  }, {
+    "name" : "thread",
+    "value" : "4924-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "api.test_request_body.test_post"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "prepare_post_body_data",
+    "value" : "[TestDataWithPreparedBody(test_data=POST file-system and expect 201 status code. at 0x7f426afedbe0, test_body={'id': PreparedFieldValue(value=None, generated_value=False, error_messages=[None], f_type=PositiveInt(_sp_vals_positive=[0, 2147483647], _sp_vals_negative=[3.14, 'avEdCMkibr', PreparedFieldValue(value=-1, generated_value=False, error_messages=['The {name} must be at least 0.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The {name} may not be greater than 2147483647.'], f_type=..., drop_key=False)]), drop_key=True), 'description': PreparedFieldValue(value=None, generated_value=False, error_messages=[None], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value='agKsNPQryyMrFEUedUcVsSAQQPzAZQbbSUiYtTfnUaEMisndQPWWspUaGbtbidwYqtSfNQmijwcqYjRSfyOmdBgrpXeyxIgCKrrfAuGZhFFVggPfVpZgUyBzBNoUsPRzzhKwBNagsmydrFIRhBIPLQfePtqGqyhvcsKMQWABDicxUzSMjtpziBDndBtoCKqlvjGchkeOEbmilGVTDaCtrMKMBASOGwrUWpjHOTqfRrNbJcpWPggwQTdAbsLBOJeCQMaJvbczDYgDkzlXXpMXMgJEzcJKBLJSPmPbGXEDpHWmvRbHSNWCAJGICcbspvIGRTWgwkKVGzDmBLIEjCPbvRZTohuLxsnbOsWwyibQKUjCgPptpHvFzhpkVglXMCHAbmCRHwoiZgXSDFcYOFzpDFYXPaMGMSnxWepOlKvhqvASwbMOeJcySbuDmBilPADyAoyXLQshSRuOYvvIWVOHHxVEFuoaimtbPlYpZbogzKPaXYqyrGfdTSIVoUpFZnBvDkfcCrkSvdSCpSowYlVoHFMVygUTAizVoeNfLmZheDyfEyHDXUPdEIXKgPjGRZRhNradsABMoxuHbvdloGvYaRfUbsHGSTyvjKXiMFGAtpTsUGBbyimPbSgGpRxdwLqKuzqDFBiQVQpERfKgwlYUDQTieHtpvIewvHueKawqmEMXwyALWNdkeHtZmdfhEFKyBxPEUQawqYcQXgRWsaCUCtcKAqOPRogzDWqbiTKXADOcUarWmmydtLMOapNTgPHnRAXniGRxSmpoUNPSPzUjaSfGffxUETJslGvaiQtEchdUEsBvOkJnHBQDlTSbAqtLETEbGhClIdGjxxsnmkPGaiLrxGvgYWoKXGyINiOKmBrHEqgsQmubEnFBTRtNJCNAsZgFCmNsPrsEfCKAJpFfLMskrCAoFOefNniVKkCpSluDpHUZJeAsWdNiyOOMIHGboUQqPwwCbuhhZtRtxJPgZPHpLjvSGSIdXSBscGDcKQzLlygltzAFAPAheuyMAaiOnxuHFMdtnSADEuTAnJSMhuRSzPJTDwQlYZcOdioooqQYclAwNSeMQZbNJMSVBMxnlAOIEbyMKcAvnUROzrNlCvFimajHqnKEbOgTqTIpHbBAYZfMIWFmFVCMijNMOGKaSSdfgzYGimvqrBNxKtImGayqACPxBSxlnfwaHlJLqUKjApJMANHMOaVvbDcQrWfkzVMcvMRmcHIBDAHGbiZQAKQxehLSpwEOEAYgDFpxJMCAcAxwKtMGAMQieBmggzrRcTYkJfCbdtHQfSVPVRMmlEOHeylPMVvTffrXWUgwgYIlvQThVelZBGhYbCDXZcEimnkHoCTKVLNxpStlxKxAVqewoMsFNXutLhsGoiQEbSeLPNIiwBjZmWPQDqDLozSqbezGNxynurLcMNHXlWivbXdGKVMzzeecJJaXIhGmMjGQMLOzsbksGKuKgvsxEnyLXBTFIrIOGYeEIeZeyToFgJRQterovvUSrGtGMNihfoSRnSGPAwNxdOKmZmFbYmXKUFBZOtPBQBAVPmKdePfyrlaEjOzufGvQFJUUkvVKpEakUCnaJHtCZtAkkqZhayNlCxkUDIGNBmWRnmPEjnGVyWtPRecpTPnKgSBhNGjTZFrwTATPEqhGDCnVcXdjuCMnnVBKCBWykXhEIoaAyeIoOclaSsBKSAKbevzuzVZsiytDnHXMAMluzrEAOoXYVlRBgZsYHgInXqfNywlbUZEorpMhZpTDjPyMvWJyhfVqMOJYnLwbtMNPmZIhKovGpeXDcZnfRDDsGcEFGZXIUFGbEPUmbNnjarNFgaYqWHxKkJmahcVzWJaxFxYzSlHgwqMKpIFACaWipeFlUtKCaSMBHPkcdnLsmqJFHBKMzELKMCZNxoxClOlzKukCIyvoyDtarBbyicLyrJPxrgHJbqNSgaAVRqgSBKmgeukXnnRMPdKBvmOTunJRwuoSZetbfpzNCLOPonTOEjohrynmi', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=..., drop_key=False)]), drop_key=True)})]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "positive" ]
+  },
+  "source" : "476bc43748941063.json",
+  "parameterValues" : [ "[TestDataWithPreparedBody(test_data=POST file-system and expect 201 status code. at 0x7f426afedbe0, test_body={'id': PreparedFieldValue(value=None, generated_value=False, error_messages=[None], f_type=PositiveInt(_sp_vals_positive=[0, 2147483647], _sp_vals_negative=[3.14, 'avEdCMkibr', PreparedFieldValue(value=-1, generated_value=False, error_messages=['The {name} must be at least 0.'], f_type=..., drop_key=False), PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The {name} may not be greater than 2147483647.'], f_type=..., drop_key=False)]), drop_key=True), 'description': PreparedFieldValue(value=None, generated_value=False, error_messages=[None], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value='agKsNPQryyMrFEUedUcVsSAQQPzAZQbbSUiYtTfnUaEMisndQPWWspUaGbtbidwYqtSfNQmijwcqYjRSfyOmdBgrpXeyxIgCKrrfAuGZhFFVggPfVpZgUyBzBNoUsPRzzhKwBNagsmydrFIRhBIPLQfePtqGqyhvcsKMQWABDicxUzSMjtpziBDndBtoCKqlvjGchkeOEbmilGVTDaCtrMKMBASOGwrUWpjHOTqfRrNbJcpWPggwQTdAbsLBOJeCQMaJvbczDYgDkzlXXpMXMgJEzcJKBLJSPmPbGXEDpHWmvRbHSNWCAJGICcbspvIGRTWgwkKVGzDmBLIEjCPbvRZTohuLxsnbOsWwyibQKUjCgPptpHvFzhpkVglXMCHAbmCRHwoiZgXSDFcYOFzpDFYXPaMGMSnxWepOlKvhqvASwbMOeJcySbuDmBilPADyAoyXLQshSRuOYvvIWVOHHxVEFuoaimtbPlYpZbogzKPaXYqyrGfdTSIVoUpFZnBvDkfcCrkSvdSCpSowYlVoHFMVygUTAizVoeNfLmZheDyfEyHDXUPdEIXKgPjGRZRhNradsABMoxuHbvdloGvYaRfUbsHGSTyvjKXiMFGAtpTsUGBbyimPbSgGpRxdwLqKuzqDFBiQVQpERfKgwlYUDQTieHtpvIewvHueKawqmEMXwyALWNdkeHtZmdfhEFKyBxPEUQawqYcQXgRWsaCUCtcKAqOPRogzDWqbiTKXADOcUarWmmydtLMOapNTgPHnRAXniGRxSmpoUNPSPzUjaSfGffxUETJslGvaiQtEchdUEsBvOkJnHBQDlTSbAqtLETEbGhClIdGjxxsnmkPGaiLrxGvgYWoKXGyINiOKmBrHEqgsQmubEnFBTRtNJCNAsZgFCmNsPrsEfCKAJpFfLMskrCAoFOefNniVKkCpSluDpHUZJeAsWdNiyOOMIHGboUQqPwwCbuhhZtRtxJPgZPHpLjvSGSIdXSBscGDcKQzLlygltzAFAPAheuyMAaiOnxuHFMdtnSADEuTAnJSMhuRSzPJTDwQlYZcOdioooqQYclAwNSeMQZbNJMSVBMxnlAOIEbyMKcAvnUROzrNlCvFimajHqnKEbOgTqTIpHbBAYZfMIWFmFVCMijNMOGKaSSdfgzYGimvqrBNxKtImGayqACPxBSxlnfwaHlJLqUKjApJMANHMOaVvbDcQrWfkzVMcvMRmcHIBDAHGbiZQAKQxehLSpwEOEAYgDFpxJMCAcAxwKtMGAMQieBmggzrRcTYkJfCbdtHQfSVPVRMmlEOHeylPMVvTffrXWUgwgYIlvQThVelZBGhYbCDXZcEimnkHoCTKVLNxpStlxKxAVqewoMsFNXutLhsGoiQEbSeLPNIiwBjZmWPQDqDLozSqbezGNxynurLcMNHXlWivbXdGKVMzzeecJJaXIhGmMjGQMLOzsbksGKuKgvsxEnyLXBTFIrIOGYeEIeZeyToFgJRQterovvUSrGtGMNihfoSRnSGPAwNxdOKmZmFbYmXKUFBZOtPBQBAVPmKdePfyrlaEjOzufGvQFJUUkvVKpEakUCnaJHtCZtAkkqZhayNlCxkUDIGNBmWRnmPEjnGVyWtPRecpTPnKgSBhNGjTZFrwTATPEqhGDCnVcXdjuCMnnVBKCBWykXhEIoaAyeIoOclaSsBKSAKbevzuzVZsiytDnHXMAMluzrEAOoXYVlRBgZsYHgInXqfNywlbUZEorpMhZpTDjPyMvWJyhfVqMOJYnLwbtMNPmZIhKovGpeXDcZnfRDDsGcEFGZXIUFGbEPUmbNnjarNFgaYqWHxKkJmahcVzWJaxFxYzSlHgwqMKpIFACaWipeFlUtKCaSMBHPkcdnLsmqJFHBKMzELKMCZNxoxClOlzKukCIyvoyDtarBbyicLyrJPxrgHJbqNSgaAVRqgSBKmgeukXnnRMPdKBvmOTunJRwuoSZetbfpzNCLOPonTOEjohrynmi', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=..., drop_key=False)]), drop_key=True)})]" ]
+}

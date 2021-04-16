@@ -1,0 +1,1037 @@
+{
+  "uid" : "39b0855549b22e32",
+  "name" : "test_post_body_negative[cluster_POST_negative_Invalid field types and values]",
+  "fullName" : "api.test_request_body.test_post#test_post_body_negative",
+  "historyId" : "9eed0a2ec490d3cd939827a17adbcc8a",
+  "time" : {
+    "start" : 1618579364514,
+    "stop" : 1618579364924,
+    "duration" : 410
+  },
+  "description" : "\n    Negative cases of request body testing\n    Includes sets of invalid field values - out of boundary values,\n    nullable and required if not possible, fields with incorrect types etc.\n    ",
+  "descriptionHtml" : "<pre><code>Negative cases of request body testing\nIncludes sets of invalid field values - out of boundary values,\nnullable and required if not possible, fields with incorrect types etc.\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "app_fs",
+    "time" : {
+      "start" : 1618579362952,
+      "stop" : 1618579364408,
+      "duration" : 1456
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: local/app:XHRyOdkmVf",
+      "time" : {
+        "start" : 1618579362979,
+        "stop" : 1618579363366,
+        "duration" : 387
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "prepare_post_body_data",
+    "time" : {
+      "start" : 1618579364408,
+      "stop" : 1618579364513,
+      "duration" : 105
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Generate valid request data",
+      "time" : {
+        "start" : 1618579364408,
+        "stop" : 1618579364513,
+        "duration" : 105
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send LIST /cluster-type/",
+        "time" : {
+          "start" : 1618579364408,
+          "stop" : 1618579364460,
+          "duration" : 52
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618579364460,
+            "stop" : 1618579364460,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "4c3b140583b76e37",
+          "name" : "Full request log",
+          "source" : "4c3b140583b76e37.txt",
+          "type" : "text/plain",
+          "size" : 563
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Send LIST /cluster-type/",
+        "time" : {
+          "start" : 1618579364460,
+          "stop" : 1618579364513,
+          "duration" : 53
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.OK: 200>",
+          "time" : {
+            "start" : 1618579364513,
+            "stop" : 1618579364513,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [200]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.OK: 200>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "9999e81b6f5fd769",
+          "name" : "Full request log",
+          "source" : "9999e81b6f5fd769.txt",
+          "type" : "text/plain",
+          "size" : 563
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "endpoint",
+        "value" : "<Endpoints.Cluster: Endpoint(path='cluster', methods=[<Methods.GET: Method(function=<function get at 0x7f426b2cfa60>, url_template='/{name}/{id}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.LIST: Method(function=<function get at 0x7f426b2cfa60>, url_template='/{name}/', default_success_code=<HTTPStatus.OK: 200>)>, <Methods.POST: Method(function=<function post at 0x7f426b2cfc10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>], data_class=<class 'tests.utils.data_classes.ClusterFields'>)>"
+      }, {
+        "name" : "method",
+        "value" : "<Methods.POST: Method(function=<function post at 0x7f426b2cfc10>, url_template='/{name}/', default_success_code=<HTTPStatus.CREATED: 201>)>"
+      } ],
+      "stepsCount" : 4,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  }, {
+    "name" : "cmd_opts",
+    "time" : {
+      "start" : 1618579299206,
+      "stop" : 1618579299206,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "image",
+    "time" : {
+      "start" : 1618579299206,
+      "stop" : 1618579303065,
+      "duration" : 3859
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Run container: app:refs_pull_6_merge",
+      "time" : {
+        "start" : 1618579299250,
+        "stop" : 1618579299806,
+        "duration" : 556
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "testStage" : {
+    "description" : "\n    Negative cases of request body testing\n    Includes sets of invalid field values - out of boundary values,\n    nullable and required if not possible, fields with incorrect types etc.\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Assert - All fields without body checks - Special values: cluster_type_id, description, name",
+      "time" : {
+        "start" : 1618579364514,
+        "stop" : 1618579364567,
+        "duration" : 53
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618579364515,
+          "stop" : 1618579364567,
+          "duration" : 52
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618579364567,
+            "stop" : 1618579364567,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "a393fb1a13c7c062",
+          "name" : "Full request log",
+          "source" : "a393fb1a13c7c062.txt",
+          "type" : "text/plain",
+          "size" : 3035
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert - cluster_type_id: ['The selected cluster type id is invalid.']",
+      "time" : {
+        "start" : 1618579364567,
+        "stop" : 1618579364622,
+        "duration" : 55
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618579364567,
+          "stop" : 1618579364622,
+          "duration" : 55
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618579364622,
+            "stop" : 1618579364622,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Response body should be",
+          "time" : {
+            "start" : 1618579364622,
+            "stop" : 1618579364622,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "9eda66d1beb1ab73",
+            "name" : "Expected body",
+            "source" : "9eda66d1beb1ab73.json",
+            "type" : "application/json",
+            "size" : 77
+          }, {
+            "uid" : "1d0f7ad9bb5c91bc",
+            "name" : "Actual body",
+            "source" : "1d0f7ad9bb5c91bc.json",
+            "type" : "application/json",
+            "size" : 77
+          } ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "expected_body",
+            "value" : "{'cluster_type_id': ['The selected cluster type id is invalid.']}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "208ff90004168e62",
+          "name" : "Full request log",
+          "source" : "208ff90004168e62.txt",
+          "type" : "text/plain",
+          "size" : 911
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 3,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert - description: ['The description may not be greater than 2000 characters.']",
+      "time" : {
+        "start" : 1618579364622,
+        "stop" : 1618579364669,
+        "duration" : 47
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618579364622,
+          "stop" : 1618579364669,
+          "duration" : 47
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618579364668,
+            "stop" : 1618579364668,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Response body should be",
+          "time" : {
+            "start" : 1618579364668,
+            "stop" : 1618579364669,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "7cc481c9ea34965e",
+            "name" : "Expected body",
+            "source" : "7cc481c9ea34965e.json",
+            "type" : "application/json",
+            "size" : 89
+          }, {
+            "uid" : "27404bdd99f43af7",
+            "name" : "Actual body",
+            "source" : "27404bdd99f43af7.json",
+            "type" : "application/json",
+            "size" : 89
+          } ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "expected_body",
+            "value" : "{'description': ['The description may not be greater than 2000 characters.']}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "8f6e4eaf9759d415",
+          "name" : "Full request log",
+          "source" : "8f6e4eaf9759d415.txt",
+          "type" : "text/plain",
+          "size" : 2738
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 3,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert - name: ['The name may not be greater than 255 characters.']",
+      "time" : {
+        "start" : 1618579364669,
+        "stop" : 1618579364729,
+        "duration" : 60
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618579364669,
+          "stop" : 1618579364729,
+          "duration" : 60
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618579364728,
+            "stop" : 1618579364728,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Response body should be",
+          "time" : {
+            "start" : 1618579364728,
+            "stop" : 1618579364729,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "8210b640136dba07",
+            "name" : "Expected body",
+            "source" : "8210b640136dba07.json",
+            "type" : "application/json",
+            "size" : 74
+          }, {
+            "uid" : "288b28e8f8bda7a",
+            "name" : "Actual body",
+            "source" : "288b28e8f8bda7a.json",
+            "type" : "application/json",
+            "size" : 74
+          } ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "expected_body",
+            "value" : "{'name': ['The name may not be greater than 255 characters.']}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "885d65b33253eec0",
+          "name" : "Full request log",
+          "source" : "885d65b33253eec0.txt",
+          "type" : "text/plain",
+          "size" : 1077
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 3,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert - All fields without body checks - Special values: cluster_type_id, description, name",
+      "time" : {
+        "start" : 1618579364729,
+        "stop" : 1618579364776,
+        "duration" : 47
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618579364729,
+          "stop" : 1618579364775,
+          "duration" : 46
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618579364775,
+            "stop" : 1618579364775,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "d01f93bc27874bf",
+          "name" : "Full request log",
+          "source" : "d01f93bc27874bf.txt",
+          "type" : "text/plain",
+          "size" : 3042
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 1,
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert - cluster_type_id: ['The selected cluster type id is invalid.']",
+      "time" : {
+        "start" : 1618579364776,
+        "stop" : 1618579364825,
+        "duration" : 49
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618579364776,
+          "stop" : 1618579364825,
+          "duration" : 49
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618579364824,
+            "stop" : 1618579364824,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Response body should be",
+          "time" : {
+            "start" : 1618579364824,
+            "stop" : 1618579364825,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "e9e50982cd376ede",
+            "name" : "Expected body",
+            "source" : "e9e50982cd376ede.json",
+            "type" : "application/json",
+            "size" : 77
+          }, {
+            "uid" : "7d382e2f40dfa9f8",
+            "name" : "Actual body",
+            "source" : "7d382e2f40dfa9f8.json",
+            "type" : "application/json",
+            "size" : 77
+          } ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "expected_body",
+            "value" : "{'cluster_type_id': ['The selected cluster type id is invalid.']}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "742890fa676856b8",
+          "name" : "Full request log",
+          "source" : "742890fa676856b8.txt",
+          "type" : "text/plain",
+          "size" : 918
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 3,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert - description: ['The description may not be greater than 2000 characters.']",
+      "time" : {
+        "start" : 1618579364825,
+        "stop" : 1618579364872,
+        "duration" : 47
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618579364825,
+          "stop" : 1618579364872,
+          "duration" : 47
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618579364871,
+            "stop" : 1618579364871,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Response body should be",
+          "time" : {
+            "start" : 1618579364871,
+            "stop" : 1618579364872,
+            "duration" : 1
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "9578a51e406a6070",
+            "name" : "Expected body",
+            "source" : "9578a51e406a6070.json",
+            "type" : "application/json",
+            "size" : 89
+          }, {
+            "uid" : "bc9e2fb4498ab529",
+            "name" : "Actual body",
+            "source" : "bc9e2fb4498ab529.json",
+            "type" : "application/json",
+            "size" : 89
+          } ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "expected_body",
+            "value" : "{'description': ['The description may not be greater than 2000 characters.']}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "71a0fe3b424dcd32",
+          "name" : "Full request log",
+          "source" : "71a0fe3b424dcd32.txt",
+          "type" : "text/plain",
+          "size" : 2738
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 3,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Assert - name: ['The name may not be greater than 255 characters.']",
+      "time" : {
+        "start" : 1618579364872,
+        "stop" : 1618579364924,
+        "duration" : 52
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Send POST /cluster/",
+        "time" : {
+          "start" : 1618579364872,
+          "stop" : 1618579364924,
+          "duration" : 52
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Response status code should be equal <HTTPStatus.UNPROCESSABLE_ENTITY: 422>",
+          "time" : {
+            "start" : 1618579364924,
+            "stop" : 1618579364924,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "status_code",
+            "value" : "<HTTPStatus.UNPROCESSABLE_ENTITY: 422>"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        }, {
+          "name" : "Response body should be",
+          "time" : {
+            "start" : 1618579364924,
+            "stop" : 1618579364924,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ {
+            "uid" : "92eb075571fc8a35",
+            "name" : "Expected body",
+            "source" : "92eb075571fc8a35.json",
+            "type" : "application/json",
+            "size" : 74
+          }, {
+            "uid" : "dc79aa11720e2bec",
+            "name" : "Actual body",
+            "source" : "dc79aa11720e2bec.json",
+            "type" : "application/json",
+            "size" : 74
+          } ],
+          "parameters" : [ {
+            "name" : "response",
+            "value" : "<Response [422]>"
+          }, {
+            "name" : "expected_body",
+            "value" : "{'name': ['The name may not be greater than 255 characters.']}"
+          } ],
+          "stepsCount" : 0,
+          "attachmentsCount" : 2,
+          "shouldDisplayMessage" : false,
+          "hasContent" : true
+        } ],
+        "attachments" : [ {
+          "uid" : "c9495f5c4695063d",
+          "name" : "Full request log",
+          "source" : "c9495f5c4695063d.txt",
+          "type" : "text/plain",
+          "size" : 1077
+        } ],
+        "parameters" : [ ],
+        "stepsCount" : 2,
+        "attachmentsCount" : 3,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 3,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 30,
+    "attachmentsCount" : 20,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "app_fs::fin",
+    "time" : {
+      "start" : 1618579364926,
+      "stop" : 1618579365159,
+      "duration" : 233
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "image::fin",
+    "time" : {
+      "start" : 1618579383302,
+      "stop" : 1618579383334,
+      "duration" : 32
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "API"
+  }, {
+    "name" : "suite",
+    "value" : "Body tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "POST"
+  }, {
+    "name" : "tag",
+    "value" : "negative"
+  }, {
+    "name" : "host",
+    "value" : "fv-az150-344"
+  }, {
+    "name" : "thread",
+    "value" : "4924-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "api.test_request_body.test_post"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "prepare_post_body_data",
+    "value" : "[TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc0a0, test_body={'cluster_type_id': PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[..., PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False)]), drop_key=False), 'description': PreparedFieldValue(value='LaOJBHnLqShxlPzreuGpziApKsCWXXkeBIBsiZMfNwkyVhdKvztlfKdkibAZpDIFgwwKooiROwaMVrtagSziGncUHosreVJYBAIIlnZZuftKmVscRLmgkAeSuEMoTNkNyZAVAReanoBkvKuvLmmfpZExgqVzrVzsokxaKYfBWEBJJTQsuTYFRynIQjIVIfZqpAgUEuIWARnrtGninGqLfArZdfFvYwiZCFOcgwEIjtbMebcSPgcqbjRqmqDKTDVmuIVAZGIlaDPXNjahgoOXGPPxrTDqaEddYRJMrpyIQKLgfrNkrOrlonWlUjDwXXDqIxbctCNDRfvaDNQXooIJoeYbWSkDhOoVHBUgpTpgTOHKdmbWQDvOmQAaGQdmepOsQNScpNKNKXeHyeKxFTSvpjCvEqvFwrZNwpXJCDKqFbOWSGjwkJczmVVYFsyUlyBGAUFdQvGbtTbJRSlezvSXVLTbyRUkbYscWdIcjhACsPxByGGHHkJczQOMeSkOtYBxdzhcQtVNckIiQlfMglKXWeMGOaDpTXAQcNOcsvnlnNJceWNZONXjOmLxTEhHTcHmAFBIZszFgARncaJvMLTpnQzLBxRGnkcKumQcsxadqLQASpDhDCsmgUhMSiuNYAIgGDGnqJtvEsjkRZMNlqATpkgVPEwQTBHHvrRzTxykoUDsLPzCYSYBIYgsVoryRvcZmaAFFpQLEDqYYfsUEDknNcMfOFTGSxUgNJJotICPzyIrefraXAGbxiTpSDpSCAIcZSEZuOtaANihNjauYAkrjzRnJBowhEnIbGOkSHxEcHHOJFvjSuAKLKxuHAGzqQwEnnwpYZpTppyZtToHYgRHNmfeqCNfhnkHFKRmHFaJwlslvKwLtMPUqSZKcTqOZLgbLyvRhWEZgGSiWSXamgTtQUPEmhoOpgNcaLtYimPcFyVMuPAoVCyxdhafziATrUEwDHgUyWMYDPoaUgxfdraiakBySBIJMuphDxFalczrFwBazOrSWyWfTZXRilDRBiHAKqQLxmAmDjNHBuZPyKagLkMpVjVOdrfNimnKWKILoCmhTnKOeAqhbyiMlblQGsUHHDnZtvgKaeiGOvQDqJqmYNnxJuHfrIYvGoqoWUieGBMXQLNtMSeQHsGXONEZPkcViWEHHrmrxSJJmjiSzbZHjilfPfGaqMyfReLWbrosKEXlMQxBfHgzVCmbtSSZgjqwBMuuDhgEviLRYeBiSfhihnOUrkyTESoXsqScyCzxEfyqkkQfEDdhJmoTtUqwYGByeobyiJBoIyagZPecAPrRkdkcvOmRAuZJxLqxkrnIhDStLtOEQfeHcEetsgHJgcPgTtYHptSomtDSqEDsTbVVVeOApHRPjTFDsbeZJVPGgxMsJLkyKgwBrnbuoFTzelYOaNFwTwOPCnvtFBpGdOsxKIscWRAPpMJGjnxdnitVswKjlaBEQYHECCHbohzYxhSVVaKYUzAeBugtcNibRUsnAJuBhSizXjzKhnRKZwEcwqmtOmwUYyTsNMVPlmIgtFYGOEUXDpWOhqEpRYIQyNdkAGvrWzYrmzWGoaRNRCcSBhedkiFGkvYfmHvFAbmQnzBSdqaymDwdRXzZsMzPFcBtlSWCMCZFTsKIpkkjketjmexJvRYVwWbpPQqjiJEjYHrruJLGwYZGvixbDPGjiqLITqqetpuDRPZynKOhbBzcaZiEbgOOOjhABGCYBDrGVsxTqQbbnSuwtRRnkvOiIpWztWxjgpbUuylhJntLbKeuUtJIpYiUCzlxkSzjIflzbjJfGbNLHajbZLmNcXiFIKhLuukOEPylZcaJZJQqKjccafRVtNdYYAtaClKGvlusYUvZvNZiXhTilOotHVwhRVxwDTvfpadoPevZUUhUIvdPSyWqUkosVDyesseQWkaXnFEtkcLVfFlXuMHVWKVrOZBJEyGSTaXkjfXPeIGCobCbckxveRycUSMgwTShRRLVapHNiNXgKXiRFUaYsrglU', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[...]), drop_key=False), 'name': PreparedFieldValue(value='txWqpfatKgPSFDatjYzzCBCHKpYKJgnnHscLzxlzHBdOpjeHjnVeEMbTqetGowpjlhwXZajjLuMdEvJafBwfawhWyKZIgEyzmcTCMJUKukmjpieSPKvJvALwzcIEVsexviNYzozlVTLDLQoXNlCxInRYjwBMyeYVnmdmuebhEvqdrvlSQjcXFrneBCnTpKSHalvelaeYKAvtoKwBojZlphMfTbacagorpQIcvmqTGKohFaHNjhQBiGbZdWPgnjhK', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'CwrnDcOTsrTHThfAIFcdQdspJMNmfvjDVKcgVitpitIhLTeYEiDkKiJLTykwOlJtbqtxEbwsImVfdRFlwSJBtVTryyGDoGNzgPuCcNvRfRjZwEQXoIOQDFweCjtMjzimHzNbGJBJKMMAHPGYQroYbQzvGIVLWTBYinljhcVNJXaaeQffhDOhupCuNfSuVvLCLbMGDZqHNIeVVuzdwulznbXdQzTapBqTRKUUpKZroZJRDoUpGmhtolYtZuBBhyM'], _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc1c0, test_body={'cluster_type_id': PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[..., PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False)]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc2b0, test_body={'description': PreparedFieldValue(value='LaOJBHnLqShxlPzreuGpziApKsCWXXkeBIBsiZMfNwkyVhdKvztlfKdkibAZpDIFgwwKooiROwaMVrtagSziGncUHosreVJYBAIIlnZZuftKmVscRLmgkAeSuEMoTNkNyZAVAReanoBkvKuvLmmfpZExgqVzrVzsokxaKYfBWEBJJTQsuTYFRynIQjIVIfZqpAgUEuIWARnrtGninGqLfArZdfFvYwiZCFOcgwEIjtbMebcSPgcqbjRqmqDKTDVmuIVAZGIlaDPXNjahgoOXGPPxrTDqaEddYRJMrpyIQKLgfrNkrOrlonWlUjDwXXDqIxbctCNDRfvaDNQXooIJoeYbWSkDhOoVHBUgpTpgTOHKdmbWQDvOmQAaGQdmepOsQNScpNKNKXeHyeKxFTSvpjCvEqvFwrZNwpXJCDKqFbOWSGjwkJczmVVYFsyUlyBGAUFdQvGbtTbJRSlezvSXVLTbyRUkbYscWdIcjhACsPxByGGHHkJczQOMeSkOtYBxdzhcQtVNckIiQlfMglKXWeMGOaDpTXAQcNOcsvnlnNJceWNZONXjOmLxTEhHTcHmAFBIZszFgARncaJvMLTpnQzLBxRGnkcKumQcsxadqLQASpDhDCsmgUhMSiuNYAIgGDGnqJtvEsjkRZMNlqATpkgVPEwQTBHHvrRzTxykoUDsLPzCYSYBIYgsVoryRvcZmaAFFpQLEDqYYfsUEDknNcMfOFTGSxUgNJJotICPzyIrefraXAGbxiTpSDpSCAIcZSEZuOtaANihNjauYAkrjzRnJBowhEnIbGOkSHxEcHHOJFvjSuAKLKxuHAGzqQwEnnwpYZpTppyZtToHYgRHNmfeqCNfhnkHFKRmHFaJwlslvKwLtMPUqSZKcTqOZLgbLyvRhWEZgGSiWSXamgTtQUPEmhoOpgNcaLtYimPcFyVMuPAoVCyxdhafziATrUEwDHgUyWMYDPoaUgxfdraiakBySBIJMuphDxFalczrFwBazOrSWyWfTZXRilDRBiHAKqQLxmAmDjNHBuZPyKagLkMpVjVOdrfNimnKWKILoCmhTnKOeAqhbyiMlblQGsUHHDnZtvgKaeiGOvQDqJqmYNnxJuHfrIYvGoqoWUieGBMXQLNtMSeQHsGXONEZPkcViWEHHrmrxSJJmjiSzbZHjilfPfGaqMyfReLWbrosKEXlMQxBfHgzVCmbtSSZgjqwBMuuDhgEviLRYeBiSfhihnOUrkyTESoXsqScyCzxEfyqkkQfEDdhJmoTtUqwYGByeobyiJBoIyagZPecAPrRkdkcvOmRAuZJxLqxkrnIhDStLtOEQfeHcEetsgHJgcPgTtYHptSomtDSqEDsTbVVVeOApHRPjTFDsbeZJVPGgxMsJLkyKgwBrnbuoFTzelYOaNFwTwOPCnvtFBpGdOsxKIscWRAPpMJGjnxdnitVswKjlaBEQYHECCHbohzYxhSVVaKYUzAeBugtcNibRUsnAJuBhSizXjzKhnRKZwEcwqmtOmwUYyTsNMVPlmIgtFYGOEUXDpWOhqEpRYIQyNdkAGvrWzYrmzWGoaRNRCcSBhedkiFGkvYfmHvFAbmQnzBSdqaymDwdRXzZsMzPFcBtlSWCMCZFTsKIpkkjketjmexJvRYVwWbpPQqjiJEjYHrruJLGwYZGvixbDPGjiqLITqqetpuDRPZynKOhbBzcaZiEbgOOOjhABGCYBDrGVsxTqQbbnSuwtRRnkvOiIpWztWxjgpbUuylhJntLbKeuUtJIpYiUCzlxkSzjIflzbjJfGbNLHajbZLmNcXiFIKhLuukOEPylZcaJZJQqKjccafRVtNdYYAtaClKGvlusYUvZvNZiXhTilOotHVwhRVxwDTvfpadoPevZUUhUIvdPSyWqUkosVDyesseQWkaXnFEtkcLVfFlXuMHVWKVrOZBJEyGSTaXkjfXPeIGCobCbckxveRycUSMgwTShRRLVapHNiNXgKXiRFUaYsrglU', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc3a0, test_body={'name': PreparedFieldValue(value='txWqpfatKgPSFDatjYzzCBCHKpYKJgnnHscLzxlzHBdOpjeHjnVeEMbTqetGowpjlhwXZajjLuMdEvJafBwfawhWyKZIgEyzmcTCMJUKukmjpieSPKvJvALwzcIEVsexviNYzozlVTLDLQoXNlCxInRYjwBMyeYVnmdmuebhEvqdrvlSQjcXFrneBCnTpKSHalvelaeYKAvtoKwBojZlphMfTbacagorpQIcvmqTGKohFaHNjhQBiGbZdWPgnjhK', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'CwrnDcOTsrTHThfAIFcdQdspJMNmfvjDVKcgVitpitIhLTeYEiDkKiJLTykwOlJtbqtxEbwsImVfdRFlwSJBtVTryyGDoGNzgPuCcNvRfRjZwEQXoIOQDFweCjtMjzimHzNbGJBJKMMAHPGYQroYbQzvGIVLWTBYinljhcVNJXaaeQffhDOhupCuNfSuVvLCLbMGDZqHNIeVVuzdwulznbXdQzTapBqTRKUUpKZroZJRDoUpGmhtolYtZuBBhyM'], _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc460, test_body={'cluster_type_id': PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False), ...]), drop_key=False), 'description': PreparedFieldValue(value='LaOJBHnLqShxlPzreuGpziApKsCWXXkeBIBsiZMfNwkyVhdKvztlfKdkibAZpDIFgwwKooiROwaMVrtagSziGncUHosreVJYBAIIlnZZuftKmVscRLmgkAeSuEMoTNkNyZAVAReanoBkvKuvLmmfpZExgqVzrVzsokxaKYfBWEBJJTQsuTYFRynIQjIVIfZqpAgUEuIWARnrtGninGqLfArZdfFvYwiZCFOcgwEIjtbMebcSPgcqbjRqmqDKTDVmuIVAZGIlaDPXNjahgoOXGPPxrTDqaEddYRJMrpyIQKLgfrNkrOrlonWlUjDwXXDqIxbctCNDRfvaDNQXooIJoeYbWSkDhOoVHBUgpTpgTOHKdmbWQDvOmQAaGQdmepOsQNScpNKNKXeHyeKxFTSvpjCvEqvFwrZNwpXJCDKqFbOWSGjwkJczmVVYFsyUlyBGAUFdQvGbtTbJRSlezvSXVLTbyRUkbYscWdIcjhACsPxByGGHHkJczQOMeSkOtYBxdzhcQtVNckIiQlfMglKXWeMGOaDpTXAQcNOcsvnlnNJceWNZONXjOmLxTEhHTcHmAFBIZszFgARncaJvMLTpnQzLBxRGnkcKumQcsxadqLQASpDhDCsmgUhMSiuNYAIgGDGnqJtvEsjkRZMNlqATpkgVPEwQTBHHvrRzTxykoUDsLPzCYSYBIYgsVoryRvcZmaAFFpQLEDqYYfsUEDknNcMfOFTGSxUgNJJotICPzyIrefraXAGbxiTpSDpSCAIcZSEZuOtaANihNjauYAkrjzRnJBowhEnIbGOkSHxEcHHOJFvjSuAKLKxuHAGzqQwEnnwpYZpTppyZtToHYgRHNmfeqCNfhnkHFKRmHFaJwlslvKwLtMPUqSZKcTqOZLgbLyvRhWEZgGSiWSXamgTtQUPEmhoOpgNcaLtYimPcFyVMuPAoVCyxdhafziATrUEwDHgUyWMYDPoaUgxfdraiakBySBIJMuphDxFalczrFwBazOrSWyWfTZXRilDRBiHAKqQLxmAmDjNHBuZPyKagLkMpVjVOdrfNimnKWKILoCmhTnKOeAqhbyiMlblQGsUHHDnZtvgKaeiGOvQDqJqmYNnxJuHfrIYvGoqoWUieGBMXQLNtMSeQHsGXONEZPkcViWEHHrmrxSJJmjiSzbZHjilfPfGaqMyfReLWbrosKEXlMQxBfHgzVCmbtSSZgjqwBMuuDhgEviLRYeBiSfhihnOUrkyTESoXsqScyCzxEfyqkkQfEDdhJmoTtUqwYGByeobyiJBoIyagZPecAPrRkdkcvOmRAuZJxLqxkrnIhDStLtOEQfeHcEetsgHJgcPgTtYHptSomtDSqEDsTbVVVeOApHRPjTFDsbeZJVPGgxMsJLkyKgwBrnbuoFTzelYOaNFwTwOPCnvtFBpGdOsxKIscWRAPpMJGjnxdnitVswKjlaBEQYHECCHbohzYxhSVVaKYUzAeBugtcNibRUsnAJuBhSizXjzKhnRKZwEcwqmtOmwUYyTsNMVPlmIgtFYGOEUXDpWOhqEpRYIQyNdkAGvrWzYrmzWGoaRNRCcSBhedkiFGkvYfmHvFAbmQnzBSdqaymDwdRXzZsMzPFcBtlSWCMCZFTsKIpkkjketjmexJvRYVwWbpPQqjiJEjYHrruJLGwYZGvixbDPGjiqLITqqetpuDRPZynKOhbBzcaZiEbgOOOjhABGCYBDrGVsxTqQbbnSuwtRRnkvOiIpWztWxjgpbUuylhJntLbKeuUtJIpYiUCzlxkSzjIflzbjJfGbNLHajbZLmNcXiFIKhLuukOEPylZcaJZJQqKjccafRVtNdYYAtaClKGvlusYUvZvNZiXhTilOotHVwhRVxwDTvfpadoPevZUUhUIvdPSyWqUkosVDyesseQWkaXnFEtkcLVfFlXuMHVWKVrOZBJEyGSTaXkjfXPeIGCobCbckxveRycUSMgwTShRRLVapHNiNXgKXiRFUaYsrglU', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[...]), drop_key=False), 'name': PreparedFieldValue(value='txWqpfatKgPSFDatjYzzCBCHKpYKJgnnHscLzxlzHBdOpjeHjnVeEMbTqetGowpjlhwXZajjLuMdEvJafBwfawhWyKZIgEyzmcTCMJUKukmjpieSPKvJvALwzcIEVsexviNYzozlVTLDLQoXNlCxInRYjwBMyeYVnmdmuebhEvqdrvlSQjcXFrneBCnTpKSHalvelaeYKAvtoKwBojZlphMfTbacagorpQIcvmqTGKohFaHNjhQBiGbZdWPgnjhK', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'CwrnDcOTsrTHThfAIFcdQdspJMNmfvjDVKcgVitpitIhLTeYEiDkKiJLTykwOlJtbqtxEbwsImVfdRFlwSJBtVTryyGDoGNzgPuCcNvRfRjZwEQXoIOQDFweCjtMjzimHzNbGJBJKMMAHPGYQroYbQzvGIVLWTBYinljhcVNJXaaeQffhDOhupCuNfSuVvLCLbMGDZqHNIeVVuzdwulznbXdQzTapBqTRKUUpKZroZJRDoUpGmhtolYtZuBBhyM'], _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc580, test_body={'cluster_type_id': PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False), ...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc670, test_body={'description': PreparedFieldValue(value='LaOJBHnLqShxlPzreuGpziApKsCWXXkeBIBsiZMfNwkyVhdKvztlfKdkibAZpDIFgwwKooiROwaMVrtagSziGncUHosreVJYBAIIlnZZuftKmVscRLmgkAeSuEMoTNkNyZAVAReanoBkvKuvLmmfpZExgqVzrVzsokxaKYfBWEBJJTQsuTYFRynIQjIVIfZqpAgUEuIWARnrtGninGqLfArZdfFvYwiZCFOcgwEIjtbMebcSPgcqbjRqmqDKTDVmuIVAZGIlaDPXNjahgoOXGPPxrTDqaEddYRJMrpyIQKLgfrNkrOrlonWlUjDwXXDqIxbctCNDRfvaDNQXooIJoeYbWSkDhOoVHBUgpTpgTOHKdmbWQDvOmQAaGQdmepOsQNScpNKNKXeHyeKxFTSvpjCvEqvFwrZNwpXJCDKqFbOWSGjwkJczmVVYFsyUlyBGAUFdQvGbtTbJRSlezvSXVLTbyRUkbYscWdIcjhACsPxByGGHHkJczQOMeSkOtYBxdzhcQtVNckIiQlfMglKXWeMGOaDpTXAQcNOcsvnlnNJceWNZONXjOmLxTEhHTcHmAFBIZszFgARncaJvMLTpnQzLBxRGnkcKumQcsxadqLQASpDhDCsmgUhMSiuNYAIgGDGnqJtvEsjkRZMNlqATpkgVPEwQTBHHvrRzTxykoUDsLPzCYSYBIYgsVoryRvcZmaAFFpQLEDqYYfsUEDknNcMfOFTGSxUgNJJotICPzyIrefraXAGbxiTpSDpSCAIcZSEZuOtaANihNjauYAkrjzRnJBowhEnIbGOkSHxEcHHOJFvjSuAKLKxuHAGzqQwEnnwpYZpTppyZtToHYgRHNmfeqCNfhnkHFKRmHFaJwlslvKwLtMPUqSZKcTqOZLgbLyvRhWEZgGSiWSXamgTtQUPEmhoOpgNcaLtYimPcFyVMuPAoVCyxdhafziATrUEwDHgUyWMYDPoaUgxfdraiakBySBIJMuphDxFalczrFwBazOrSWyWfTZXRilDRBiHAKqQLxmAmDjNHBuZPyKagLkMpVjVOdrfNimnKWKILoCmhTnKOeAqhbyiMlblQGsUHHDnZtvgKaeiGOvQDqJqmYNnxJuHfrIYvGoqoWUieGBMXQLNtMSeQHsGXONEZPkcViWEHHrmrxSJJmjiSzbZHjilfPfGaqMyfReLWbrosKEXlMQxBfHgzVCmbtSSZgjqwBMuuDhgEviLRYeBiSfhihnOUrkyTESoXsqScyCzxEfyqkkQfEDdhJmoTtUqwYGByeobyiJBoIyagZPecAPrRkdkcvOmRAuZJxLqxkrnIhDStLtOEQfeHcEetsgHJgcPgTtYHptSomtDSqEDsTbVVVeOApHRPjTFDsbeZJVPGgxMsJLkyKgwBrnbuoFTzelYOaNFwTwOPCnvtFBpGdOsxKIscWRAPpMJGjnxdnitVswKjlaBEQYHECCHbohzYxhSVVaKYUzAeBugtcNibRUsnAJuBhSizXjzKhnRKZwEcwqmtOmwUYyTsNMVPlmIgtFYGOEUXDpWOhqEpRYIQyNdkAGvrWzYrmzWGoaRNRCcSBhedkiFGkvYfmHvFAbmQnzBSdqaymDwdRXzZsMzPFcBtlSWCMCZFTsKIpkkjketjmexJvRYVwWbpPQqjiJEjYHrruJLGwYZGvixbDPGjiqLITqqetpuDRPZynKOhbBzcaZiEbgOOOjhABGCYBDrGVsxTqQbbnSuwtRRnkvOiIpWztWxjgpbUuylhJntLbKeuUtJIpYiUCzlxkSzjIflzbjJfGbNLHajbZLmNcXiFIKhLuukOEPylZcaJZJQqKjccafRVtNdYYAtaClKGvlusYUvZvNZiXhTilOotHVwhRVxwDTvfpadoPevZUUhUIvdPSyWqUkosVDyesseQWkaXnFEtkcLVfFlXuMHVWKVrOZBJEyGSTaXkjfXPeIGCobCbckxveRycUSMgwTShRRLVapHNiNXgKXiRFUaYsrglU', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc760, test_body={'name': PreparedFieldValue(value='txWqpfatKgPSFDatjYzzCBCHKpYKJgnnHscLzxlzHBdOpjeHjnVeEMbTqetGowpjlhwXZajjLuMdEvJafBwfawhWyKZIgEyzmcTCMJUKukmjpieSPKvJvALwzcIEVsexviNYzozlVTLDLQoXNlCxInRYjwBMyeYVnmdmuebhEvqdrvlSQjcXFrneBCnTpKSHalvelaeYKAvtoKwBojZlphMfTbacagorpQIcvmqTGKohFaHNjhQBiGbZdWPgnjhK', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'CwrnDcOTsrTHThfAIFcdQdspJMNmfvjDVKcgVitpitIhLTeYEiDkKiJLTykwOlJtbqtxEbwsImVfdRFlwSJBtVTryyGDoGNzgPuCcNvRfRjZwEQXoIOQDFweCjtMjzimHzNbGJBJKMMAHPGYQroYbQzvGIVLWTBYinljhcVNJXaaeQffhDOhupCuNfSuVvLCLbMGDZqHNIeVVuzdwulznbXdQzTapBqTRKUUpKZroZJRDoUpGmhtolYtZuBBhyM'], _sp_vals_negative=[...]), drop_key=False)})]"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 9,
+        "unknown" : 0,
+        "total" : 9
+      },
+      "items" : [ {
+        "uid" : "eb6f166432916714",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/44//#testresult/eb6f166432916714",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618415501211,
+          "stop" : 1618415501652,
+          "duration" : 441
+        }
+      }, {
+        "uid" : "62b7d12cc315381",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/42//#testresult/62b7d12cc315381",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618414860665,
+          "stop" : 1618414861017,
+          "duration" : 352
+        }
+      }, {
+        "uid" : "30eb9a9de00d3b7f",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/41//#testresult/30eb9a9de00d3b7f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618414140007,
+          "stop" : 1618414140322,
+          "duration" : 315
+        }
+      }, {
+        "uid" : "fc3cc721536cf729",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/40//#testresult/fc3cc721536cf729",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618413648348,
+          "stop" : 1618413648665,
+          "duration" : 317
+        }
+      }, {
+        "uid" : "6fb456d90ef77480",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/39//#testresult/6fb456d90ef77480",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618402753606,
+          "stop" : 1618402753998,
+          "duration" : 392
+        }
+      }, {
+        "uid" : "b5663d6be9d41452",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/38//#testresult/b5663d6be9d41452",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618401373705,
+          "stop" : 1618401374094,
+          "duration" : 389
+        }
+      }, {
+        "uid" : "e8e05e2c3edac505",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/37//#testresult/e8e05e2c3edac505",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618400887449,
+          "stop" : 1618400887807,
+          "duration" : 358
+        }
+      }, {
+        "uid" : "ca3a175bdcde271c",
+        "reportUrl" : "https://arenadata.github.io/truly_automated_tests/36//#testresult/ca3a175bdcde271c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1618400352585,
+          "stop" : 1618400352980,
+          "duration" : 395
+        }
+      } ]
+    },
+    "tags" : [ "negative" ]
+  },
+  "source" : "39b0855549b22e32.json",
+  "parameterValues" : [ "[TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc0a0, test_body={'cluster_type_id': PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[..., PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False)]), drop_key=False), 'description': PreparedFieldValue(value='LaOJBHnLqShxlPzreuGpziApKsCWXXkeBIBsiZMfNwkyVhdKvztlfKdkibAZpDIFgwwKooiROwaMVrtagSziGncUHosreVJYBAIIlnZZuftKmVscRLmgkAeSuEMoTNkNyZAVAReanoBkvKuvLmmfpZExgqVzrVzsokxaKYfBWEBJJTQsuTYFRynIQjIVIfZqpAgUEuIWARnrtGninGqLfArZdfFvYwiZCFOcgwEIjtbMebcSPgcqbjRqmqDKTDVmuIVAZGIlaDPXNjahgoOXGPPxrTDqaEddYRJMrpyIQKLgfrNkrOrlonWlUjDwXXDqIxbctCNDRfvaDNQXooIJoeYbWSkDhOoVHBUgpTpgTOHKdmbWQDvOmQAaGQdmepOsQNScpNKNKXeHyeKxFTSvpjCvEqvFwrZNwpXJCDKqFbOWSGjwkJczmVVYFsyUlyBGAUFdQvGbtTbJRSlezvSXVLTbyRUkbYscWdIcjhACsPxByGGHHkJczQOMeSkOtYBxdzhcQtVNckIiQlfMglKXWeMGOaDpTXAQcNOcsvnlnNJceWNZONXjOmLxTEhHTcHmAFBIZszFgARncaJvMLTpnQzLBxRGnkcKumQcsxadqLQASpDhDCsmgUhMSiuNYAIgGDGnqJtvEsjkRZMNlqATpkgVPEwQTBHHvrRzTxykoUDsLPzCYSYBIYgsVoryRvcZmaAFFpQLEDqYYfsUEDknNcMfOFTGSxUgNJJotICPzyIrefraXAGbxiTpSDpSCAIcZSEZuOtaANihNjauYAkrjzRnJBowhEnIbGOkSHxEcHHOJFvjSuAKLKxuHAGzqQwEnnwpYZpTppyZtToHYgRHNmfeqCNfhnkHFKRmHFaJwlslvKwLtMPUqSZKcTqOZLgbLyvRhWEZgGSiWSXamgTtQUPEmhoOpgNcaLtYimPcFyVMuPAoVCyxdhafziATrUEwDHgUyWMYDPoaUgxfdraiakBySBIJMuphDxFalczrFwBazOrSWyWfTZXRilDRBiHAKqQLxmAmDjNHBuZPyKagLkMpVjVOdrfNimnKWKILoCmhTnKOeAqhbyiMlblQGsUHHDnZtvgKaeiGOvQDqJqmYNnxJuHfrIYvGoqoWUieGBMXQLNtMSeQHsGXONEZPkcViWEHHrmrxSJJmjiSzbZHjilfPfGaqMyfReLWbrosKEXlMQxBfHgzVCmbtSSZgjqwBMuuDhgEviLRYeBiSfhihnOUrkyTESoXsqScyCzxEfyqkkQfEDdhJmoTtUqwYGByeobyiJBoIyagZPecAPrRkdkcvOmRAuZJxLqxkrnIhDStLtOEQfeHcEetsgHJgcPgTtYHptSomtDSqEDsTbVVVeOApHRPjTFDsbeZJVPGgxMsJLkyKgwBrnbuoFTzelYOaNFwTwOPCnvtFBpGdOsxKIscWRAPpMJGjnxdnitVswKjlaBEQYHECCHbohzYxhSVVaKYUzAeBugtcNibRUsnAJuBhSizXjzKhnRKZwEcwqmtOmwUYyTsNMVPlmIgtFYGOEUXDpWOhqEpRYIQyNdkAGvrWzYrmzWGoaRNRCcSBhedkiFGkvYfmHvFAbmQnzBSdqaymDwdRXzZsMzPFcBtlSWCMCZFTsKIpkkjketjmexJvRYVwWbpPQqjiJEjYHrruJLGwYZGvixbDPGjiqLITqqetpuDRPZynKOhbBzcaZiEbgOOOjhABGCYBDrGVsxTqQbbnSuwtRRnkvOiIpWztWxjgpbUuylhJntLbKeuUtJIpYiUCzlxkSzjIflzbjJfGbNLHajbZLmNcXiFIKhLuukOEPylZcaJZJQqKjccafRVtNdYYAtaClKGvlusYUvZvNZiXhTilOotHVwhRVxwDTvfpadoPevZUUhUIvdPSyWqUkosVDyesseQWkaXnFEtkcLVfFlXuMHVWKVrOZBJEyGSTaXkjfXPeIGCobCbckxveRycUSMgwTShRRLVapHNiNXgKXiRFUaYsrglU', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[...]), drop_key=False), 'name': PreparedFieldValue(value='txWqpfatKgPSFDatjYzzCBCHKpYKJgnnHscLzxlzHBdOpjeHjnVeEMbTqetGowpjlhwXZajjLuMdEvJafBwfawhWyKZIgEyzmcTCMJUKukmjpieSPKvJvALwzcIEVsexviNYzozlVTLDLQoXNlCxInRYjwBMyeYVnmdmuebhEvqdrvlSQjcXFrneBCnTpKSHalvelaeYKAvtoKwBojZlphMfTbacagorpQIcvmqTGKohFaHNjhQBiGbZdWPgnjhK', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'CwrnDcOTsrTHThfAIFcdQdspJMNmfvjDVKcgVitpitIhLTeYEiDkKiJLTykwOlJtbqtxEbwsImVfdRFlwSJBtVTryyGDoGNzgPuCcNvRfRjZwEQXoIOQDFweCjtMjzimHzNbGJBJKMMAHPGYQroYbQzvGIVLWTBYinljhcVNJXaaeQffhDOhupCuNfSuVvLCLbMGDZqHNIeVVuzdwulznbXdQzTapBqTRKUUpKZroZJRDoUpGmhtolYtZuBBhyM'], _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc1c0, test_body={'cluster_type_id': PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[..., PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False)]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc2b0, test_body={'description': PreparedFieldValue(value='LaOJBHnLqShxlPzreuGpziApKsCWXXkeBIBsiZMfNwkyVhdKvztlfKdkibAZpDIFgwwKooiROwaMVrtagSziGncUHosreVJYBAIIlnZZuftKmVscRLmgkAeSuEMoTNkNyZAVAReanoBkvKuvLmmfpZExgqVzrVzsokxaKYfBWEBJJTQsuTYFRynIQjIVIfZqpAgUEuIWARnrtGninGqLfArZdfFvYwiZCFOcgwEIjtbMebcSPgcqbjRqmqDKTDVmuIVAZGIlaDPXNjahgoOXGPPxrTDqaEddYRJMrpyIQKLgfrNkrOrlonWlUjDwXXDqIxbctCNDRfvaDNQXooIJoeYbWSkDhOoVHBUgpTpgTOHKdmbWQDvOmQAaGQdmepOsQNScpNKNKXeHyeKxFTSvpjCvEqvFwrZNwpXJCDKqFbOWSGjwkJczmVVYFsyUlyBGAUFdQvGbtTbJRSlezvSXVLTbyRUkbYscWdIcjhACsPxByGGHHkJczQOMeSkOtYBxdzhcQtVNckIiQlfMglKXWeMGOaDpTXAQcNOcsvnlnNJceWNZONXjOmLxTEhHTcHmAFBIZszFgARncaJvMLTpnQzLBxRGnkcKumQcsxadqLQASpDhDCsmgUhMSiuNYAIgGDGnqJtvEsjkRZMNlqATpkgVPEwQTBHHvrRzTxykoUDsLPzCYSYBIYgsVoryRvcZmaAFFpQLEDqYYfsUEDknNcMfOFTGSxUgNJJotICPzyIrefraXAGbxiTpSDpSCAIcZSEZuOtaANihNjauYAkrjzRnJBowhEnIbGOkSHxEcHHOJFvjSuAKLKxuHAGzqQwEnnwpYZpTppyZtToHYgRHNmfeqCNfhnkHFKRmHFaJwlslvKwLtMPUqSZKcTqOZLgbLyvRhWEZgGSiWSXamgTtQUPEmhoOpgNcaLtYimPcFyVMuPAoVCyxdhafziATrUEwDHgUyWMYDPoaUgxfdraiakBySBIJMuphDxFalczrFwBazOrSWyWfTZXRilDRBiHAKqQLxmAmDjNHBuZPyKagLkMpVjVOdrfNimnKWKILoCmhTnKOeAqhbyiMlblQGsUHHDnZtvgKaeiGOvQDqJqmYNnxJuHfrIYvGoqoWUieGBMXQLNtMSeQHsGXONEZPkcViWEHHrmrxSJJmjiSzbZHjilfPfGaqMyfReLWbrosKEXlMQxBfHgzVCmbtSSZgjqwBMuuDhgEviLRYeBiSfhihnOUrkyTESoXsqScyCzxEfyqkkQfEDdhJmoTtUqwYGByeobyiJBoIyagZPecAPrRkdkcvOmRAuZJxLqxkrnIhDStLtOEQfeHcEetsgHJgcPgTtYHptSomtDSqEDsTbVVVeOApHRPjTFDsbeZJVPGgxMsJLkyKgwBrnbuoFTzelYOaNFwTwOPCnvtFBpGdOsxKIscWRAPpMJGjnxdnitVswKjlaBEQYHECCHbohzYxhSVVaKYUzAeBugtcNibRUsnAJuBhSizXjzKhnRKZwEcwqmtOmwUYyTsNMVPlmIgtFYGOEUXDpWOhqEpRYIQyNdkAGvrWzYrmzWGoaRNRCcSBhedkiFGkvYfmHvFAbmQnzBSdqaymDwdRXzZsMzPFcBtlSWCMCZFTsKIpkkjketjmexJvRYVwWbpPQqjiJEjYHrruJLGwYZGvixbDPGjiqLITqqetpuDRPZynKOhbBzcaZiEbgOOOjhABGCYBDrGVsxTqQbbnSuwtRRnkvOiIpWztWxjgpbUuylhJntLbKeuUtJIpYiUCzlxkSzjIflzbjJfGbNLHajbZLmNcXiFIKhLuukOEPylZcaJZJQqKjccafRVtNdYYAtaClKGvlusYUvZvNZiXhTilOotHVwhRVxwDTvfpadoPevZUUhUIvdPSyWqUkosVDyesseQWkaXnFEtkcLVfFlXuMHVWKVrOZBJEyGSTaXkjfXPeIGCobCbckxveRycUSMgwTShRRLVapHNiNXgKXiRFUaYsrglU', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc3a0, test_body={'name': PreparedFieldValue(value='txWqpfatKgPSFDatjYzzCBCHKpYKJgnnHscLzxlzHBdOpjeHjnVeEMbTqetGowpjlhwXZajjLuMdEvJafBwfawhWyKZIgEyzmcTCMJUKukmjpieSPKvJvALwzcIEVsexviNYzozlVTLDLQoXNlCxInRYjwBMyeYVnmdmuebhEvqdrvlSQjcXFrneBCnTpKSHalvelaeYKAvtoKwBojZlphMfTbacagorpQIcvmqTGKohFaHNjhQBiGbZdWPgnjhK', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'CwrnDcOTsrTHThfAIFcdQdspJMNmfvjDVKcgVitpitIhLTeYEiDkKiJLTykwOlJtbqtxEbwsImVfdRFlwSJBtVTryyGDoGNzgPuCcNvRfRjZwEQXoIOQDFweCjtMjzimHzNbGJBJKMMAHPGYQroYbQzvGIVLWTBYinljhcVNJXaaeQffhDOhupCuNfSuVvLCLbMGDZqHNIeVVuzdwulznbXdQzTapBqTRKUUpKZroZJRDoUpGmhtolYtZuBBhyM'], _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc460, test_body={'cluster_type_id': PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False), ...]), drop_key=False), 'description': PreparedFieldValue(value='LaOJBHnLqShxlPzreuGpziApKsCWXXkeBIBsiZMfNwkyVhdKvztlfKdkibAZpDIFgwwKooiROwaMVrtagSziGncUHosreVJYBAIIlnZZuftKmVscRLmgkAeSuEMoTNkNyZAVAReanoBkvKuvLmmfpZExgqVzrVzsokxaKYfBWEBJJTQsuTYFRynIQjIVIfZqpAgUEuIWARnrtGninGqLfArZdfFvYwiZCFOcgwEIjtbMebcSPgcqbjRqmqDKTDVmuIVAZGIlaDPXNjahgoOXGPPxrTDqaEddYRJMrpyIQKLgfrNkrOrlonWlUjDwXXDqIxbctCNDRfvaDNQXooIJoeYbWSkDhOoVHBUgpTpgTOHKdmbWQDvOmQAaGQdmepOsQNScpNKNKXeHyeKxFTSvpjCvEqvFwrZNwpXJCDKqFbOWSGjwkJczmVVYFsyUlyBGAUFdQvGbtTbJRSlezvSXVLTbyRUkbYscWdIcjhACsPxByGGHHkJczQOMeSkOtYBxdzhcQtVNckIiQlfMglKXWeMGOaDpTXAQcNOcsvnlnNJceWNZONXjOmLxTEhHTcHmAFBIZszFgARncaJvMLTpnQzLBxRGnkcKumQcsxadqLQASpDhDCsmgUhMSiuNYAIgGDGnqJtvEsjkRZMNlqATpkgVPEwQTBHHvrRzTxykoUDsLPzCYSYBIYgsVoryRvcZmaAFFpQLEDqYYfsUEDknNcMfOFTGSxUgNJJotICPzyIrefraXAGbxiTpSDpSCAIcZSEZuOtaANihNjauYAkrjzRnJBowhEnIbGOkSHxEcHHOJFvjSuAKLKxuHAGzqQwEnnwpYZpTppyZtToHYgRHNmfeqCNfhnkHFKRmHFaJwlslvKwLtMPUqSZKcTqOZLgbLyvRhWEZgGSiWSXamgTtQUPEmhoOpgNcaLtYimPcFyVMuPAoVCyxdhafziATrUEwDHgUyWMYDPoaUgxfdraiakBySBIJMuphDxFalczrFwBazOrSWyWfTZXRilDRBiHAKqQLxmAmDjNHBuZPyKagLkMpVjVOdrfNimnKWKILoCmhTnKOeAqhbyiMlblQGsUHHDnZtvgKaeiGOvQDqJqmYNnxJuHfrIYvGoqoWUieGBMXQLNtMSeQHsGXONEZPkcViWEHHrmrxSJJmjiSzbZHjilfPfGaqMyfReLWbrosKEXlMQxBfHgzVCmbtSSZgjqwBMuuDhgEviLRYeBiSfhihnOUrkyTESoXsqScyCzxEfyqkkQfEDdhJmoTtUqwYGByeobyiJBoIyagZPecAPrRkdkcvOmRAuZJxLqxkrnIhDStLtOEQfeHcEetsgHJgcPgTtYHptSomtDSqEDsTbVVVeOApHRPjTFDsbeZJVPGgxMsJLkyKgwBrnbuoFTzelYOaNFwTwOPCnvtFBpGdOsxKIscWRAPpMJGjnxdnitVswKjlaBEQYHECCHbohzYxhSVVaKYUzAeBugtcNibRUsnAJuBhSizXjzKhnRKZwEcwqmtOmwUYyTsNMVPlmIgtFYGOEUXDpWOhqEpRYIQyNdkAGvrWzYrmzWGoaRNRCcSBhedkiFGkvYfmHvFAbmQnzBSdqaymDwdRXzZsMzPFcBtlSWCMCZFTsKIpkkjketjmexJvRYVwWbpPQqjiJEjYHrruJLGwYZGvixbDPGjiqLITqqetpuDRPZynKOhbBzcaZiEbgOOOjhABGCYBDrGVsxTqQbbnSuwtRRnkvOiIpWztWxjgpbUuylhJntLbKeuUtJIpYiUCzlxkSzjIflzbjJfGbNLHajbZLmNcXiFIKhLuukOEPylZcaJZJQqKjccafRVtNdYYAtaClKGvlusYUvZvNZiXhTilOotHVwhRVxwDTvfpadoPevZUUhUIvdPSyWqUkosVDyesseQWkaXnFEtkcLVfFlXuMHVWKVrOZBJEyGSTaXkjfXPeIGCobCbckxveRycUSMgwTShRRLVapHNiNXgKXiRFUaYsrglU', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[...]), drop_key=False), 'name': PreparedFieldValue(value='txWqpfatKgPSFDatjYzzCBCHKpYKJgnnHscLzxlzHBdOpjeHjnVeEMbTqetGowpjlhwXZajjLuMdEvJafBwfawhWyKZIgEyzmcTCMJUKukmjpieSPKvJvALwzcIEVsexviNYzozlVTLDLQoXNlCxInRYjwBMyeYVnmdmuebhEvqdrvlSQjcXFrneBCnTpKSHalvelaeYKAvtoKwBojZlphMfTbacagorpQIcvmqTGKohFaHNjhQBiGbZdWPgnjhK', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'CwrnDcOTsrTHThfAIFcdQdspJMNmfvjDVKcgVitpitIhLTeYEiDkKiJLTykwOlJtbqtxEbwsImVfdRFlwSJBtVTryyGDoGNzgPuCcNvRfRjZwEQXoIOQDFweCjtMjzimHzNbGJBJKMMAHPGYQroYbQzvGIVLWTBYinljhcVNJXaaeQffhDOhupCuNfSuVvLCLbMGDZqHNIeVVuzdwulznbXdQzTapBqTRKUUpKZroZJRDoUpGmhtolYtZuBBhyM'], _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc580, test_body={'cluster_type_id': PreparedFieldValue(value=2147483648, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=ForeignKey(_sp_vals_positive=None, _sp_vals_negative=[PreparedFieldValue(value=100, generated_value=False, error_messages=['The selected cluster type id is invalid.'], f_type=..., drop_key=False), ...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc670, test_body={'description': PreparedFieldValue(value='LaOJBHnLqShxlPzreuGpziApKsCWXXkeBIBsiZMfNwkyVhdKvztlfKdkibAZpDIFgwwKooiROwaMVrtagSziGncUHosreVJYBAIIlnZZuftKmVscRLmgkAeSuEMoTNkNyZAVAReanoBkvKuvLmmfpZExgqVzrVzsokxaKYfBWEBJJTQsuTYFRynIQjIVIfZqpAgUEuIWARnrtGninGqLfArZdfFvYwiZCFOcgwEIjtbMebcSPgcqbjRqmqDKTDVmuIVAZGIlaDPXNjahgoOXGPPxrTDqaEddYRJMrpyIQKLgfrNkrOrlonWlUjDwXXDqIxbctCNDRfvaDNQXooIJoeYbWSkDhOoVHBUgpTpgTOHKdmbWQDvOmQAaGQdmepOsQNScpNKNKXeHyeKxFTSvpjCvEqvFwrZNwpXJCDKqFbOWSGjwkJczmVVYFsyUlyBGAUFdQvGbtTbJRSlezvSXVLTbyRUkbYscWdIcjhACsPxByGGHHkJczQOMeSkOtYBxdzhcQtVNckIiQlfMglKXWeMGOaDpTXAQcNOcsvnlnNJceWNZONXjOmLxTEhHTcHmAFBIZszFgARncaJvMLTpnQzLBxRGnkcKumQcsxadqLQASpDhDCsmgUhMSiuNYAIgGDGnqJtvEsjkRZMNlqATpkgVPEwQTBHHvrRzTxykoUDsLPzCYSYBIYgsVoryRvcZmaAFFpQLEDqYYfsUEDknNcMfOFTGSxUgNJJotICPzyIrefraXAGbxiTpSDpSCAIcZSEZuOtaANihNjauYAkrjzRnJBowhEnIbGOkSHxEcHHOJFvjSuAKLKxuHAGzqQwEnnwpYZpTppyZtToHYgRHNmfeqCNfhnkHFKRmHFaJwlslvKwLtMPUqSZKcTqOZLgbLyvRhWEZgGSiWSXamgTtQUPEmhoOpgNcaLtYimPcFyVMuPAoVCyxdhafziATrUEwDHgUyWMYDPoaUgxfdraiakBySBIJMuphDxFalczrFwBazOrSWyWfTZXRilDRBiHAKqQLxmAmDjNHBuZPyKagLkMpVjVOdrfNimnKWKILoCmhTnKOeAqhbyiMlblQGsUHHDnZtvgKaeiGOvQDqJqmYNnxJuHfrIYvGoqoWUieGBMXQLNtMSeQHsGXONEZPkcViWEHHrmrxSJJmjiSzbZHjilfPfGaqMyfReLWbrosKEXlMQxBfHgzVCmbtSSZgjqwBMuuDhgEviLRYeBiSfhihnOUrkyTESoXsqScyCzxEfyqkkQfEDdhJmoTtUqwYGByeobyiJBoIyagZPecAPrRkdkcvOmRAuZJxLqxkrnIhDStLtOEQfeHcEetsgHJgcPgTtYHptSomtDSqEDsTbVVVeOApHRPjTFDsbeZJVPGgxMsJLkyKgwBrnbuoFTzelYOaNFwTwOPCnvtFBpGdOsxKIscWRAPpMJGjnxdnitVswKjlaBEQYHECCHbohzYxhSVVaKYUzAeBugtcNibRUsnAJuBhSizXjzKhnRKZwEcwqmtOmwUYyTsNMVPlmIgtFYGOEUXDpWOhqEpRYIQyNdkAGvrWzYrmzWGoaRNRCcSBhedkiFGkvYfmHvFAbmQnzBSdqaymDwdRXzZsMzPFcBtlSWCMCZFTsKIpkkjketjmexJvRYVwWbpPQqjiJEjYHrruJLGwYZGvixbDPGjiqLITqqetpuDRPZynKOhbBzcaZiEbgOOOjhABGCYBDrGVsxTqQbbnSuwtRRnkvOiIpWztWxjgpbUuylhJntLbKeuUtJIpYiUCzlxkSzjIflzbjJfGbNLHajbZLmNcXiFIKhLuukOEPylZcaJZJQqKjccafRVtNdYYAtaClKGvlusYUvZvNZiXhTilOotHVwhRVxwDTvfpadoPevZUUhUIvdPSyWqUkosVDyesseQWkaXnFEtkcLVfFlXuMHVWKVrOZBJEyGSTaXkjfXPeIGCobCbckxveRycUSMgwTShRRLVapHNiNXgKXiRFUaYsrglU', generated_value=False, error_messages=['The description may not be greater than 2000 characters.'], f_type=Text(_sp_vals_positive=None, _sp_vals_negative=[...]), drop_key=False)}), TestDataWithPreparedBody(test_data=POST cluster and expect 422 status code. at 0x7f426affc760, test_body={'name': PreparedFieldValue(value='txWqpfatKgPSFDatjYzzCBCHKpYKJgnnHscLzxlzHBdOpjeHjnVeEMbTqetGowpjlhwXZajjLuMdEvJafBwfawhWyKZIgEyzmcTCMJUKukmjpieSPKvJvALwzcIEVsexviNYzozlVTLDLQoXNlCxInRYjwBMyeYVnmdmuebhEvqdrvlSQjcXFrneBCnTpKSHalvelaeYKAvtoKwBojZlphMfTbacagorpQIcvmqTGKohFaHNjhQBiGbZdWPgnjhK', generated_value=False, error_messages=['The name may not be greater than 255 characters.'], f_type=String(_sp_vals_positive=['s', '!@#$%^&*\\\\/{}[]', 'CwrnDcOTsrTHThfAIFcdQdspJMNmfvjDVKcgVitpitIhLTeYEiDkKiJLTykwOlJtbqtxEbwsImVfdRFlwSJBtVTryyGDoGNzgPuCcNvRfRjZwEQXoIOQDFweCjtMjzimHzNbGJBJKMMAHPGYQroYbQzvGIVLWTBYinljhcVNJXaaeQffhDOhupCuNfSuVvLCLbMGDZqHNIeVVuzdwulznbXdQzTapBqTRKUUpKZroZJRDoUpGmhtolYtZuBBhyM'], _sp_vals_negative=[...]), drop_key=False)})]" ]
+}
