@@ -161,7 +161,8 @@ def get_negative_data_for_post_body_check():
                         _get_datasets(
                             endpoint,
                             desc="Null values for Nullable=False fields",
-                            field_conditions=lambda x: not x.nullable and x.name != "id",
+                            field_conditions=lambda x: not x.nullable
+                            and x.name != "id",
                             value_properties={
                                 "error_message": BaseType.error_message_required,
                                 "value": None,
